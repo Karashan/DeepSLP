@@ -1,6 +1,6 @@
 # DeepSLP
 
-**DeepSLP: A Deep Neural Network Framework Leveraging Cancer Dependency Data to Predict Synthetic Lethality in Human Cells**
+**DeepSLP: A Deep Learning Framework Leveraging Cancer Dependency Data to Predict Synthetic Lethality in Human Cells**
 
 DeepSLP is a Python-based framework implementing a deep learning approach to predict synthetic lethal (SL) interactions from functional genomics features derived from the Cancer Dependency Map (DepMap). It provides tools to construct pairwise feature representations from CRISPR knockout fitness profiles and gene expression data, train deep neural network models, and benchmark prediction performance.
 
@@ -87,7 +87,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you use DeepSLP in your research, please cite:
 
-> [Zhang et al.], "DeepSLP: a deep neural network framework leveraging cancer dependency data to predict synthetic lethality in human cells," [Journal Name], [Year].
+> [Zhang et al.], "DeepSLP: a deep learning framework leveraging cancer dependency data to predict synthetic lethality in human cells," [Journal Name], [Year].
 
 ---
 
