@@ -28,3 +28,9 @@ dependencies:
 
   # Jupyter
   - ipykernel
+
+  # Hyperparameter tuning
+  - optuna
+
+  # Utilities
+  - joblib
