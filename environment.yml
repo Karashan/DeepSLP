@@ -1,15 +1,9 @@
 name: deepslp
 channels:
-  - pytorch
-  - nvidia
   - conda-forge
   - defaults
 dependencies:
   - python=3.13
-
-  # Deep learning (GPU)
-  - pytorch
-  - pytorch-cuda=12.1
 
   # ML / data stack
   - scikit-learn
@@ -34,3 +28,7 @@ dependencies:
 
   # Utilities
   - joblib
+
+  - pip:
+      # PyTorch with CUDA 12.1 (pip only — conda builds lack GPU for py3.13)
+      - torch==2.5.1+cu121

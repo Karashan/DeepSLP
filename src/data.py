@@ -169,9 +169,36 @@ def scale_splits(
 ) -> tuple[dict, StandardScaler]:
     """Fit StandardScaler on training data; transform all splits in-place.
 
+    Constant features (zero variance in training set) are dropped before
+    scaling to avoid NaN from division by zero.
+
     Returns the modified *split* dict (values become numpy arrays) and the
     fitted scaler.
     """
+    import pandas as pd
+
+    X_train = split["X_train"]
+    if isinstance(X_train, pd.DataFrame):
+        # Identify and drop zero-variance columns
+        stds = X_train.std()
+        keep = stds[stds > 0].index
+        dropped = len(stds) - len(keep)
+        if dropped > 0:
+            print(f"  [scale_splits] Dropping {dropped} constant feature(s)")
+        split["X_train"] = X_train[keep]
+        split["X_val"] = split["X_val"][keep]
+        split["X_test"] = split["X_test"][keep]
+    else:
+        # numpy array path
+        stds = np.std(X_train, axis=0)
+        keep_mask = stds > 0
+        dropped = int((~keep_mask).sum())
+        if dropped > 0:
+            print(f"  [scale_splits] Dropping {dropped} constant feature(s)")
+            split["X_train"] = X_train[:, keep_mask]
+            split["X_val"] = split["X_val"][:, keep_mask]
+            split["X_test"] = split["X_test"][:, keep_mask]
+
     scaler = StandardScaler()
     split["X_train"] = scaler.fit_transform(split["X_train"])
     split["X_val"] = scaler.transform(split["X_val"])
