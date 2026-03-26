@@ -89,7 +89,7 @@ class SLPredictorMLP(nn.Module):
         self,
         input_size: int,
         hidden_sizes: list[int],
-        dropout: float = 0.2,
+        dropout: float = 0.3,
         pos_prior: float | None = None,
     ):
         super().__init__()
