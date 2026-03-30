@@ -1,0 +1,56 @@
+{
+  "data_dir": "data/input/GIV_24Q4/ReLU128_5L",
+  "label_col": "GI_stringent_Type2",
+  "n_folds": 10,
+  "seed": 42,
+  "hidden_sizes": [
+    128,
+    64,
+    32
+  ],
+  "dropout": 0.3,
+  "batch_size": 128,
+  "lr": 0.001,
+  "weight_decay": 0.001,
+  "max_grad_norm": 1.0,
+  "epochs": 50,
+  "patience": 15,
+  "scheduler": "plateau",
+  "lr_decay_factor": 0.5,
+  "lr_patience": 5,
+  "focal_alpha": 0.75,
+  "focal_gamma": 1.5,
+  "balanced_sampling": false,
+  "top_k": 100,
+  "wall_time_min": 560.38,
+  "summary": {
+    "AUROC": {
+      "mean": 0.8055789444154305,
+      "se": 0.010009535471424677
+    },
+    "AUPR": {
+      "mean": 0.011707591214125068,
+      "se": 0.002870582601903272
+    },
+    "AP": {
+      "mean": 0.011933517066717556,
+      "se": 0.002902997823443986
+    },
+    "Recall@100": {
+      "mean": 0.009567234222777188,
+      "se": 0.0022967927515550493
+    },
+    "Precision@100": {
+      "mean": 0.07099999990314246,
+      "se": 0.022233608322771464
+    },
+    "Accuracy": {
+      "mean": 0.9982419879287887,
+      "se": 0.00019677789703016117
+    },
+    "F1": {
+      "mean": 0.0006546644844517185,
+      "se": 0.0006546644844517184
+    }
+  }
+}

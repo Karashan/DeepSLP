@@ -1,0 +1,260 @@
+nohup: ignoring input
+/home/b-xiangzhang/DeepSLP/src/data.py:26: DtypeWarning: Columns (0: GI_stringent) have mixed types. Specify dtype option on import or set low_memory=False.
+  frames.append(pd.read_csv(f, sep="\t"))
+/home/b-xiangzhang/DeepSLP/src/data.py:44: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df = df.assign(_pair=pair)
+[I 2026-03-25 18:46:26,750] A new study created in memory with name: deepslp_tune
+Loading data from data/input/GIV_24Q4/ReLU128_5L ...
+Loaded 3912779 unique gene pairs
+  0%|          | 0/50 [00:00<?, ?it/s]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                        0%|          | 0/50 [34:44<?, ?it/s]Best trial: 0. Best value: 0.017387:   0%|          | 0/50 [34:44<?, ?it/s]Best trial: 0. Best value: 0.017387:   2%|▏         | 1/50 [34:44<28:22:26, 2084.61s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                        Best trial: 0. Best value: 0.017387:   2%|▏         | 1/50 [1:05:51<28:22:26, 2084.61s/it]Best trial: 0. Best value: 0.017387:   2%|▏         | 1/50 [1:05:51<28:22:26, 2084.61s/it]Best trial: 0. Best value: 0.017387:   4%|▍         | 2/50 [1:05:51<26:04:59, 1956.25s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                          Best trial: 0. Best value: 0.017387:   4%|▍         | 2/50 [1:38:19<26:04:59, 1956.25s/it]Best trial: 2. Best value: 0.0200658:   4%|▍         | 2/50 [1:38:19<26:04:59, 1956.25s/it]Best trial: 2. Best value: 0.0200658:   6%|▌         | 3/50 [1:38:19<25:29:30, 1952.55s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           Best trial: 2. Best value: 0.0200658:   6%|▌         | 3/50 [2:07:19<25:29:30, 1952.55s/it]Best trial: 2. Best value: 0.0200658:   6%|▌         | 3/50 [2:07:19<25:29:30, 1952.55s/it]Best trial: 2. Best value: 0.0200658:   8%|▊         | 4/50 [2:07:19<23:52:52, 1868.96s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           [2026-03-25 18:46:44] Training started
+  Epoch   1/50  loss 0.0051/0.0046  AUPR 0.0157/0.0064  AUROC 0.8484/0.7830  LR 1.43e-04  Best: ep 0
+  Epoch   2/50  loss 0.0049/0.0044  AUPR 0.0328/0.0095  AUROC 0.8713/0.8194  LR 1.43e-04  Best: ep 1
+  Epoch   3/50  loss 0.0048/0.0045  AUPR 0.0310/0.0095  AUROC 0.8747/0.8178  LR 1.43e-04  Best: ep 2
+  Epoch   4/50  loss 0.0047/0.0044  AUPR 0.0381/0.0174  AUROC 0.8803/0.8280  LR 1.43e-04  Best: ep 3
+  Epoch   5/50  loss 0.0047/0.0045  AUPR 0.0391/0.0145  AUROC 0.8808/0.8164  LR 1.43e-04  Best: ep 4
+  Epoch   6/50  loss 0.0046/0.0044  AUPR 0.0382/0.0143  AUROC 0.8830/0.8291  LR 1.43e-04  Best: ep 4
+  Epoch   7/50  loss 0.0046/0.0044  AUPR 0.0451/0.0143  AUROC 0.8867/0.8328  LR 1.43e-04  Best: ep 4
+  Epoch   8/50  loss 0.0046/0.0044  AUPR 0.0458/0.0144  AUROC 0.8877/0.8313  LR 1.43e-04  Best: ep 4
+  Epoch   9/50  loss 0.0046/0.0044  AUPR 0.0462/0.0153  AUROC 0.8896/0.8296  LR 1.43e-04  Best: ep 4
+[2026-03-25 19:21:05] Early stopping at epoch 9 (best val AUPR 0.0174 at ep 4)
+[2026-03-25 19:21:05] Training finished in 2061.0s
+[I 2026-03-25 19:21:11,365] Trial 0 finished with value: 0.017387031440937343 and parameters: {'n_layers': 4, 'hidden_0': 154, 'hidden_1': 153, 'hidden_2': 58, 'hidden_3': 54, 'dropout': 0.30000000000000004, 'lr': 0.0001432582974467861, 'weight_decay': 7.849592257789543e-06, 'max_grad_norm': 1.0, 'batch_size': 64, 'focal_alpha': 0.65, 'focal_gamma': 0.5, 'scheduler_type': 'plateau', 'balanced_sampling': False}. Best is trial 0 with value: 0.017387031440937343.
+[2026-03-25 19:21:27] Training started
+  Epoch   1/50  loss 0.0020/0.0018  AUPR 0.0018/0.0016  AUROC 0.5000/0.5000  LR 4.23e-02  Best: ep 0
+  Epoch   2/50  loss 0.0020/0.0018  AUPR 0.0018/0.0016  AUROC 0.5000/0.5000  LR 3.93e-02  Best: ep 1
+  Epoch   3/50  loss 0.0020/0.0018  AUPR 0.0018/0.0016  AUROC 0.5000/0.5000  LR 3.45e-02  Best: ep 1
+  Epoch   4/50  loss 0.0020/0.0019  AUPR 0.0018/0.0016  AUROC 0.5000/0.5000  LR 2.84e-02  Best: ep 1
+  Epoch   5/50  loss 0.0020/0.0019  AUPR 0.0018/0.0016  AUROC 0.5000/0.5000  LR 2.17e-02  Best: ep 1
+  Epoch   6/50  loss 0.0020/0.0019  AUPR 0.0018/0.0016  AUROC 0.5000/0.5000  LR 1.50e-02  Best: ep 1
+[2026-03-25 19:52:10] Early stopping at epoch 6 (best val AUPR 0.0016 at ep 1)
+[2026-03-25 19:52:10] Training finished in 1842.5s
+[I 2026-03-25 19:52:17,753] Trial 1 finished with value: 0.0015989365336977876 and parameters: {'n_layers': 2, 'hidden_0': 33, 'hidden_1': 20, 'dropout': 0.30000000000000004, 'lr': 0.04340881195378188, 'weight_decay': 0.006816337015355567, 'max_grad_norm': 5.0, 'batch_size': 32, 'focal_alpha': 0.65, 'focal_gamma': 2.5, 'scheduler_type': 'cosine', 'balanced_sampling': False}. Best is trial 0 with value: 0.017387031440937343.
+[2026-03-25 19:52:34] Training started
+  Epoch   1/50  loss 0.0022/0.0019  AUPR 0.0201/0.0136  AUROC 0.8480/0.8007  LR 6.86e-03  Best: ep 0
+  Epoch   2/50  loss 0.0018/0.0017  AUPR 0.0308/0.0136  AUROC 0.8624/0.8182  LR 6.36e-03  Best: ep 1
+  Epoch   3/50  loss 0.0018/0.0017  AUPR 0.0345/0.0136  AUROC 0.8692/0.8232  LR 5.58e-03  Best: ep 2
+  Epoch   4/50  loss 0.0017/0.0016  AUPR 0.0360/0.0154  AUROC 0.8763/0.8252  LR 4.60e-03  Best: ep 2
+  Epoch   5/50  loss 0.0017/0.0017  AUPR 0.0397/0.0167  AUROC 0.8806/0.8155  LR 3.52e-03  Best: ep 4
+  Epoch   6/50  loss 0.0017/0.0017  AUPR 0.0407/0.0144  AUROC 0.8842/0.8238  LR 2.43e-03  Best: ep 5
+  Epoch   7/50  loss 0.0016/0.0016  AUPR 0.0463/0.0169  AUROC 0.8883/0.8286  LR 1.45e-03  Best: ep 5
+  Epoch   8/50  loss 0.0016/0.0016  AUPR 0.0484/0.0172  AUROC 0.8904/0.8339  LR 6.71e-04  Best: ep 7
+  Epoch   9/50  loss 0.0016/0.0017  AUPR 0.0494/0.0181  AUROC 0.8918/0.8294  LR 1.72e-04  Best: ep 8
+  Epoch  10/50  loss 0.0016/0.0016  AUPR 0.0502/0.0190  AUROC 0.8930/0.8336  LR 7.03e-03  Best: ep 9
+  Epoch  11/50  loss 0.0017/0.0017  AUPR 0.0423/0.0156  AUROC 0.8819/0.8194  LR 6.99e-03  Best: ep 10
+  Epoch  12/50  loss 0.0017/0.0017  AUPR 0.0395/0.0193  AUROC 0.8810/0.8262  LR 6.86e-03  Best: ep 10
+  Epoch  13/50  loss 0.0017/0.0017  AUPR 0.0417/0.0143  AUROC 0.8811/0.8283  LR 6.65e-03  Best: ep 12
+  Epoch  14/50  loss 0.0017/0.0016  AUPR 0.0412/0.0176  AUROC 0.8851/0.8307  LR 6.36e-03  Best: ep 12
+  Epoch  15/50  loss 0.0017/0.0016  AUPR 0.0427/0.0154  AUROC 0.8853/0.8285  LR 6.00e-03  Best: ep 12
+  Epoch  16/50  loss 0.0017/0.0016  AUPR 0.0476/0.0177  AUROC 0.8883/0.8366  LR 5.58e-03  Best: ep 12
+  Epoch  17/50  loss 0.0017/0.0017  AUPR 0.0469/0.0193  AUROC 0.8890/0.8347  LR 5.11e-03  Best: ep 12
+  Epoch  18/50  loss 0.0017/0.0016  AUPR 0.0455/0.0146  AUROC 0.8903/0.8319  LR 4.60e-03  Best: ep 17
+  Epoch  19/50  loss 0.0016/0.0016  AUPR 0.0481/0.0167  AUROC 0.8911/0.8342  LR 4.07e-03  Best: ep 17
+  Epoch  20/50  loss 0.0016/0.0016  AUPR 0.0487/0.0172  AUROC 0.8953/0.8275  LR 3.52e-03  Best: ep 17
+  Epoch  21/50  loss 0.0016/0.0017  AUPR 0.0507/0.0201  AUROC 0.8959/0.8275  LR 2.97e-03  Best: ep 17
+  Epoch  22/50  loss 0.0016/0.0016  AUPR 0.0529/0.0186  AUROC 0.8978/0.8402  LR 2.43e-03  Best: ep 21
+  Epoch  23/50  loss 0.0016/0.0017  AUPR 0.0580/0.0195  AUROC 0.9016/0.8362  LR 1.92e-03  Best: ep 21
+  Epoch  24/50  loss 0.0016/0.0016  AUPR 0.0587/0.0194  AUROC 0.9035/0.8293  LR 1.45e-03  Best: ep 21
+  Epoch  25/50  loss 0.0016/0.0017  AUPR 0.0585/0.0180  AUROC 0.9032/0.8241  LR 1.03e-03  Best: ep 21
+  Epoch  26/50  loss 0.0015/0.0016  AUPR 0.0614/0.0200  AUROC 0.9060/0.8397  LR 6.71e-04  Best: ep 21
+[2026-03-25 20:24:43] Early stopping at epoch 26 (best val AUPR 0.0201 at ep 21)
+[2026-03-25 20:24:43] Training finished in 1929.0s
+[I 2026-03-25 20:24:45,912] Trial 2 finished with value: 0.02006582324252322 and parameters: {'n_layers': 2, 'hidden_0': 192, 'hidden_1': 22, 'dropout': 0.45000000000000007, 'lr': 0.007031974013551657, 'weight_decay': 0.0011079025609352748, 'max_grad_norm': 5.0, 'batch_size': 256, 'focal_alpha': 0.9, 'focal_gamma': 2.25, 'scheduler_type': 'cosine', 'balanced_sampling': False}. Best is trial 2 with value: 0.02006582324252322.
+[2026-03-25 20:25:02] Training started
+  Epoch   1/50  loss 0.0029/0.0020  AUPR 0.0191/0.0077  AUROC 0.8531/0.8037  LR 8.76e-04  Best: ep 0
+  Epoch   2/50  loss 0.0022/0.0020  AUPR 0.0266/0.0072  AUROC 0.8682/0.8146  LR 8.76e-04  Best: ep 1
+  Epoch   3/50  loss 0.0020/0.0019  AUPR 0.0305/0.0088  AUROC 0.8755/0.8194  LR 8.76e-04  Best: ep 1
+  Epoch   4/50  loss 0.0020/0.0019  AUPR 0.0320/0.0140  AUROC 0.8766/0.8325  LR 8.76e-04  Best: ep 3
+  Epoch   5/50  loss 0.0019/0.0019  AUPR 0.0363/0.0122  AUROC 0.8793/0.8340  LR 8.76e-04  Best: ep 4
+  Epoch   6/50  loss 0.0019/0.0020  AUPR 0.0407/0.0139  AUROC 0.8843/0.8223  LR 8.76e-04  Best: ep 4
+  Epoch   7/50  loss 0.0019/0.0020  AUPR 0.0415/0.0132  AUROC 0.8861/0.8267  LR 8.76e-04  Best: ep 4
+  Epoch   8/50  loss 0.0019/0.0020  AUPR 0.0451/0.0171  AUROC 0.8888/0.8139  LR 8.76e-04  Best: ep 4
+  Epoch   9/50  loss 0.0019/0.0019  AUPR 0.0430/0.0139  AUROC 0.8915/0.8332  LR 8.76e-04  Best: ep 8
+  Epoch  10/50  loss 0.0019/0.0019  AUPR 0.0467/0.0128  AUROC 0.8923/0.8275  LR 4.38e-04  Best: ep 8
+  Epoch  11/50  loss 0.0018/0.0019  AUPR 0.0494/0.0127  AUROC 0.8964/0.8286  LR 4.38e-04  Best: ep 8
+  Epoch  12/50  loss 0.0018/0.0019  AUPR 0.0505/0.0105  AUROC 0.8971/0.8257  LR 4.38e-04  Best: ep 8
+  Epoch  13/50  loss 0.0018/0.0020  AUPR 0.0507/0.0107  AUROC 0.8986/0.8097  LR 4.38e-04  Best: ep 8
+[2026-03-25 20:53:42] Early stopping at epoch 13 (best val AUPR 0.0171 at ep 8)
+[2026-03-25 20:53:42] Training finished in 1720.6s
+[I 2026-03-25 20:53:46,724] Trial 3 finished with value: 0.017069426725028612 and parameters: {'n_layers': 4, 'hidden_0': 120, 'hidden_1': 58, 'hidden_2': 27, 'hidden_3': 23, 'dropout': 0.25, 'lr': 0.0008755110855965095, 'weight_decay': 0.0015385915234078901, 'max_grad_norm': 5.0, 'batch_size': 128, 'focal_alpha': 0.9500000000000001, 'focal_gamma': 1.75, 'scheduler_type': 'plateau', 'balanced_sampling': False}. Best is trial 2 with value: 0.02006582324252322.
+[2026-03-25 20:54:03] Training started
+[W 2026-03-25 20:56:26,625] Trial 4 failed with parameters: {'n_layers': 5, 'hidden_0': 342, 'hidden_1': 189, 'hidden_2': 43, 'hidden_3': 21, 'hidden_4': 21, 'dropout': 0.30000000000000004, 'lr': 0.007642651989076891, 'weight_decay': 1.3436360777233473e-06, 'max_grad_norm': 1.0, 'batch_size': 128, 'focal_alpha': 0.8500000000000001, 'focal_gamma': 0.75, 'scheduler_type': 'cosine', 'balanced_sampling': True} because of the following error: ValueError('Input contains NaN.').
+Traceback (most recent call last):
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+    value_or_values = func(trial)
+  File "/home/b-xiangzhang/DeepSLP/src/tune.py", line 109, in objective
+    history = train_model(
+        model, train_loader, val_loader,
+    ...<2 lines>...
+        patience=5, scheduler_type=scheduler_type, device=device,
+    )
+  File "/home/b-xiangzhang/DeepSLP/src/training.py", line 398, in train_model
+    t_aupr, t_auroc = evaluate(model, train_loader, device)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/DeepSLP/src/training.py", line 75, in evaluate
+    aupr = average_precision_score(labels, probs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 270, in average_precision_score
+    return _average_binary_score(
+        average_precision, y_true, y_score, average, sample_weight=sample_weight
+    )
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_base.py", line 69, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 231, in _binary_uninterpolated_average_precision
+    precision, recall, _ = precision_recall_curve(
+                           ~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 1100, in precision_recall_curve
+    _, fps, _, tps, thresholds = confusion_matrix_at_thresholds(
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 934, in confusion_matrix_at_thresholds
+    assert_all_finite(y_score)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/validation.py", line 223, in assert_all_finite
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        X.data if sp.issparse(X) else X,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/validation.py", line 133, in _assert_all_finite
+    _assert_all_finite_element_wise(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<4 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/validation.py", line 182, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.Best trial: 2. Best value: 0.0200658:   8%|▊         | 4/50 [2:09:59<23:52:52, 1868.96s/it]                                                                                           Best trial: 2. Best value: 0.0200658:   8%|▊         | 4/50 [2:09:59<23:52:52, 1868.96s/it]Best trial: 2. Best value: 0.0200658:   8%|▊         | 4/50 [2:09:59<24:54:58, 1949.97s/it]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/b-xiangzhang/DeepSLP/src/tune.py", line 212, in <module>
+    main()
+    ~~~~^^
+  File "/home/b-xiangzhang/DeepSLP/src/tune.py", line 174, in main
+    study.optimize(objective, n_trials=args.n_trials, show_progress_bar=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/optuna/study/study.py", line 490, in optimize
+    _optimize(
+    ~~~~~~~~~^
+        study=self,
+        ^^^^^^^^^^^
+    ...<7 lines>...
+        show_progress_bar=show_progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/optuna/study/_optimize.py", line 68, in _optimize
+    _optimize_sequential(
+    ~~~~~~~~~~~~~~~~~~~~^
+        study,
+        ^^^^^^
+    ...<8 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/optuna/study/_optimize.py", line 165, in _optimize_sequential
+    frozen_trial_id = _run_trial(study, func, catch)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/optuna/study/_optimize.py", line 263, in _run_trial
+    raise func_err
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+    value_or_values = func(trial)
+  File "/home/b-xiangzhang/DeepSLP/src/tune.py", line 109, in objective
+    history = train_model(
+        model, train_loader, val_loader,
+    ...<2 lines>...
+        patience=5, scheduler_type=scheduler_type, device=device,
+    )
+  File "/home/b-xiangzhang/DeepSLP/src/training.py", line 398, in train_model
+    t_aupr, t_auroc = evaluate(model, train_loader, device)
+                      ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/DeepSLP/src/training.py", line 75, in evaluate
+    aupr = average_precision_score(labels, probs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 270, in average_precision_score
+    return _average_binary_score(
+        average_precision, y_true, y_score, average, sample_weight=sample_weight
+    )
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_base.py", line 69, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 231, in _binary_uninterpolated_average_precision
+    precision, recall, _ = precision_recall_curve(
+                           ~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 1100, in precision_recall_curve
+    _, fps, _, tps, thresholds = confusion_matrix_at_thresholds(
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/metrics/_ranking.py", line 934, in confusion_matrix_at_thresholds
+    assert_all_finite(y_score)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/validation.py", line 223, in assert_all_finite
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        X.data if sp.issparse(X) else X,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/validation.py", line 133, in _assert_all_finite
+    _assert_all_finite_element_wise(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<4 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/b-xiangzhang/miniconda3/envs/deepslp/lib/python3.13/site-packages/sklearn/utils/validation.py", line 182, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+[W 2026-03-25 20:56:26,628] Trial 4 failed with value None.
