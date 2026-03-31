@@ -78,9 +78,16 @@ def main() -> None:
     print(f"Best tuning AUPR: {tuning['best_value']:.4f}")
     print(f"Best params: {json.dumps(best, indent=2)}")
 
-    # Reconstruct hidden sizes from per-layer keys
-    n_layers = best["n_layers"]
-    hidden_sizes = [best[f"hidden_{i}"] for i in range(n_layers)]
+    # Reconstruct hidden sizes (supports both preset and per-layer formats)
+    if "arch" in best:
+        ARCH_PRESETS = {
+            "64-32": [64, 32], "128-64": [128, 64],
+            "128-64-32": [128, 64, 32], "256-128-64": [256, 128, 64],
+        }
+        hidden_sizes = ARCH_PRESETS[best["arch"]]
+    else:
+        n_layers = best["n_layers"]
+        hidden_sizes = [best[f"hidden_{i}"] for i in range(n_layers)]
 
     # ------------------------------------------------------------------
     # 2. Load and clean data
@@ -111,14 +118,14 @@ def main() -> None:
             hidden_sizes=hidden_sizes,
             dropout=best["dropout"],
             batch_size=best["batch_size"],
-            balanced_sampling=best["balanced_sampling"],
+            balanced_sampling=best.get("balanced_sampling", False),
             lr=best["lr"],
             weight_decay=best["weight_decay"],
-            max_grad_norm=best["max_grad_norm"],
+            max_grad_norm=best.get("max_grad_norm", 1.0),
             epochs=args.epochs,
             focal_alpha=best["focal_alpha"],
             focal_gamma=best["focal_gamma"],
-            scheduler_type=best["scheduler_type"],
+            scheduler_type=best.get("scheduler_type", "plateau"),
             top_k=args.top_k,
             output_dir=output_dir,
             tag=f"fold_{fold}",

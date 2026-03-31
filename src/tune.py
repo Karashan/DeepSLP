@@ -7,9 +7,17 @@ Usage
                        --n-trials 50 \\
                        --output-dir outputs/tuning
 
-Optuna explores model architecture (hidden sizes, dropout, number of layers),
-optimiser settings (learning rate), loss function parameters (focal alpha/gamma),
-and training knobs (batch size) — all driven by validation AUPR.
+Simplified search space (7 tuneable parameters):
+    arch            – preset hidden-layer configurations
+    dropout         – 0.1 / 0.2 / 0.3 / 0.4
+    lr              – 1e-4 … 1e-2  (log)
+    weight_decay    – 1e-5 … 1e-2  (log)
+    batch_size      – 64 / 128 / 256
+    focal_alpha     – 0.5 / 0.75
+    focal_gamma     – 1.0 / 1.5 / 2.0
+
+Fixed settings:
+    max_grad_norm = 1.0, scheduler = plateau, balanced_sampling = False
 """
 
 from __future__ import annotations
@@ -52,26 +60,27 @@ def _build_objective(
     """Return an Optuna objective function closed over the dataset."""
 
     def objective(trial: optuna.Trial) -> float:
-        # --- sample hyperparameters ---
-        n_layers = trial.suggest_int("n_layers", 2, 5)
-        hidden_sizes: list[int] = []
-        prev = None
-        for i in range(n_layers):
-            lo = 16
-            hi = min(prev or 512, 512)
-            h = trial.suggest_int(f"hidden_{i}", lo, hi, log=True)
-            hidden_sizes.append(h)
-            prev = h
+        # --- sample hyperparameters (simplified) ---
+        ARCH_PRESETS = {
+            "64-32":      [64, 32],
+            "128-64":     [128, 64],
+            "128-64-32":  [128, 64, 32],
+            "256-128-64": [256, 128, 64],
+        }
+        arch = trial.suggest_categorical("arch", list(ARCH_PRESETS.keys()))
+        hidden_sizes = ARCH_PRESETS[arch]
 
-        dropout = trial.suggest_float("dropout", 0.1, 0.5, step=0.05)
-        lr = trial.suggest_float("lr", 1e-4, 5e-2, log=True)
-        weight_decay = trial.suggest_float("weight_decay", 1e-6, 1e-2, log=True)
-        max_grad_norm = trial.suggest_categorical("max_grad_norm", [0.5, 1.0, 5.0])
-        batch_size = trial.suggest_categorical("batch_size", [32, 64, 128, 256])
-        focal_alpha = trial.suggest_float("focal_alpha", 0.25, 1.0, step=0.05)
-        focal_gamma = trial.suggest_float("focal_gamma", 0.5, 3.0, step=0.25)
-        scheduler_type = trial.suggest_categorical("scheduler_type", ["plateau", "cosine"])
-        balanced_sampling = trial.suggest_categorical("balanced_sampling", [True, False])
+        dropout = trial.suggest_float("dropout", 0.1, 0.4, step=0.1)
+        lr = trial.suggest_float("lr", 1e-4, 1e-2, log=True)
+        weight_decay = trial.suggest_float("weight_decay", 1e-5, 1e-2, log=True)
+        batch_size = trial.suggest_categorical("batch_size", [64, 128, 256])
+        focal_alpha = trial.suggest_categorical("focal_alpha", [0.5, 0.75])
+        focal_gamma = trial.suggest_categorical("focal_gamma", [1.0, 1.5, 2.0])
+
+        # Fixed settings
+        max_grad_norm = 1.0
+        scheduler_type = "plateau"
+        balanced_sampling = False
 
         # --- cross-validation loop ---
         fold_auprs: list[float] = []
@@ -110,7 +119,7 @@ def _build_objective(
                 model, train_loader, val_loader,
                 criterion=criterion, lr=lr, weight_decay=weight_decay,
                 max_grad_norm=max_grad_norm, epochs=epochs,
-                patience=5, scheduler_type=scheduler_type, device=device,
+                patience=15, scheduler_type=scheduler_type, device=device,
             )
             model.load_state_dict(history["best_state"])
             model.to(device)
