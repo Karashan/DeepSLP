@@ -26,7 +26,9 @@ from .data import (
     NON_FEATURE_COLS,
     filter_unique_pairs,
     load_tsv_iterations,
+    split_query_holdout,
     split_query_kfold,
+    split_random_stratified,
 )
 from .training import run_pipeline
 
@@ -47,8 +49,8 @@ def parse_args() -> argparse.Namespace:
                    help="Binary label column")
     p.add_argument("--tuning-json", required=True,
                    help="Path to tuning_results.json from src.tune")
-    p.add_argument("--cv", type=int, default=4, choices=[1, 2, 4],
-                   help="CV strategy for final eval (default: 4 = 10-fold)")
+    p.add_argument("--cv", type=int, default=2, choices=[1, 2, 4],
+                   help="CV strategy for final eval (default: 2 = 10-fold)")
     p.add_argument("--n-folds", type=int, default=10,
                    help="Number of folds")
     p.add_argument("--seed", type=int, default=42)
@@ -107,11 +109,24 @@ def main() -> None:
         print(f"  Fold {fold}/{args.n_folds}")
         print(f"{'='*60}")
 
-        split = split_query_kfold(
-            df, args.label_col, fold=fold, seed=args.seed,
-            n_folds=args.n_folds,
-            non_feature_cols=NON_FEATURE_COLS,
-        )
+        fold_seed = args.seed + fold - 1
+
+        if args.cv == 1:
+            split = split_random_stratified(
+                df, args.label_col, seed=fold_seed,
+                non_feature_cols=NON_FEATURE_COLS,
+            )
+        elif args.cv == 2:
+            split = split_query_holdout(
+                df, args.label_col, seed=fold_seed,
+                non_feature_cols=NON_FEATURE_COLS,
+            )
+        else:  # cv == 4
+            split = split_query_kfold(
+                df, args.label_col, fold=fold, seed=args.seed,
+                n_folds=args.n_folds,
+                non_feature_cols=NON_FEATURE_COLS,
+            )
 
         result = run_pipeline(
             split, df, NON_FEATURE_COLS,
