@@ -1,0 +1,38 @@
+{
+  "data_dir": "data/input/GIV_24Q4/ReLU128_5L",
+  "label_col": "GI_stringent_Type2",
+  "cv": 4,
+  "n_folds": 10,
+  "seed": 42,
+  "epochs": 50,
+  "top_k": 100,
+  "tuning_json": "outputs/tuning/tuning_results.json",
+  "best_tuning_aupr": 0.03241984508556378,
+  "best_params": {
+    "arch": "128-64",
+    "dropout": 0.1,
+    "lr": 0.00016259805345098953,
+    "weight_decay": 0.0013632614414563066,
+    "batch_size": 256,
+    "focal_alpha": 0.5,
+    "focal_gamma": 1.5
+  },
+  "mean_metrics": {
+    "AUROC": 0.786297622858575,
+    "AUPR": 0.012421944658611687,
+    "AP": 0.012791959125305858,
+    "Recall@100": 0.010974627663381397,
+    "Precision@100": 0.07499999906867742,
+    "Accuracy": 0.9982435896628651,
+    "F1": 0.00030211480362537764
+  },
+  "std_metrics": {
+    "AUROC": 0.043887743886986304,
+    "AUPR": 0.007018991164855525,
+    "AP": 0.007210272105004421,
+    "Recall@100": 0.008207559911649792,
+    "Precision@100": 0.061146454007125,
+    "Accuracy": 0.0006228124475831129,
+    "F1": 0.0009553708943106886
+  }
+}
