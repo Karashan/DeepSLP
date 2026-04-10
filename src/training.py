@@ -289,9 +289,9 @@ def train_model(
     weight_decay: float = 1e-4,
     max_grad_norm: float = 1.0,
     epochs: int = 50,
-    patience: int = 15,
+    patience: int = 10,
     scheduler_type: str = "plateau",
-    lr_decay_factor: float = 0.5,
+    lr_decay_factor: float = 0.1,
     lr_patience: int = 5,
     device: torch.device | None = None,
 ) -> dict:
@@ -312,7 +312,7 @@ def train_model(
         scheduler has time to reduce the LR and let the model recover
         before training is terminated.
     lr_decay_factor : float
-        Multiplicative factor for ReduceLROnPlateau (default 0.5).
+        Multiplicative factor for ReduceLROnPlateau (default 0.1).
     lr_patience : int
         Number of epochs with no val-loss improvement before the LR is
         reduced.  Should be **smaller** than ``patience``.
@@ -449,16 +449,16 @@ def run_pipeline(
     non_feature_cols: list[str],
     *,
     hidden_sizes: list[int] = [128, 64, 32],
-    dropout: float = 0.2,
+    dropout: float = 0.3,
     batch_size: int = 64,
     balanced_sampling: bool = False,
     lr: float = 1e-2,
     weight_decay: float = 1e-4,
     max_grad_norm: float = 1.0,
     epochs: int = 50,
-    patience: int = 15,
+    patience: int = 10,
     scheduler_type: str = "plateau",
-    lr_decay_factor: float = 0.5,
+    lr_decay_factor: float = 0.1,
     lr_patience: int = 5,
     focal_alpha: float = 0.75,
     focal_gamma: float = 1.5,

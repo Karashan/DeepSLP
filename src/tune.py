@@ -7,17 +7,17 @@ Usage
                        --n-trials 50 \\
                        --output-dir outputs/tuning
 
-Simplified search space (7 tuneable parameters):
+Simplified search space (6 tuneable parameters):
     arch            – preset hidden-layer configurations
-    dropout         – 0.1 / 0.2 / 0.3 / 0.4
-    lr              – 1e-4 … 1e-2  (log)
-    weight_decay    – 1e-5 … 1e-2  (log)
+    dropout         – 0.2 / 0.3 / 0.4
+    lr              – 1e-2 / 1e-3 / 1e-4
     batch_size      – 64 / 128 / 256
-    focal_alpha     – 0.5 / 0.75
+    focal_alpha     – 0.75 / 0.95
     focal_gamma     – 1.0 / 1.5 / 2.0
 
 Fixed settings:
-    max_grad_norm = 1.0, scheduler = plateau, balanced_sampling = False
+    max_grad_norm = 1.0, weight_decay = 1e-4, scheduler = plateau,
+    balanced_sampling = False
 """
 
 from __future__ import annotations
@@ -62,23 +62,22 @@ def _build_objective(
     def objective(trial: optuna.Trial) -> float:
         # --- sample hyperparameters (simplified) ---
         ARCH_PRESETS = {
-            "64-32":      [64, 32],
-            "128-64":     [128, 64],
             "128-64-32":  [128, 64, 32],
-            "256-128-64": [256, 128, 64],
+            "128-128-128":  [128, 128, 128],
+            "256-128-64": [256, 128, 64]
         }
         arch = trial.suggest_categorical("arch", list(ARCH_PRESETS.keys()))
         hidden_sizes = ARCH_PRESETS[arch]
 
-        dropout = trial.suggest_float("dropout", 0.1, 0.4, step=0.1)
-        lr = trial.suggest_float("lr", 1e-4, 1e-2, log=True)
-        weight_decay = trial.suggest_float("weight_decay", 1e-5, 1e-2, log=True)
+        dropout = trial.suggest_float("dropout", 0.2, 0.4, step=0.1)
+        lr = trial.suggest_categorical("lr", [1e-2, 1e-3, 1e-4])
         batch_size = trial.suggest_categorical("batch_size", [64, 128, 256])
-        focal_alpha = trial.suggest_categorical("focal_alpha", [0.5, 0.75])
+        focal_alpha = trial.suggest_categorical("focal_alpha", [0.75, 0.95])
         focal_gamma = trial.suggest_categorical("focal_gamma", [1.0, 1.5, 2.0])
 
         # Fixed settings
         max_grad_norm = 1.0
+        weight_decay = 1e-4
         scheduler_type = "plateau"
         balanced_sampling = False
 
@@ -119,7 +118,7 @@ def _build_objective(
                 model, train_loader, val_loader,
                 criterion=criterion, lr=lr, weight_decay=weight_decay,
                 max_grad_norm=max_grad_norm, epochs=epochs,
-                patience=15, scheduler_type=scheduler_type, device=device,
+                patience=10, scheduler_type=scheduler_type, device=device,
             )
             model.load_state_dict(history["best_state"])
             model.to(device)
