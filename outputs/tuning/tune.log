@@ -1,0 +1,1660 @@
+nohup: ignoring input
+/home/b-xiangzhang/DeepSLP/src/data.py:26: DtypeWarning: Columns (0: GI_stringent) have mixed types. Specify dtype option on import or set low_memory=False.
+  frames.append(pd.read_csv(f, sep="\t"))
+/home/b-xiangzhang/DeepSLP/src/data.py:44: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df = df.assign(_pair=pair)
+[I 2026-04-10 16:26:21,791] A new study created in memory with name: deepslp_tune
+Loading data from data/input/GIV_24Q4/ReLU128_5L ...
+Loaded 3912779 unique gene pairs
+  0%|          | 0/50 [00:00<?, ?it/s]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                        0%|          | 0/50 [44:05<?, ?it/s]Best trial: 0. Best value: 0.0148906:   0%|          | 0/50 [44:05<?, ?it/s]Best trial: 0. Best value: 0.0148906:   2%|▏         | 1/50 [44:05<36:00:34, 2645.61s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                         Best trial: 0. Best value: 0.0148906:   2%|▏         | 1/50 [1:40:23<36:00:34, 2645.61s/it]Best trial: 1. Best value: 0.0216789:   2%|▏         | 1/50 [1:40:23<36:00:34, 2645.61s/it]Best trial: 1. Best value: 0.0216789:   4%|▍         | 2/50 [1:40:23<41:01:02, 3076.29s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           Best trial: 1. Best value: 0.0216789:   4%|▍         | 2/50 [2:28:07<41:01:02, 3076.29s/it]Best trial: 1. Best value: 0.0216789:   4%|▍         | 2/50 [2:28:07<41:01:02, 3076.29s/it]Best trial: 1. Best value: 0.0216789:   6%|▌         | 3/50 [2:28:07<38:53:51, 2979.40s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+[2026-04-10 16:26:38] Training started
+  Epoch   1/50  loss 0.0042/0.0036  AUPR 0.0213/0.0137  AUROC 0.8505/0.8136  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0039/0.0036  AUPR 0.0172/0.0076  AUROC 0.8603/0.8147  LR 1.00e-02  Best: ep 1
+  Epoch   3/50  loss 0.0039/0.0037  AUPR 0.0252/0.0113  AUROC 0.8668/0.8054  LR 1.00e-02  Best: ep 1
+  Epoch   4/50  loss 0.0038/0.0036  AUPR 0.0269/0.0122  AUROC 0.8659/0.8134  LR 1.00e-02  Best: ep 1
+  Epoch   5/50  loss 0.0038/0.0057  AUPR 0.0251/0.0114  AUROC 0.8640/0.8102  LR 1.00e-02  Best: ep 1
+  Epoch   6/50  loss 0.0038/0.0035  AUPR 0.0278/0.0144  AUROC 0.8692/0.8256  LR 1.00e-02  Best: ep 1
+  Epoch   7/50  loss 0.0038/0.0040  AUPR 0.0204/0.0061  AUROC 0.8482/0.7764  LR 1.00e-02  Best: ep 6
+  Epoch   8/50  loss 0.0038/0.0036  AUPR 0.0307/0.0135  AUROC 0.8692/0.8074  LR 1.00e-02  Best: ep 6
+  Epoch   9/50  loss 0.0038/0.0039  AUPR 0.0301/0.0112  AUROC 0.8747/0.8257  LR 1.00e-02  Best: ep 6
+  Epoch  10/50  loss 0.0038/0.0036  AUPR 0.0318/0.0125  AUROC 0.8696/0.8025  LR 1.00e-02  Best: ep 6
+  Epoch  11/50  loss 0.0038/0.0035  AUPR 0.0335/0.0147  AUROC 0.8764/0.8275  LR 1.00e-02  Best: ep 6
+  Epoch  12/50  loss 0.0038/0.0036  AUPR 0.0343/0.0149  AUROC 0.8735/0.8188  LR 1.00e-02  Best: ep 11
+  Epoch  13/50  loss 0.0038/0.0036  AUPR 0.0276/0.0113  AUROC 0.8763/0.8110  LR 1.00e-02  Best: ep 12
+  Epoch  14/50  loss 0.0038/0.0036  AUPR 0.0333/0.0147  AUROC 0.8767/0.8289  LR 1.00e-02  Best: ep 12
+  Epoch  15/50  loss 0.0037/0.0037  AUPR 0.0318/0.0133  AUROC 0.8741/0.8224  LR 1.00e-02  Best: ep 12
+  Epoch  16/50  loss 0.0038/0.0036  AUPR 0.0301/0.0143  AUROC 0.8770/0.8213  LR 1.00e-02  Best: ep 12
+  Epoch  17/50  loss 0.0038/0.0036  AUPR 0.0339/0.0134  AUROC 0.8788/0.8265  LR 1.00e-03  Best: ep 12
+  Epoch  18/50  loss 0.0036/0.0036  AUPR 0.0358/0.0138  AUROC 0.8839/0.8227  LR 1.00e-03  Best: ep 12
+  Epoch  19/50  loss 0.0036/0.0036  AUPR 0.0354/0.0134  AUROC 0.8812/0.8194  LR 1.00e-03  Best: ep 12
+  Epoch  20/50  loss 0.0036/0.0036  AUPR 0.0363/0.0140  AUROC 0.8846/0.8242  LR 1.00e-03  Best: ep 12
+  Epoch  21/50  loss 0.0036/0.0035  AUPR 0.0376/0.0146  AUROC 0.8852/0.8303  LR 1.00e-03  Best: ep 12
+  Epoch  22/50  loss 0.0036/0.0035  AUPR 0.0373/0.0140  AUROC 0.8859/0.8305  LR 1.00e-03  Best: ep 12
+[2026-04-10 17:10:24] Early stopping at epoch 22 (best val AUPR 0.0149 at ep 12)
+[2026-04-10 17:10:24] Training finished in 2625.2s
+[I 2026-04-10 17:10:27,401] Trial 0 finished with value: 0.014890601670720996 and parameters: {'arch': '128-128-128', 'dropout': 0.30000000000000004, 'lr': 0.01, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 0 with value: 0.014890601670720996.
+[2026-04-10 17:10:43] Training started
+  Epoch   1/50  loss 0.0037/0.0028  AUPR 0.0287/0.0098  AUROC 0.8594/0.8173  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0031/0.0028  AUPR 0.0331/0.0101  AUROC 0.8698/0.8109  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0030/0.0028  AUPR 0.0339/0.0162  AUROC 0.8822/0.8259  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0029/0.0027  AUPR 0.0432/0.0152  AUROC 0.8872/0.8301  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0029/0.0028  AUPR 0.0453/0.0180  AUROC 0.8921/0.8225  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0029/0.0028  AUPR 0.0500/0.0151  AUROC 0.8965/0.8266  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0028/0.0028  AUPR 0.0498/0.0151  AUROC 0.8980/0.8197  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0028/0.0028  AUPR 0.0530/0.0170  AUROC 0.8996/0.8320  LR 1.00e-04  Best: ep 5
+  Epoch   9/50  loss 0.0028/0.0029  AUPR 0.0578/0.0164  AUROC 0.9044/0.8270  LR 1.00e-04  Best: ep 5
+  Epoch  10/50  loss 0.0027/0.0028  AUPR 0.0587/0.0173  AUROC 0.9066/0.8241  LR 1.00e-05  Best: ep 5
+  Epoch  11/50  loss 0.0027/0.0027  AUPR 0.0642/0.0177  AUROC 0.9106/0.8306  LR 1.00e-05  Best: ep 5
+  Epoch  12/50  loss 0.0026/0.0027  AUPR 0.0663/0.0184  AUROC 0.9125/0.8283  LR 1.00e-05  Best: ep 5
+  Epoch  13/50  loss 0.0026/0.0027  AUPR 0.0675/0.0186  AUROC 0.9131/0.8305  LR 1.00e-05  Best: ep 12
+  Epoch  14/50  loss 0.0026/0.0028  AUPR 0.0685/0.0206  AUROC 0.9143/0.8302  LR 1.00e-05  Best: ep 13
+  Epoch  15/50  loss 0.0026/0.0028  AUPR 0.0690/0.0204  AUROC 0.9153/0.8263  LR 1.00e-05  Best: ep 14
+  Epoch  16/50  loss 0.0026/0.0028  AUPR 0.0698/0.0208  AUROC 0.9160/0.8266  LR 1.00e-05  Best: ep 14
+  Epoch  17/50  loss 0.0026/0.0028  AUPR 0.0708/0.0207  AUROC 0.9164/0.8260  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0026/0.0028  AUPR 0.0716/0.0210  AUROC 0.9167/0.8277  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0026/0.0028  AUPR 0.0729/0.0217  AUROC 0.9175/0.8248  LR 1.00e-06  Best: ep 18
+  Epoch  20/50  loss 0.0026/0.0028  AUPR 0.0731/0.0214  AUROC 0.9181/0.8259  LR 1.00e-06  Best: ep 19
+  Epoch  21/50  loss 0.0026/0.0028  AUPR 0.0732/0.0215  AUROC 0.9180/0.8258  LR 1.00e-06  Best: ep 19
+  Epoch  22/50  loss 0.0026/0.0028  AUPR 0.0736/0.0213  AUROC 0.9178/0.8267  LR 1.00e-06  Best: ep 19
+  Epoch  23/50  loss 0.0026/0.0028  AUPR 0.0732/0.0213  AUROC 0.9181/0.8267  LR 1.00e-06  Best: ep 19
+  Epoch  24/50  loss 0.0026/0.0028  AUPR 0.0737/0.0213  AUROC 0.9185/0.8265  LR 1.00e-06  Best: ep 19
+  Epoch  25/50  loss 0.0026/0.0028  AUPR 0.0737/0.0213  AUROC 0.9184/0.8239  LR 1.00e-07  Best: ep 19
+  Epoch  26/50  loss 0.0026/0.0028  AUPR 0.0736/0.0213  AUROC 0.9186/0.8267  LR 1.00e-07  Best: ep 19
+  Epoch  27/50  loss 0.0026/0.0028  AUPR 0.0738/0.0211  AUROC 0.9185/0.8261  LR 1.00e-07  Best: ep 19
+  Epoch  28/50  loss 0.0026/0.0028  AUPR 0.0734/0.0213  AUROC 0.9185/0.8275  LR 1.00e-07  Best: ep 19
+  Epoch  29/50  loss 0.0026/0.0028  AUPR 0.0735/0.0214  AUROC 0.9186/0.8278  LR 1.00e-07  Best: ep 19
+[2026-04-10 18:06:41] Early stopping at epoch 29 (best val AUPR 0.0217 at ep 19)
+[2026-04-10 18:06:41] Training finished in 3358.6s
+[I 2026-04-10 18:06:45,175] Trial 1 finished with value: 0.021678853988825263 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 1 with value: 0.021678853988825263.
+[2026-04-10 18:07:00] Training started
+  Epoch   1/50  loss 0.0022/0.0016  AUPR 0.0235/0.0114  AUROC 0.8422/0.8211  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0018/0.0016  AUPR 0.0307/0.0102  AUROC 0.8736/0.8212  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0017/0.0017  AUPR 0.0285/0.0118  AUROC 0.8759/0.8258  LR 1.00e-03  Best: ep 1
+  Epoch   4/50  loss 0.0017/0.0017  AUPR 0.0379/0.0140  AUROC 0.8803/0.8308  LR 1.00e-03  Best: ep 3
+  Epoch   5/50  loss 0.0016/0.0016  AUPR 0.0403/0.0183  AUROC 0.8844/0.8275  LR 1.00e-03  Best: ep 4
+  Epoch   6/50  loss 0.0016/0.0017  AUPR 0.0418/0.0109  AUROC 0.8885/0.8245  LR 1.00e-03  Best: ep 5
+  Epoch   7/50  loss 0.0016/0.0016  AUPR 0.0450/0.0143  AUROC 0.8917/0.8257  LR 1.00e-03  Best: ep 5
+  Epoch   8/50  loss 0.0016/0.0016  AUPR 0.0430/0.0166  AUROC 0.8907/0.8308  LR 1.00e-03  Best: ep 5
+  Epoch   9/50  loss 0.0016/0.0016  AUPR 0.0446/0.0178  AUROC 0.8915/0.8444  LR 1.00e-03  Best: ep 5
+  Epoch  10/50  loss 0.0016/0.0016  AUPR 0.0482/0.0161  AUROC 0.8930/0.8382  LR 1.00e-03  Best: ep 5
+  Epoch  11/50  loss 0.0016/0.0016  AUPR 0.0478/0.0174  AUROC 0.8979/0.8367  LR 1.00e-03  Best: ep 5
+  Epoch  12/50  loss 0.0016/0.0017  AUPR 0.0509/0.0165  AUROC 0.8989/0.8303  LR 1.00e-03  Best: ep 5
+  Epoch  13/50  loss 0.0015/0.0016  AUPR 0.0518/0.0143  AUROC 0.8984/0.8338  LR 1.00e-03  Best: ep 5
+  Epoch  14/50  loss 0.0015/0.0016  AUPR 0.0518/0.0174  AUROC 0.8997/0.8388  LR 1.00e-03  Best: ep 5
+  Epoch  15/50  loss 0.0015/0.0016  AUPR 0.0520/0.0174  AUROC 0.9021/0.8328  LR 1.00e-04  Best: ep 5
+[2026-04-10 18:54:24] Early stopping at epoch 15 (best val AUPR 0.0183 at ep 5)
+[2026-04-10 18:54:24] Training finished in 2843.4s
+[I 2026-04-10 18:54:29,274] Trial 2 finished with value: 0.018290609721787036 and parameters: {'arch': '128-64-32', 'dropout': 0.2, 'lr': 0.001, 'batch_size': 64, 'focal_alpha': 0.95, 'focal_gamma': 2.0}. Best is trial 1 with value: 0.021678853988825263.
+[2026-04-10 18:54:45] Training started
+  Epoch   1/50  loss 0.0021/0.0017  AUPR 0.0195/0.0063  AUROC 0.8520/0.8023  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0018/0.0017  AUPR 0.0241/0.0111  AUROC 0.8619/0.8230  LR 1.00e-02  Best: ep 1                                                                                           Best trial: 1. Best value: 0.0216789:   6%|▌         | 3/50 [3:24:16<38:53:51, 2979.40s/it]Best trial: 1. Best value: 0.0216789:   6%|▌         | 3/50 [3:24:16<38:53:51, 2979.40s/it]Best trial: 1. Best value: 0.0216789:   8%|▊         | 4/50 [3:24:16<40:02:00, 3133.06s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           
+  Epoch   3/50  loss 0.0018/0.0016  AUPR 0.0279/0.0130  AUROC 0.8665/0.8275  LR 1.00e-02  Best: ep 2
+  Epoch   4/50  loss 0.0018/0.0018  AUPR 0.0248/0.0096  AUROC 0.8703/0.8084  LR 1.00e-02  Best: ep 3
+  Epoch   5/50  loss 0.0018/0.0017  AUPR 0.0315/0.0108  AUROC 0.8720/0.8184  LR 1.00e-02  Best: ep 3
+  Epoch   6/50  loss 0.0018/0.0017  AUPR 0.0344/0.0116  AUROC 0.8777/0.8297  LR 1.00e-02  Best: ep 3
+  Epoch   7/50  loss 0.0018/0.0017  AUPR 0.0279/0.0101  AUROC 0.8791/0.8256  LR 1.00e-02  Best: ep 3
+  Epoch   8/50  loss 0.0017/0.0017  AUPR 0.0326/0.0120  AUROC 0.8780/0.8136  LR 1.00e-02  Best: ep 3
+  Epoch   9/50  loss 0.0017/0.0017  AUPR 0.0356/0.0140  AUROC 0.8835/0.8288  LR 1.00e-03  Best: ep 3
+  Epoch  10/50  loss 0.0017/0.0016  AUPR 0.0387/0.0140  AUROC 0.8878/0.8302  LR 1.00e-03  Best: ep 9
+  Epoch  11/50  loss 0.0016/0.0016  AUPR 0.0392/0.0132  AUROC 0.8891/0.8265  LR 1.00e-03  Best: ep 10
+  Epoch  12/50  loss 0.0016/0.0016  AUPR 0.0398/0.0132  AUROC 0.8903/0.8274  LR 1.00e-03  Best: ep 10
+  Epoch  13/50  loss 0.0016/0.0016  AUPR 0.0402/0.0132  AUROC 0.8903/0.8237  LR 1.00e-03  Best: ep 10
+  Epoch  14/50  loss 0.0016/0.0016  AUPR 0.0406/0.0132  AUROC 0.8911/0.8281  LR 1.00e-03  Best: ep 10
+  Epoch  15/50  loss 0.0016/0.0017  AUPR 0.0402/0.0121  AUROC 0.8916/0.8242  LR 1.00e-03  Best: ep 10
+  Epoch  16/50  loss 0.0016/0.0016  AUPR 0.0411/0.0141  AUROC 0.8925/0.8250  LR 1.00e-03  Best: ep 10
+  Epoch  17/50  loss 0.0016/0.0016  AUPR 0.0411/0.0133  AUROC 0.8925/0.8240  LR 1.00e-03  Best: ep 16
+  Epoch  18/50  loss 0.0016/0.0017  AUPR 0.0407/0.0132  AUROC 0.8931/0.8220  LR 1.00e-03  Best: ep 16
+  Epoch  19/50  loss 0.0016/0.0016  AUPR 0.0417/0.0147  AUROC 0.8939/0.8276  LR 1.00e-03  Best: ep 16
+  Epoch  20/50  loss 0.0016/0.0016  AUPR 0.0421/0.0140  AUROC 0.8941/0.8276  LR 1.00e-04  Best: ep 19
+  Epoch  21/50  loss 0.0016/0.0016  AUPR 0.0421/0.0141  AUROC 0.8943/0.8274  LR 1.00e-04  Best: ep 19
+  Epoch  22/50  loss 0.0016/0.0016  AUPR 0.0419/0.0142  AUROC 0.8947/0.8266  LR 1.00e-04  Best: ep 19
+  Epoch  23/50  loss 0.0016/0.0016  AUPR 0.0421/0.0141  AUROC 0.8947/0.8276  LR 1.00e-04  Best: ep 19
+  Epoch  24/50  loss 0.0016/0.0016  AUPR 0.0425/0.0141  AUROC 0.8946/0.8268  LR 1.00e-04  Best: ep 19
+  Epoch  25/50  loss 0.0016/0.0016  AUPR 0.0425/0.0144  AUROC 0.8949/0.8274  LR 1.00e-04  Best: ep 19
+  Epoch  26/50  loss 0.0016/0.0016  AUPR 0.0424/0.0145  AUROC 0.8950/0.8272  LR 1.00e-05  Best: ep 19
+  Epoch  27/50  loss 0.0016/0.0016  AUPR 0.0424/0.0145  AUROC 0.8950/0.8276  LR 1.00e-05  Best: ep 19
+  Epoch  28/50  loss 0.0016/0.0016  AUPR 0.0424/0.0143  AUROC 0.8951/0.8272  LR 1.00e-05  Best: ep 19
+  Epoch  29/50  loss 0.0016/0.0016  AUPR 0.0424/0.0143  AUROC 0.8951/0.8269  LR 1.00e-05  Best: ep 19
+[2026-04-10 19:50:34] Early stopping at epoch 29 (best val AUPR 0.0147 at ep 19)
+[2026-04-10 19:50:34] Training finished in 3349.6s
+[I 2026-04-10 19:50:37,885] Trial 3 finished with value: 0.014708215103459883 and parameters: {'arch': '128-64-32', 'dropout': 0.4, 'lr': 0.01, 'batch_size': 128, 'focal_alpha': 0.95, 'focal_gamma': 2.0}. Best is trial 1 with value: 0.021678853988825263.
+[2026-04-10 19:50:53] Training started
+  Epoch   1/50  loss 0.0039/0.0030  AUPR 0.0229/0.0109  AUROC 0.8566/0.7983  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0033/0.0028  AUPR 0.0309/0.0113  AUROC 0.8657/0.8179  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0031/0.0028  AUPR 0.0332/0.0130  AUROC 0.8766/0.8157  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0031/0.0028  AUPR 0.0353/0.0149  AUROC 0.8814/0.8248  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0030/0.0028  AUPR 0.0366/0.0124  AUROC 0.8857/0.8163  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0029/0.0028  AUPR 0.0461/0.0144  AUROC 0.8917/0.8169  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0029/0.0028  AUPR 0.0444/0.0166  AUROC 0.8902/0.8228  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0029/0.0028  AUPR 0.0470/0.0108  AUROC 0.8934/0.8186  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0028/0.0027  AUPR 0.0486/0.0176  AUROC 0.8970/0.8326  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0028/0.0027  AUPR 0.0506/0.0163  AUROC 0.8990/0.8282  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0028/0.0028  AUPR 0.0523/0.0154  AUROC 0.9009/0.8211  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0028/0.0027  AUPR 0.0545/0.0151  AUROC 0.9005/0.8305  LR 1.00e-04  Best: ep 9
+  Epoch  13/50  loss 0.0028/0.0027  AUPR 0.0549/0.0172  AUROC 0.9024/0.8336  LR 1.00e-04  Best: ep 9
+  Epoch  14/50  loss 0.0027/0.0027  AUPR 0.0559/0.0177  AUROC 0.9059/0.8314  LR 1.00e-04  Best: ep 9
+  Epoch  15/50  loss 0.0027/0.0028  AUPR 0.0570/0.0192  AUROC 0.9070/0.8292  LR 1.00e-04  Best: ep 14
+  Epoch  16/50  loss 0.0027/0.0028  AUPR 0.0597/0.0197  AUROC 0.9071/0.8355  LR 1.00e-04  Best: ep 15
+  Epoch  17/50  loss 0.0027/0.0029  AUPR 0.0592/0.0196  AUROC 0.9077/0.8229  LR 1.00e-04  Best: ep 16
+  Epoch  18/50  loss 0.0027/0.0027  AUPR 0.0620/0.0176  AUROC 0.9080/0.8292  LR 1.00e-04  Best: ep 16
+  Epoch  19/50  loss 0.0027/0.0027  AUPR 0.0653/0.0179  AUROC 0.9112/0.8296  LR 1.00e-05  Best: ep 16
+  Epoch  20/50  loss 0.0026/0.0027  AUPR 0.0683/0.0208  AUROC 0.9148/0.8342  LR 1.00e-05  Best: ep 16
+  Epoch  21/50  loss 0.0026/0.0027  AUPR 0.0696/0.0216  AUROC 0.9159/0.8349  LR 1.00e-05  Best: ep 20
+  Epoch  22/50  loss 0.0026/0.0027  AUPR 0.0707/0.0213  AUROC 0.9166/0.8317  LR 1.00e-05  Best: ep 21
+  Epoch  23/50  loss 0.0026/0.0027  AUPR 0.0721/0.0203  AUROC 0.9174/0.8307  LR 1.00e-05  Best: ep 21
+  Epoch  24/50  loss 0.0026/0.0027  AUPR 0.0721/0.0216  AUROC 0.9179/0.8322  LR 1.00e-05  Best: ep 21
+  Epoch  25/50  loss 0.0026/0.0027  AUPR 0.0725/0.0215  AUROC 0.9182/0.8316  LR 1.00e-06  Best: ep 21
+  Epoch  26/50  loss 0.0026/0.0028  AUPR 0.0728/0.0211  AUROC 0.9184/0.8314  LR 1.00e-06  Best: ep 21
+  Epoch  27/50  loss 0.0025/0.0028  AUPR 0.0728/0.0214  AUROC 0.9184/0.8304  LR 1.00e-06  Best: ep 21
+  Epoch  28/50  loss 0.0026/0.0028  AUPR 0.0733/0.0215  AUROC 0.9188/0.8299  LR 1.00e-06  Best: ep 21
+  Epoch  29/50  loss 0.0026/0.0028  AUPR 0.0731/0.0217  AUROC 0.9186/0.8305  LR 1.00e-06  Best: ep 21
+  Epoch  30/50  loss 0.0026/0.0028  AUPR 0.0729/0.0214  AUROC 0.9188/0.8318  LR 1.00e-06  Best: ep 29
+  Epoch  31/50  loss 0.0026/0.0027  AUPR 0.0737/0.0213  AUROC 0.9189/0.8314  LR 1.00e-07  Best: ep 29
+  Epoch  32/50  loss 0.0025/0.0027  AUPR 0.0739/0.0211  AUROC 0.9189/0.8331  LR 1.00e-07  Best: ep 29
+  Epoch  33/50  loss 0.0026/0.0028  AUPR 0.0736/0.0215  AUROC 0.9188/0.8306  LR 1.00e-07  Best: ep 29
+  Epoch  34/50  loss 0.0026/0.0027  AUPR 0.0735/0.0211  AUROC 0.9191/0.8318  LR 1.00e-07  Best: ep 29
+  Epoch  35/50  loss 0.0026/0.0028  AUPR 0.0734/0.0217  AUROC 0.9188/0.8312  LR 1.00e-07  Best: ep 29
+  Epoch  36/50  loss 0.0026/0.0028  AUPR 0.0735/0.0215  AUROC 0.9189/0.8316  LR 1.00e-07  Best: ep 29
+  Epoch  37/50  loss 0.0026/0.0028  AUPR 0.0733/0.0222  AUROC 0.9185/0.8314  LR 1.00e-08  Best: ep 29
+  Epoch  38/50  loss 0.0026/0.0027  AUPR 0.0737/0.0210  AUROC 0.9188/0.8314  LR 1.00e-08  Best: ep 37
+  Epoch  39/50  loss 0.0026/0.0027  AUPR 0.0737/0.0209  AUROC 0.9188/0.8301  LR 1.00e-08  Best: ep 37
+  Epoch  40/50  loss 0.0025/0.0027  AUPR 0.0736/0.0214  AUROC 0.9189/0.8327  LR 1.00e-08  Best: ep 37
+  Epoch  41/50  loss 0.0026/0.0028  AUPR 0.0733/0.0218  AUROC 0.9186/0.8320  LR 1.00e-08  Best: ep 37
+  Epoch  42/50  loss 0.0026/0.0027  AUPR 0.0737/0.0214  AUROC 0.9188/0.8321  LR 1.00e-08  Best: ep 37
+  Epoch  43/50  loss 0.0026/0.0028  AUPR 0.0738/0.0216  AUROC 0.9188/0.8313  LR 1.00e-08  Best: ep 37
+  Epoch  44/50  loss 0.0026/0.0028  AUPR 0.0735/0.0217  AUROC 0.9189/0.8311  LR 1.00e-08  Best: ep 37
+  Epoch  45/50  loss 0.0025/0.0028  AUPR 0.0736/0.0215  AUROC 0.9188/0.8310  LR 1.00e-08  Best: ep 37
+  Epoch  46/50  loss 0.0026/0.0028  AUPR 0.0732/0.0220  AUROC 0.9186/0.8322  LR 1.00e-08  Best: ep 37
+  Epoch  47/50  loss 0.0026/0.0027  AUPR 0.0735/0.0217  AUROC 0.9188/0.8325  LR 1.00e-08  Best: ep 37
+[2026-04-10 21:21:26] Early stopping at epoch 47 (best val AUPR 0.0222 at ep 37)
+[2026-04-10 21:21:26] Training finished in 5433.4s
+[I 2026-04-10 21:21:30,051] Trial 4 finished with value: 0.022157879142144368 and parameters: {'arch': '256-128-64', 'dropout': 0.4, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 4 with value: 0.022157879142144368.Best trial: 1. Best value: 0.0216789:   8%|▊         | 4/50 [4:55:08<40:02:00, 3133.06s/it]Best trial: 4. Best value: 0.0221579:   8%|▊         | 4/50 [4:55:08<40:02:00, 3133.06s/it]Best trial: 4. Best value: 0.0221579:  10%|█         | 5/50 [4:55:08<49:37:00, 3969.34s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           Best trial: 4. Best value: 0.0221579:  10%|█         | 5/50 [5:25:45<49:37:00, 3969.34s/it]Best trial: 4. Best value: 0.0221579:  10%|█         | 5/50 [5:25:45<49:37:00, 3969.34s/it]Best trial: 4. Best value: 0.0221579:  12%|█▏        | 6/50 [5:25:45<39:39:15, 3244.44s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           Best trial: 4. Best value: 0.0221579:  12%|█▏        | 6/50 [5:48:35<39:39:15, 3244.44s/it]Best trial: 4. Best value: 0.0221579:  12%|█▏        | 6/50 [5:48:35<39:39:15, 3244.44s/it]Best trial: 4. Best value: 0.0221579:  14%|█▍        | 7/50 [5:48:35<31:25:54, 2631.49s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+[2026-04-10 21:21:45] Training started
+  Epoch   1/50  loss 0.0048/0.0037  AUPR 0.0253/0.0094  AUROC 0.8575/0.8043  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0041/0.0037  AUPR 0.0348/0.0143  AUROC 0.8718/0.8177  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0039/0.0036  AUPR 0.0372/0.0170  AUROC 0.8777/0.8240  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0039/0.0035  AUPR 0.0397/0.0192  AUROC 0.8802/0.8391  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0038/0.0035  AUPR 0.0398/0.0198  AUROC 0.8795/0.8383  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0038/0.0036  AUPR 0.0450/0.0206  AUROC 0.8866/0.8248  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0037/0.0035  AUPR 0.0473/0.0139  AUROC 0.8873/0.8324  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0037/0.0037  AUPR 0.0502/0.0196  AUROC 0.8905/0.8246  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0037/0.0036  AUPR 0.0513/0.0190  AUROC 0.8928/0.8368  LR 1.00e-04  Best: ep 6
+  Epoch  10/50  loss 0.0037/0.0035  AUPR 0.0537/0.0171  AUROC 0.8948/0.8311  LR 1.00e-05  Best: ep 6
+  Epoch  11/50  loss 0.0036/0.0035  AUPR 0.0588/0.0179  AUROC 0.8996/0.8377  LR 1.00e-05  Best: ep 6
+  Epoch  12/50  loss 0.0035/0.0035  AUPR 0.0593/0.0179  AUROC 0.9010/0.8381  LR 1.00e-05  Best: ep 6
+  Epoch  13/50  loss 0.0035/0.0035  AUPR 0.0611/0.0188  AUROC 0.9017/0.8385  LR 1.00e-05  Best: ep 6
+  Epoch  14/50  loss 0.0035/0.0035  AUPR 0.0617/0.0182  AUROC 0.9022/0.8415  LR 1.00e-05  Best: ep 6
+  Epoch  15/50  loss 0.0035/0.0035  AUPR 0.0627/0.0185  AUROC 0.9028/0.8385  LR 1.00e-05  Best: ep 6
+  Epoch  16/50  loss 0.0035/0.0035  AUPR 0.0628/0.0183  AUROC 0.9026/0.8411  LR 1.00e-06  Best: ep 6
+[2026-04-10 21:52:03] Early stopping at epoch 16 (best val AUPR 0.0206 at ep 6)
+[2026-04-10 21:52:03] Training finished in 1818.5s
+[I 2026-04-10 21:52:07,320] Trial 5 finished with value: 0.020563479693898754 and parameters: {'arch': '128-64-32', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-10 21:52:22] Training started
+  Epoch   1/50  loss 0.0024/0.0017  AUPR 0.0215/0.0103  AUROC 0.8607/0.8163  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0019/0.0017  AUPR 0.0282/0.0125  AUROC 0.8721/0.8261  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0018/0.0016  AUPR 0.0345/0.0140  AUROC 0.8763/0.8364  LR 1.00e-03  Best: ep 2
+  Epoch   4/50  loss 0.0017/0.0016  AUPR 0.0392/0.0144  AUROC 0.8810/0.8271  LR 1.00e-03  Best: ep 3
+  Epoch   5/50  loss 0.0016/0.0016  AUPR 0.0396/0.0145  AUROC 0.8914/0.8364  LR 1.00e-03  Best: ep 4
+  Epoch   6/50  loss 0.0016/0.0016  AUPR 0.0419/0.0161  AUROC 0.8897/0.8288  LR 1.00e-03  Best: ep 5
+  Epoch   7/50  loss 0.0016/0.0018  AUPR 0.0438/0.0187  AUROC 0.8969/0.8234  LR 1.00e-03  Best: ep 6
+  Epoch   8/50  loss 0.0015/0.0017  AUPR 0.0465/0.0206  AUROC 0.8993/0.8318  LR 1.00e-03  Best: ep 7
+  Epoch   9/50  loss 0.0015/0.0017  AUPR 0.0444/0.0162  AUROC 0.8998/0.8186  LR 1.00e-03  Best: ep 8
+  Epoch  10/50  loss 0.0015/0.0017  AUPR 0.0512/0.0140  AUROC 0.9038/0.8208  LR 1.00e-03  Best: ep 8
+  Epoch  11/50  loss 0.0015/0.0016  AUPR 0.0537/0.0168  AUROC 0.9078/0.8301  LR 1.00e-04  Best: ep 8
+  Epoch  12/50  loss 0.0014/0.0016  AUPR 0.0605/0.0172  AUROC 0.9130/0.8314  LR 1.00e-04  Best: ep 8
+  Epoch  13/50  loss 0.0014/0.0016  AUPR 0.0619/0.0176  AUROC 0.9148/0.8329  LR 1.00e-04  Best: ep 8
+  Epoch  14/50  loss 0.0014/0.0017  AUPR 0.0621/0.0167  AUROC 0.9161/0.8314  LR 1.00e-04  Best: ep 8
+  Epoch  15/50  loss 0.0014/0.0016  AUPR 0.0630/0.0167  AUROC 0.9172/0.8309  LR 1.00e-04  Best: ep 8
+  Epoch  16/50  loss 0.0014/0.0016  AUPR 0.0641/0.0170  AUROC 0.9182/0.8336  LR 1.00e-04  Best: ep 8
+  Epoch  17/50  loss 0.0014/0.0016  AUPR 0.0646/0.0169  AUROC 0.9196/0.8295  LR 1.00e-05  Best: ep 8
+  Epoch  18/50  loss 0.0014/0.0017  AUPR 0.0648/0.0171  AUROC 0.9197/0.8305  LR 1.00e-05  Best: ep 8
+[2026-04-10 22:14:54] Early stopping at epoch 18 (best val AUPR 0.0206 at ep 8)
+[2026-04-10 22:14:54] Training finished in 1351.4s
+[I 2026-04-10 22:14:56,863] Trial 6 finished with value: 0.020590153276258027 and parameters: {'arch': '128-64-32', 'dropout': 0.2, 'lr': 0.001, 'batch_size': 256, 'focal_alpha': 0.95, 'focal_gamma': 2.0}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-10 22:15:12] Training started
+  Epoch   1/50  loss 0.0026/0.0022  AUPR 0.0243/0.0109  AUROC 0.8416/0.8019  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0023/0.0022  AUPR 0.0303/0.0089  AUROC 0.8664/0.8139  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0022/0.0022  AUPR 0.0361/0.0112  AUROC 0.8695/0.8220  LR 1.00e-04  Best: ep 1
+  Epoch   4/50  loss 0.0022/0.0021  AUPR 0.0357/0.0097  AUROC 0.8744/0.8276  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0021/0.0021  AUPR 0.0383/0.0133  AUROC 0.8812/0.8256  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0021/0.0021  AUPR 0.0408/0.0105  AUROC 0.8867/0.8265  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0021/0.0021  AUPR 0.0426/0.0134  AUROC 0.8866/0.8337  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0021/0.0021  AUPR 0.0438/0.0132  AUROC 0.8873/0.8280  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0021/0.0021  AUPR 0.0445/0.0122  AUROC 0.8904/0.8209  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0021/0.0022  AUPR 0.0432/0.0087  AUROC 0.8912/0.8076  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0021/0.0020  AUPR 0.0484/0.0136  AUROC 0.8946/0.8336  LR 1.00e-04  Best: ep 7
+  Epoch  12/50  loss 0.0021/0.0021  AUPR 0.0490/0.0131  AUROC 0.8963/0.8303  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0020/0.0021  AUPR 0.0470/0.0129  AUROC 0.8927/0.8347  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0020/0.0021  AUPR 0.0476/0.0142  AUROC 0.8956/0.8272  LR 1.00e-04  Best: ep 11
+  Epoch  15/50  loss 0.0020/0.0021  AUPR 0.0502/0.0142  AUROC 0.8970/0.8259  LR 1.00e-04  Best: ep 14
+  Epoch  16/50  loss 0.0020/0.0021  AUPR 0.0479/0.0143  AUROC 0.8989/0.8217  LR 1.00e-04  Best: ep 14
+  Epoch  17/50  loss 0.0020/0.0021  AUPR 0.0471/0.0137  AUROC 0.8999/0.8233  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0020/0.0021  AUPR 0.0562/0.0147  AUROC 0.9036/0.8240  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0020/0.0021  AUPR 0.0574/0.0149  AUROC 0.9044/0.8280  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0020/0.0021  AUPR 0.0574/0.0144  AUROC 0.9054/0.8255  LR 1.00e-05  Best: ep 19
+  Epoch  21/50  loss 0.0020/0.0021  AUPR 0.0582/0.0148  AUROC 0.9057/0.8268  LR 1.00e-05  Best: ep 19
+  Epoch  22/50  loss 0.0020/0.0021  AUPR 0.0590/0.0152  AUROC 0.9060/0.8274  LR 1.00e-05  Best: ep 19
+  Epoch  23/50  loss 0.0019/0.0021  AUPR 0.0598/0.0149  AUROC 0.9065/0.8242  LR 1.00e-06  Best: ep 22
+  Epoch  24/50  loss 0.0019/0.0021  AUPR 0.0600/0.0155  AUROC 0.9065/0.8229  LR 1.00e-06  Best: ep 22
+  Epoch  25/50  loss 0.0019/0.0021  AUPR 0.0600/0.0150  AUROC 0.9066/0.8245  LR 1.00e-06  Best: ep 24
+  Epoch  26/50  loss 0.0019/0.0021  AUPR 0.0600/0.0152  AUROC 0.9068/0.8245  LR 1.00e-06  Best: ep 24
+  Epoch  27/50  loss 0.0019/0.0021  AUPR 0.0604/0.0161  AUROC 0.9072/0.8231  LR 1.00e-06  Best: ep 24
+  Epoch  28/50  loss 0.0019/0.0021  AUPR 0.0598/0.0142  AUROC 0.9065/0.8262  LR 1.00e-06  Best: ep 27
+  Epoch  29/50  loss 0.0019/0.0021  AUPR 0.0604/0.0156  AUROC 0.9073/0.8235  LR 1.00e-07  Best: ep 27
+  Epoch  30/50  loss 0.0019/0.0021  AUPR 0.0601/0.0145  AUROC 0.9067/0.8247  LR 1.00e-07  Best: ep 27
+  Epoch  31/50  loss 0.0019/0.0021  AUPR 0.0602/0.0151  AUROC 0.9069/0.8247  LR 1.00e-07  Best: ep 27
+  Epoch  32/50  loss 0.0019/0.0021  AUPR 0.0603/0.0151  AUROC 0.9069/0.8253  LR 1.00e-07  Best: ep 27
+  Epoch  33/50  loss 0.0019/0.0021  AUPR 0.0601/0.0151  AUROC 0.9069/0.8251  LR 1.00e-07  Best: ep 27
+  Epoch  34/50  loss 0.0019/0.0021  AUPR 0.0602/0.0149  AUROC 0.9069/0.8250  LR 1.00e-07  Best: ep 27
+  Epoch  35/50  loss 0.0019/0.0021  AUPR 0.0602/0.0158  AUROC 0.9071/0.8246  LR 1.00e-08  Best: ep 27
+  Epoch  36/50  loss 0.0019/0.0021  AUPR 0.0604/0.0155  AUROC 0.9071/0.8251  LR 1.00e-08  Best: ep 27
+  Epoch  37/50  loss 0.0019/0.0021  AUPR 0.0605/0.0158  AUROC 0.9071/0.8252  LR 1.00e-08  Best: ep 27
+[2026-04-10 23:26:53] Early stopping at epoch 37 (best val AUPR 0.0161 at ep 27)
+[2026-04-10 23:26:53] Training finished in 4301.2s                                                                                           Best trial: 4. Best value: 0.0221579:  14%|█▍        | 7/50 [7:00:35<31:25:54, 2631.49s/it]Best trial: 4. Best value: 0.0221579:  14%|█▍        | 7/50 [7:00:35<31:25:54, 2631.49s/it]Best trial: 4. Best value: 0.0221579:  16%|█▌        | 8/50 [7:00:35<36:58:20, 3169.05s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           Best trial: 4. Best value: 0.0221579:  16%|█▌        | 8/50 [7:53:40<36:58:20, 3169.05s/it]Best trial: 4. Best value: 0.0221579:  16%|█▌        | 8/50 [7:53:40<36:58:20, 3169.05s/it]Best trial: 4. Best value: 0.0221579:  18%|█▊        | 9/50 [7:53:40<36:09:00, 3174.16s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                           Best trial: 4. Best value: 0.0221579:  18%|█▊        | 9/50 [8:26:45<36:09:00, 3174.16s/it]Best trial: 4. Best value: 0.0221579:  18%|█▊        | 9/50 [8:26:45<36:09:00, 3174.16s/it]Best trial: 4. Best value: 0.0221579:  20%|██        | 10/50 [8:26:45<31:11:21, 2807.03s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+[I 2026-04-10 23:26:56,934] Trial 7 finished with value: 0.016050402784507846 and parameters: {'arch': '128-128-128', 'dropout': 0.4, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 2.0}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-10 23:27:12] Training started
+  Epoch   1/50  loss 0.0040/0.0020  AUPR 0.0216/0.0075  AUROC 0.8519/0.7925  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0025/0.0019  AUPR 0.0255/0.0090  AUROC 0.8658/0.8031  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0023/0.0017  AUPR 0.0304/0.0141  AUROC 0.8705/0.8269  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0021/0.0017  AUPR 0.0317/0.0114  AUROC 0.8737/0.8275  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0021/0.0017  AUPR 0.0343/0.0123  AUROC 0.8826/0.8242  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0020/0.0017  AUPR 0.0349/0.0125  AUROC 0.8823/0.8228  LR 1.00e-04  Best: ep 3
+  Epoch   7/50  loss 0.0019/0.0017  AUPR 0.0395/0.0137  AUROC 0.8860/0.8364  LR 1.00e-04  Best: ep 3
+  Epoch   8/50  loss 0.0019/0.0016  AUPR 0.0411/0.0157  AUROC 0.8887/0.8415  LR 1.00e-04  Best: ep 3
+  Epoch   9/50  loss 0.0019/0.0016  AUPR 0.0418/0.0130  AUROC 0.8912/0.8316  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0018/0.0016  AUPR 0.0440/0.0154  AUROC 0.8940/0.8336  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0018/0.0017  AUPR 0.0420/0.0141  AUROC 0.8951/0.8282  LR 1.00e-04  Best: ep 8
+  Epoch  12/50  loss 0.0018/0.0016  AUPR 0.0477/0.0153  AUROC 0.8968/0.8393  LR 1.00e-04  Best: ep 8
+  Epoch  13/50  loss 0.0018/0.0017  AUPR 0.0465/0.0126  AUROC 0.8970/0.8162  LR 1.00e-04  Best: ep 8
+  Epoch  14/50  loss 0.0017/0.0017  AUPR 0.0468/0.0137  AUROC 0.8981/0.8266  LR 1.00e-04  Best: ep 8
+  Epoch  15/50  loss 0.0017/0.0016  AUPR 0.0498/0.0147  AUROC 0.9019/0.8283  LR 1.00e-04  Best: ep 8
+  Epoch  16/50  loss 0.0017/0.0016  AUPR 0.0492/0.0182  AUROC 0.9021/0.8325  LR 1.00e-04  Best: ep 8
+  Epoch  17/50  loss 0.0017/0.0016  AUPR 0.0522/0.0152  AUROC 0.9030/0.8330  LR 1.00e-04  Best: ep 16
+  Epoch  18/50  loss 0.0016/0.0017  AUPR 0.0505/0.0187  AUROC 0.9036/0.8267  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0016/0.0016  AUPR 0.0589/0.0179  AUROC 0.9089/0.8339  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0016/0.0017  AUPR 0.0603/0.0175  AUROC 0.9103/0.8326  LR 1.00e-05  Best: ep 18
+  Epoch  21/50  loss 0.0016/0.0016  AUPR 0.0608/0.0168  AUROC 0.9110/0.8343  LR 1.00e-05  Best: ep 18
+  Epoch  22/50  loss 0.0016/0.0016  AUPR 0.0608/0.0169  AUROC 0.9112/0.8356  LR 1.00e-05  Best: ep 18
+  Epoch  23/50  loss 0.0016/0.0016  AUPR 0.0613/0.0170  AUROC 0.9115/0.8366  LR 1.00e-05  Best: ep 18
+  Epoch  24/50  loss 0.0016/0.0016  AUPR 0.0620/0.0164  AUROC 0.9120/0.8356  LR 1.00e-06  Best: ep 18
+  Epoch  25/50  loss 0.0016/0.0016  AUPR 0.0623/0.0168  AUROC 0.9124/0.8352  LR 1.00e-06  Best: ep 18
+  Epoch  26/50  loss 0.0016/0.0016  AUPR 0.0623/0.0170  AUROC 0.9123/0.8351  LR 1.00e-06  Best: ep 18
+  Epoch  27/50  loss 0.0016/0.0016  AUPR 0.0624/0.0170  AUROC 0.9124/0.8353  LR 1.00e-06  Best: ep 18
+  Epoch  28/50  loss 0.0016/0.0016  AUPR 0.0623/0.0169  AUROC 0.9124/0.8364  LR 1.00e-06  Best: ep 18
+[2026-04-11 00:19:58] Early stopping at epoch 28 (best val AUPR 0.0187 at ep 18)
+[2026-04-11 00:19:58] Training finished in 3166.4s
+[I 2026-04-11 00:20:02,319] Trial 8 finished with value: 0.018660663616874306 and parameters: {'arch': '128-64-32', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.95, 'focal_gamma': 2.0}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-11 00:20:18] Training started
+  Epoch   1/50  loss 0.0044/0.0025  AUPR 0.0271/0.0143  AUROC 0.8616/0.8161  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0031/0.0025  AUPR 0.0283/0.0126  AUROC 0.8692/0.8086  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0024  AUPR 0.0330/0.0113  AUROC 0.8742/0.8071  LR 1.00e-04  Best: ep 1
+  Epoch   4/50  loss 0.0027/0.0024  AUPR 0.0346/0.0094  AUROC 0.8790/0.8154  LR 1.00e-04  Best: ep 1
+  Epoch   5/50  loss 0.0026/0.0023  AUPR 0.0341/0.0131  AUROC 0.8840/0.8235  LR 1.00e-04  Best: ep 1
+  Epoch   6/50  loss 0.0026/0.0022  AUPR 0.0361/0.0167  AUROC 0.8791/0.8382  LR 1.00e-04  Best: ep 1
+  Epoch   7/50  loss 0.0025/0.0022  AUPR 0.0404/0.0150  AUROC 0.8887/0.8363  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0025/0.0023  AUPR 0.0450/0.0152  AUROC 0.8902/0.8263  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0025/0.0022  AUPR 0.0447/0.0158  AUROC 0.8936/0.8407  LR 1.00e-04  Best: ep 6
+  Epoch  10/50  loss 0.0024/0.0022  AUPR 0.0447/0.0133  AUROC 0.8968/0.8302  LR 1.00e-04  Best: ep 6
+  Epoch  11/50  loss 0.0024/0.0022  AUPR 0.0450/0.0155  AUROC 0.8948/0.8301  LR 1.00e-04  Best: ep 6
+  Epoch  12/50  loss 0.0024/0.0022  AUPR 0.0484/0.0156  AUROC 0.8996/0.8376  LR 1.00e-04  Best: ep 6
+  Epoch  13/50  loss 0.0023/0.0022  AUPR 0.0512/0.0176  AUROC 0.9025/0.8283  LR 1.00e-04  Best: ep 6
+  Epoch  14/50  loss 0.0023/0.0024  AUPR 0.0518/0.0192  AUROC 0.8995/0.8073  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0023/0.0022  AUPR 0.0545/0.0197  AUROC 0.9055/0.8360  LR 1.00e-05  Best: ep 14
+  Epoch  16/50  loss 0.0022/0.0022  AUPR 0.0570/0.0209  AUROC 0.9088/0.8325  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0022/0.0022  AUPR 0.0585/0.0205  AUROC 0.9105/0.8372  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0022/0.0022  AUPR 0.0593/0.0207  AUROC 0.9113/0.8358  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0022/0.0022  AUPR 0.0599/0.0207  AUROC 0.9117/0.8366  LR 1.00e-05  Best: ep 16
+  Epoch  20/50  loss 0.0022/0.0022  AUPR 0.0603/0.0201  AUROC 0.9125/0.8356  LR 1.00e-05  Best: ep 16
+  Epoch  21/50  loss 0.0022/0.0022  AUPR 0.0607/0.0198  AUROC 0.9129/0.8343  LR 1.00e-06  Best: ep 16
+  Epoch  22/50  loss 0.0022/0.0022  AUPR 0.0611/0.0199  AUROC 0.9131/0.8347  LR 1.00e-06  Best: ep 16
+  Epoch  23/50  loss 0.0022/0.0022  AUPR 0.0613/0.0200  AUROC 0.9132/0.8353  LR 1.00e-06  Best: ep 16
+  Epoch  24/50  loss 0.0022/0.0022  AUPR 0.0610/0.0203  AUROC 0.9131/0.8355  LR 1.00e-06  Best: ep 16
+  Epoch  25/50  loss 0.0022/0.0022  AUPR 0.0613/0.0203  AUROC 0.9133/0.8349  LR 1.00e-06  Best: ep 16
+  Epoch  26/50  loss 0.0022/0.0022  AUPR 0.0613/0.0205  AUROC 0.9134/0.8358  LR 1.00e-06  Best: ep 16
+[2026-04-11 00:53:04] Early stopping at epoch 26 (best val AUPR 0.0209 at ep 16)
+[2026-04-11 00:53:04] Training finished in 1966.5s
+[I 2026-04-11 00:53:07,270] Trial 9 finished with value: 0.02093335034315044 and parameters: {'arch': '128-64-32', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.95, 'focal_gamma': 1.5}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-11 00:53:22] Training started
+  Epoch   1/50  loss 0.0034/0.0029  AUPR 0.0230/0.0060  AUROC 0.8597/0.7887  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0027  AUPR 0.0326/0.0100  AUROC 0.8680/0.8226  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0027  AUPR 0.0301/0.0106  AUROC 0.8705/0.8242  LR 1.00e-03  Best: ep 2
+  Epoch   4/50  loss 0.0028/0.0027  AUPR 0.0385/0.0136  AUROC 0.8816/0.8254  LR 1.00e-03  Best: ep 3
+  Epoch   5/50  loss 0.0028/0.0029  AUPR 0.0391/0.0135  AUROC 0.8809/0.8102  LR 1.00e-03  Best: ep 4
+  Epoch   6/50  loss 0.0028/0.0029  AUPR 0.0379/0.0111  AUROC 0.8845/0.8084  LR 1.00e-03  Best: ep 4
+  Epoch   7/50  loss 0.0028/0.0027  AUPR 0.0472/0.0127  AUROC 0.8867/0.8316  LR 1.00e-03  Best: ep 4
+  Epoch   8/50  loss 0.0028/0.0027  AUPR 0.0468/0.0147  AUROC 0.8896/0.8327  LR 1.00e-03  Best: ep 4
+  Epoch   9/50  loss 0.0028/0.0028  AUPR 0.0480/0.0128  AUROC 0.8894/0.8199  LR 1.00e-03  Best: ep 8
+  Epoch  10/50  loss 0.0027/0.0027  AUPR 0.0505/0.0175  AUROC 0.8925/0.8323  LR 1.00e-03  Best: ep 8
+  Epoch  11/50  loss 0.0027/0.0028  AUPR 0.0500/0.0128  AUROC 0.8940/0.8304  LR 1.00e-03  Best: ep 10
+  Epoch  12/50  loss 0.0027/0.0027  AUPR 0.0499/0.0138  AUROC 0.8936/0.8285  LR 1.00e-03  Best: ep 10
+  Epoch  13/50  loss 0.0027/0.0028  AUPR 0.0521/0.0165  AUROC 0.8957/0.8274  LR 1.00e-03  Best: ep 10
+  Epoch  14/50  loss 0.0027/0.0027  AUPR 0.0486/0.0123  AUROC 0.8945/0.8224  LR 1.00e-03  Best: ep 10
+  Epoch  15/50  loss 0.0027/0.0028  AUPR 0.0510/0.0115  AUROC 0.8978/0.8180  LR 1.00e-03  Best: ep 10
+  Epoch  16/50  loss 0.0027/0.0027  AUPR 0.0566/0.0133  AUROC 0.8982/0.8320  LR 1.00e-04  Best: ep 10                                                                                            Best trial: 4. Best value: 0.0221579:  20%|██        | 10/50 [9:30:44<31:11:21, 2807.03s/it]Best trial: 4. Best value: 0.0221579:  20%|██        | 10/50 [9:30:44<31:11:21, 2807.03s/it]Best trial: 4. Best value: 0.0221579:  22%|██▏       | 11/50 [9:30:44<33:49:52, 3122.89s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 4. Best value: 0.0221579:  22%|██▏       | 11/50 [10:20:26<33:49:52, 3122.89s/it]Best trial: 4. Best value: 0.0221579:  22%|██▏       | 11/50 [10:20:26<33:49:52, 3122.89s/it]Best trial: 4. Best value: 0.0221579:  24%|██▍       | 12/50 [10:20:26<32:30:38, 3079.95s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                             Best trial: 4. Best value: 0.0221579:  24%|██▍       | 12/50 [10:54:55<32:30:38, 3079.95s/it]Best trial: 12. Best value: 0.0272472:  24%|██▍       | 12/50 [10:54:55<32:30:38, 3079.95s/it]Best trial: 12. Best value: 0.0272472:  26%|██▌       | 13/50 [10:54:55<28:30:27, 2773.71s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  17/50  loss 0.0026/0.0027  AUPR 0.0585/0.0151  AUROC 0.9043/0.8286  LR 1.00e-04  Best: ep 10
+  Epoch  18/50  loss 0.0026/0.0028  AUPR 0.0599/0.0151  AUROC 0.9053/0.8307  LR 1.00e-04  Best: ep 10
+  Epoch  19/50  loss 0.0026/0.0028  AUPR 0.0608/0.0141  AUROC 0.9068/0.8259  LR 1.00e-04  Best: ep 10
+  Epoch  20/50  loss 0.0026/0.0028  AUPR 0.0611/0.0136  AUROC 0.9074/0.8220  LR 1.00e-04  Best: ep 10
+[2026-04-11 01:57:01] Early stopping at epoch 20 (best val AUPR 0.0175 at ep 10)
+[2026-04-11 01:57:01] Training finished in 3818.4s
+[I 2026-04-11 01:57:06,349] Trial 10 finished with value: 0.017526350162176574 and parameters: {'arch': '256-128-64', 'dropout': 0.4, 'lr': 0.001, 'batch_size': 64, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-11 01:57:22] Training started
+  Epoch   1/50  loss 0.0039/0.0030  AUPR 0.0234/0.0065  AUROC 0.8516/0.8025  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0033/0.0029  AUPR 0.0238/0.0093  AUROC 0.8678/0.8121  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0031/0.0028  AUPR 0.0353/0.0147  AUROC 0.8740/0.8193  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0031/0.0027  AUPR 0.0386/0.0102  AUROC 0.8811/0.8257  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0030/0.0028  AUPR 0.0361/0.0107  AUROC 0.8836/0.8204  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0029/0.0027  AUPR 0.0429/0.0155  AUROC 0.8881/0.8313  LR 1.00e-04  Best: ep 3
+  Epoch   7/50  loss 0.0029/0.0028  AUPR 0.0413/0.0172  AUROC 0.8898/0.8225  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0029/0.0028  AUPR 0.0487/0.0150  AUROC 0.8947/0.8304  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0028/0.0027  AUPR 0.0497/0.0167  AUROC 0.8958/0.8246  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0028/0.0027  AUPR 0.0500/0.0174  AUROC 0.8945/0.8301  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0028/0.0028  AUPR 0.0537/0.0155  AUROC 0.8999/0.8209  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0028/0.0028  AUPR 0.0536/0.0183  AUROC 0.9014/0.8193  LR 1.00e-05  Best: ep 10
+  Epoch  13/50  loss 0.0027/0.0028  AUPR 0.0577/0.0176  AUROC 0.9058/0.8275  LR 1.00e-05  Best: ep 12
+  Epoch  14/50  loss 0.0027/0.0027  AUPR 0.0596/0.0170  AUROC 0.9071/0.8290  LR 1.00e-05  Best: ep 12
+  Epoch  15/50  loss 0.0027/0.0028  AUPR 0.0602/0.0177  AUROC 0.9083/0.8291  LR 1.00e-05  Best: ep 12
+  Epoch  16/50  loss 0.0027/0.0028  AUPR 0.0613/0.0184  AUROC 0.9089/0.8274  LR 1.00e-05  Best: ep 12
+  Epoch  17/50  loss 0.0027/0.0027  AUPR 0.0621/0.0179  AUROC 0.9090/0.8292  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0027/0.0028  AUPR 0.0627/0.0180  AUROC 0.9103/0.8290  LR 1.00e-06  Best: ep 16
+  Epoch  19/50  loss 0.0027/0.0028  AUPR 0.0627/0.0184  AUROC 0.9103/0.8283  LR 1.00e-06  Best: ep 16
+  Epoch  20/50  loss 0.0027/0.0028  AUPR 0.0630/0.0181  AUROC 0.9104/0.8270  LR 1.00e-06  Best: ep 16
+  Epoch  21/50  loss 0.0027/0.0028  AUPR 0.0632/0.0184  AUROC 0.9103/0.8267  LR 1.00e-06  Best: ep 16
+  Epoch  22/50  loss 0.0027/0.0028  AUPR 0.0633/0.0179  AUROC 0.9107/0.8279  LR 1.00e-06  Best: ep 16
+  Epoch  23/50  loss 0.0027/0.0028  AUPR 0.0635/0.0181  AUROC 0.9106/0.8272  LR 1.00e-06  Best: ep 16
+  Epoch  24/50  loss 0.0027/0.0028  AUPR 0.0637/0.0179  AUROC 0.9107/0.8274  LR 1.00e-07  Best: ep 16
+  Epoch  25/50  loss 0.0027/0.0028  AUPR 0.0634/0.0180  AUROC 0.9108/0.8266  LR 1.00e-07  Best: ep 16
+  Epoch  26/50  loss 0.0027/0.0028  AUPR 0.0639/0.0180  AUROC 0.9108/0.8271  LR 1.00e-07  Best: ep 16
+[2026-04-11 02:46:44] Early stopping at epoch 26 (best val AUPR 0.0184 at ep 16)
+[2026-04-11 02:46:44] Training finished in 2962.5s
+[I 2026-04-11 02:46:48,085] Trial 11 finished with value: 0.018439377515411377 and parameters: {'arch': '256-128-64', 'dropout': 0.4, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 4 with value: 0.022157879142144368.
+[2026-04-11 02:47:03] Training started
+  Epoch   1/50  loss 0.0035/0.0028  AUPR 0.0253/0.0097  AUROC 0.8623/0.8238  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0028  AUPR 0.0379/0.0128  AUROC 0.8771/0.8207  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0028  AUPR 0.0400/0.0171  AUROC 0.8839/0.8082  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0028/0.0027  AUPR 0.0475/0.0207  AUROC 0.8918/0.8294  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0028/0.0027  AUPR 0.0524/0.0195  AUROC 0.8960/0.8225  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0027/0.0027  AUPR 0.0552/0.0171  AUROC 0.9000/0.8297  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0027/0.0028  AUPR 0.0575/0.0197  AUROC 0.9046/0.8311  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0027/0.0027  AUPR 0.0627/0.0272  AUROC 0.9088/0.8239  LR 1.00e-04  Best: ep 4
+  Epoch   9/50  loss 0.0027/0.0028  AUPR 0.0602/0.0205  AUROC 0.9045/0.8208  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0026/0.0028  AUPR 0.0685/0.0242  AUROC 0.9151/0.8319  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0026/0.0027  AUPR 0.0702/0.0200  AUROC 0.9134/0.8225  LR 1.00e-05  Best: ep 8
+  Epoch  12/50  loss 0.0025/0.0027  AUPR 0.0793/0.0238  AUROC 0.9211/0.8338  LR 1.00e-05  Best: ep 8
+  Epoch  13/50  loss 0.0025/0.0027  AUPR 0.0817/0.0252  AUROC 0.9234/0.8322  LR 1.00e-05  Best: ep 8
+  Epoch  14/50  loss 0.0025/0.0027  AUPR 0.0828/0.0260  AUROC 0.9250/0.8307  LR 1.00e-05  Best: ep 8
+  Epoch  15/50  loss 0.0025/0.0027  AUPR 0.0850/0.0264  AUROC 0.9253/0.8337  LR 1.00e-05  Best: ep 8
+  Epoch  16/50  loss 0.0025/0.0027  AUPR 0.0856/0.0270  AUROC 0.9270/0.8310  LR 1.00e-05  Best: ep 8
+  Epoch  17/50  loss 0.0025/0.0027  AUPR 0.0867/0.0266  AUROC 0.9276/0.8292  LR 1.00e-06  Best: ep 8
+  Epoch  18/50  loss 0.0025/0.0028  AUPR 0.0869/0.0271  AUROC 0.9272/0.8305  LR 1.00e-06  Best: ep 8
+[2026-04-11 03:21:13] Early stopping at epoch 18 (best val AUPR 0.0272 at ep 8)
+[2026-04-11 03:21:13] Training finished in 2049.8s
+[I 2026-04-11 03:21:17,121] Trial 12 finished with value: 0.02724718563770166 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 12 with value: 0.02724718563770166.
+[2026-04-11 03:21:32] Training started
+  Epoch   1/50  loss 0.0035/0.0029  AUPR 0.0284/0.0072  AUROC 0.8670/0.8018  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0027  AUPR 0.0353/0.0139  AUROC 0.8672/0.8245  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0027  AUPR 0.0430/0.0169  AUROC 0.8848/0.8310  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0028/0.0027  AUPR 0.0425/0.0131  AUROC 0.8898/0.8255  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0028/0.0028  AUPR 0.0468/0.0138  AUROC 0.8866/0.8261  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0028/0.0028  AUPR 0.0516/0.0187  AUROC 0.8992/0.8319  LR 1.00e-04  Best: ep 3
+  Epoch   7/50  loss 0.0027/0.0027  AUPR 0.0544/0.0205  AUROC 0.8976/0.8370  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0027/0.0028  AUPR 0.0566/0.0194  AUROC 0.9046/0.8290  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0027/0.0029  AUPR 0.0575/0.0190  AUROC 0.9072/0.8247  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0027/0.0028  AUPR 0.0634/0.0182  AUROC 0.9067/0.8322  LR 1.00e-05  Best: ep 7
+  Epoch  11/50  loss 0.0026/0.0027  AUPR 0.0694/0.0216  AUROC 0.9154/0.8323  LR 1.00e-05  Best: ep 7
+  Epoch  12/50  loss 0.0026/0.0027  AUPR 0.0718/0.0208  AUROC 0.9161/0.8352  LR 1.00e-05  Best: ep 11
+  Epoch  13/50  loss 0.0026/0.0027  AUPR 0.0738/0.0216  AUROC 0.9177/0.8338  LR 1.00e-05  Best: ep 11
+  Epoch  14/50  loss 0.0025/0.0028  AUPR 0.0748/0.0220  AUROC 0.9169/0.8331  LR 1.00e-05  Best: ep 11
+  Epoch  15/50  loss 0.0025/0.0027  AUPR 0.0768/0.0222  AUROC 0.9183/0.8366  LR 1.00e-05  Best: ep 14
+  Epoch  16/50  loss 0.0025/0.0028  AUPR 0.0778/0.0220  AUROC 0.9193/0.8336  LR 1.00e-06  Best: ep 15
+  Epoch  17/50  loss 0.0025/0.0028  AUPR 0.0781/0.0224  AUROC 0.9202/0.8309  LR 1.00e-06  Best: ep 15
+  Epoch  18/50  loss 0.0025/0.0028  AUPR 0.0787/0.0220  AUROC 0.9196/0.8343  LR 1.00e-06  Best: ep 17
+  Epoch  19/50  loss 0.0025/0.0027  AUPR 0.0788/0.0221  AUROC 0.9203/0.8338  LR 1.00e-06  Best: ep 17
+  Epoch  20/50  loss 0.0025/0.0027  AUPR 0.0787/0.0224  AUROC 0.9204/0.8338  LR 1.00e-06  Best: ep 17
+  Epoch  21/50  loss 0.0025/0.0027  AUPR 0.0791/0.0223  AUROC 0.9203/0.8337  LR 1.00e-06  Best: ep 20                                                                                              Best trial: 12. Best value: 0.0272472:  26%|██▌       | 13/50 [12:46:21<28:30:27, 2773.71s/it]Best trial: 12. Best value: 0.0272472:  26%|██▌       | 13/50 [12:46:21<28:30:27, 2773.71s/it]Best trial: 12. Best value: 0.0272472:  28%|██▊       | 14/50 [12:46:21<39:33:15, 3955.43s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                              Best trial: 12. Best value: 0.0272472:  28%|██▊       | 14/50 [13:43:41<39:33:15, 3955.43s/it]Best trial: 12. Best value: 0.0272472:  28%|██▊       | 14/50 [13:43:41<39:33:15, 3955.43s/it]Best trial: 12. Best value: 0.0272472:  30%|███       | 15/50 [13:43:41<36:56:44, 3800.14s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                              Best trial: 12. Best value: 0.0272472:  30%|███       | 15/50 [14:25:25<36:56:44, 3800.14s/it]Best trial: 12. Best value: 0.0272472:  30%|███       | 15/50 [14:25:25<36:56:44, 3800.14s/it]Best trial: 12. Best value: 0.0272472:  32%|███▏      | 16/50 [14:25:25<32:12:18, 3409.94s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  22/50  loss 0.0025/0.0027  AUPR 0.0794/0.0223  AUROC 0.9202/0.8360  LR 1.00e-07  Best: ep 20
+  Epoch  23/50  loss 0.0025/0.0027  AUPR 0.0790/0.0225  AUROC 0.9207/0.8336  LR 1.00e-07  Best: ep 20
+  Epoch  24/50  loss 0.0025/0.0027  AUPR 0.0793/0.0225  AUROC 0.9211/0.8343  LR 1.00e-07  Best: ep 23
+  Epoch  25/50  loss 0.0025/0.0027  AUPR 0.0790/0.0226  AUROC 0.9201/0.8363  LR 1.00e-07  Best: ep 23
+  Epoch  26/50  loss 0.0025/0.0028  AUPR 0.0790/0.0225  AUROC 0.9205/0.8351  LR 1.00e-07  Best: ep 25
+  Epoch  27/50  loss 0.0025/0.0027  AUPR 0.0794/0.0222  AUROC 0.9208/0.8337  LR 1.00e-07  Best: ep 25
+  Epoch  28/50  loss 0.0025/0.0028  AUPR 0.0794/0.0224  AUROC 0.9204/0.8341  LR 1.00e-08  Best: ep 25
+  Epoch  29/50  loss 0.0025/0.0027  AUPR 0.0791/0.0223  AUROC 0.9202/0.8368  LR 1.00e-08  Best: ep 25
+  Epoch  30/50  loss 0.0025/0.0028  AUPR 0.0794/0.0223  AUROC 0.9203/0.8356  LR 1.00e-08  Best: ep 25
+  Epoch  31/50  loss 0.0025/0.0027  AUPR 0.0793/0.0222  AUROC 0.9206/0.8361  LR 1.00e-08  Best: ep 25
+  Epoch  32/50  loss 0.0025/0.0027  AUPR 0.0792/0.0222  AUROC 0.9210/0.8331  LR 1.00e-08  Best: ep 25
+  Epoch  33/50  loss 0.0025/0.0028  AUPR 0.0791/0.0225  AUROC 0.9209/0.8339  LR 1.00e-08  Best: ep 25
+  Epoch  34/50  loss 0.0025/0.0028  AUPR 0.0795/0.0224  AUROC 0.9205/0.8347  LR 1.00e-08  Best: ep 25
+  Epoch  35/50  loss 0.0025/0.0028  AUPR 0.0795/0.0222  AUROC 0.9208/0.8319  LR 1.00e-08  Best: ep 25
+[2026-04-11 05:12:37] Early stopping at epoch 35 (best val AUPR 0.0226 at ep 25)
+[2026-04-11 05:12:37] Training finished in 6665.4s
+[I 2026-04-11 05:12:43,197] Trial 13 finished with value: 0.022594411648020864 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 64, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 12 with value: 0.02724718563770166.
+[2026-04-11 05:12:59] Training started
+  Epoch   1/50  loss 0.0035/0.0028  AUPR 0.0300/0.0139  AUROC 0.8678/0.8054  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0027  AUPR 0.0361/0.0197  AUROC 0.8789/0.8294  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0028  AUPR 0.0420/0.0141  AUROC 0.8872/0.8145  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0028/0.0028  AUPR 0.0456/0.0139  AUROC 0.8907/0.8205  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0028/0.0027  AUPR 0.0518/0.0164  AUROC 0.8973/0.8319  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0028/0.0027  AUPR 0.0550/0.0136  AUROC 0.9003/0.8198  LR 1.00e-04  Best: ep 2
+  Epoch   7/50  loss 0.0027/0.0028  AUPR 0.0538/0.0204  AUROC 0.9019/0.8201  LR 1.00e-04  Best: ep 2
+  Epoch   8/50  loss 0.0027/0.0030  AUPR 0.0589/0.0207  AUROC 0.9026/0.8380  LR 1.00e-05  Best: ep 7
+  Epoch   9/50  loss 0.0026/0.0027  AUPR 0.0665/0.0189  AUROC 0.9115/0.8293  LR 1.00e-05  Best: ep 8
+  Epoch  10/50  loss 0.0026/0.0027  AUPR 0.0687/0.0176  AUROC 0.9130/0.8274  LR 1.00e-05  Best: ep 8
+  Epoch  11/50  loss 0.0026/0.0027  AUPR 0.0713/0.0184  AUROC 0.9139/0.8315  LR 1.00e-05  Best: ep 8
+  Epoch  12/50  loss 0.0026/0.0027  AUPR 0.0719/0.0188  AUROC 0.9152/0.8290  LR 1.00e-05  Best: ep 8
+  Epoch  13/50  loss 0.0026/0.0027  AUPR 0.0736/0.0183  AUROC 0.9156/0.8302  LR 1.00e-05  Best: ep 8
+  Epoch  14/50  loss 0.0026/0.0028  AUPR 0.0744/0.0182  AUROC 0.9167/0.8289  LR 1.00e-06  Best: ep 8
+  Epoch  15/50  loss 0.0026/0.0027  AUPR 0.0748/0.0182  AUROC 0.9168/0.8301  LR 1.00e-06  Best: ep 8
+  Epoch  16/50  loss 0.0026/0.0028  AUPR 0.0744/0.0187  AUROC 0.9166/0.8326  LR 1.00e-06  Best: ep 8
+  Epoch  17/50  loss 0.0026/0.0028  AUPR 0.0751/0.0184  AUROC 0.9170/0.8296  LR 1.00e-06  Best: ep 8
+  Epoch  18/50  loss 0.0026/0.0027  AUPR 0.0751/0.0185  AUROC 0.9174/0.8306  LR 1.00e-06  Best: ep 8
+[2026-04-11 06:09:58] Early stopping at epoch 18 (best val AUPR 0.0207 at ep 8)
+[2026-04-11 06:09:58] Training finished in 3419.4s
+[I 2026-04-11 06:10:03,448] Trial 14 finished with value: 0.020671637389869477 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 64, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 12 with value: 0.02724718563770166.
+[2026-04-11 06:10:18] Training started
+  Epoch   1/50  loss 0.0032/0.0028  AUPR 0.0223/0.0134  AUROC 0.8534/0.8240  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0028  AUPR 0.0307/0.0106  AUROC 0.8717/0.8110  LR 1.00e-02  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0027  AUPR 0.0303/0.0163  AUROC 0.8743/0.8172  LR 1.00e-02  Best: ep 1
+  Epoch   4/50  loss 0.0029/0.0028  AUPR 0.0357/0.0131  AUROC 0.8767/0.8103  LR 1.00e-02  Best: ep 3
+  Epoch   5/50  loss 0.0029/0.0028  AUPR 0.0350/0.0134  AUROC 0.8820/0.8150  LR 1.00e-02  Best: ep 3
+  Epoch   6/50  loss 0.0029/0.0028  AUPR 0.0334/0.0107  AUROC 0.8802/0.8199  LR 1.00e-02  Best: ep 3
+  Epoch   7/50  loss 0.0029/0.0027  AUPR 0.0367/0.0101  AUROC 0.8785/0.8224  LR 1.00e-02  Best: ep 3
+  Epoch   8/50  loss 0.0029/0.0027  AUPR 0.0390/0.0118  AUROC 0.8853/0.8293  LR 1.00e-02  Best: ep 3
+  Epoch   9/50  loss 0.0028/0.0027  AUPR 0.0406/0.0160  AUROC 0.8812/0.8192  LR 1.00e-02  Best: ep 3
+  Epoch  10/50  loss 0.0028/0.0030  AUPR 0.0373/0.0127  AUROC 0.8835/0.8066  LR 1.00e-02  Best: ep 3
+  Epoch  11/50  loss 0.0028/0.0028  AUPR 0.0409/0.0109  AUROC 0.8859/0.8204  LR 1.00e-02  Best: ep 3
+  Epoch  12/50  loss 0.0028/0.0027  AUPR 0.0398/0.0111  AUROC 0.8893/0.8267  LR 1.00e-02  Best: ep 3
+  Epoch  13/50  loss 0.0028/0.0028  AUPR 0.0421/0.0121  AUROC 0.8813/0.8042  LR 1.00e-02  Best: ep 3
+[2026-04-11 06:51:42] Early stopping at epoch 13 (best val AUPR 0.0163 at ep 3)
+[2026-04-11 06:51:42] Training finished in 2483.2s
+[I 2026-04-11 06:51:47,249] Trial 15 finished with value: 0.01633273161685653 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.01, 'batch_size': 64, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 12 with value: 0.02724718563770166.
+[2026-04-11 06:52:02] Training started
+  Epoch   1/50  loss 0.0034/0.0028  AUPR 0.0278/0.0077  AUROC 0.8563/0.8118  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0028  AUPR 0.0372/0.0136  AUROC 0.8758/0.8143  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0028  AUPR 0.0371/0.0116  AUROC 0.8801/0.8082  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0029/0.0027  AUPR 0.0430/0.0121  AUROC 0.8901/0.8259  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0028/0.0028  AUPR 0.0501/0.0165  AUROC 0.8946/0.8210  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0028/0.0027  AUPR 0.0519/0.0149  AUROC 0.8981/0.8287  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0027/0.0028  AUPR 0.0447/0.0179  AUROC 0.8985/0.8211  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0027/0.0028  AUPR 0.0546/0.0175  AUROC 0.9006/0.8191  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0027/0.0027  AUPR 0.0568/0.0179  AUROC 0.9067/0.8325  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0027/0.0028  AUPR 0.0614/0.0192  AUROC 0.9071/0.8314  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0027/0.0029  AUPR 0.0659/0.0199  AUROC 0.9115/0.8243  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0026/0.0028  AUPR 0.0640/0.0226  AUROC 0.9124/0.8358  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0026/0.0028  AUPR 0.0621/0.0205  AUROC 0.9135/0.8311  LR 1.00e-04  Best: ep 12
+  Epoch  14/50  loss 0.0026/0.0027  AUPR 0.0687/0.0195  AUROC 0.9150/0.8283  LR 1.00e-04  Best: ep 12
+  Epoch  15/50  loss 0.0026/0.0027  AUPR 0.0759/0.0206  AUROC 0.9186/0.8198  LR 1.00e-04  Best: ep 12
+  Epoch  16/50  loss 0.0026/0.0027  AUPR 0.0710/0.0206  AUROC 0.9183/0.8219  LR 1.00e-04  Best: ep 12
+  Epoch  17/50  loss 0.0026/0.0027  AUPR 0.0765/0.0256  AUROC 0.9189/0.8272  LR 1.00e-04  Best: ep 12
+  Epoch  18/50  loss 0.0025/0.0028  AUPR 0.0758/0.0256  AUROC 0.9182/0.8378  LR 1.00e-04  Best: ep 17
+  Epoch  19/50  loss 0.0025/0.0027  AUPR 0.0807/0.0241  AUROC 0.9228/0.8309  LR 1.00e-04  Best: ep 17
+  Epoch  20/50  loss 0.0025/0.0027  AUPR 0.0841/0.0253  AUROC 0.9252/0.8335  LR 1.00e-05  Best: ep 17
+  Epoch  21/50  loss 0.0025/0.0027  AUPR 0.0925/0.0255  AUROC 0.9290/0.8342  LR 1.00e-05  Best: ep 17
+  Epoch  22/50  loss 0.0024/0.0027  AUPR 0.0958/0.0261  AUROC 0.9307/0.8342  LR 1.00e-05  Best: ep 17
+  Epoch  23/50  loss 0.0024/0.0027  AUPR 0.0974/0.0262  AUROC 0.9321/0.8323  LR 1.00e-05  Best: ep 22
+  Epoch  24/50  loss 0.0024/0.0028  AUPR 0.0989/0.0262  AUROC 0.9321/0.8335  LR 1.00e-05  Best: ep 23                                                                                              Best trial: 12. Best value: 0.0272472:  32%|███▏      | 16/50 [16:33:08<32:12:18, 3409.94s/it]Best trial: 12. Best value: 0.0272472:  32%|███▏      | 16/50 [16:33:08<32:12:18, 3409.94s/it]Best trial: 12. Best value: 0.0272472:  34%|███▍      | 17/50 [16:33:08<42:58:53, 4688.89s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                              Best trial: 12. Best value: 0.0272472:  34%|███▍      | 17/50 [17:12:46<42:58:53, 4688.89s/it]Best trial: 17. Best value: 0.0296237:  34%|███▍      | 17/50 [17:12:46<42:58:53, 4688.89s/it]Best trial: 17. Best value: 0.0296237:  36%|███▌      | 18/50 [17:12:46<35:30:20, 3994.39s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  25/50  loss 0.0024/0.0028  AUPR 0.0990/0.0267  AUROC 0.9322/0.8338  LR 1.00e-05  Best: ep 23
+  Epoch  26/50  loss 0.0024/0.0028  AUPR 0.1018/0.0258  AUROC 0.9329/0.8321  LR 1.00e-06  Best: ep 25
+  Epoch  27/50  loss 0.0024/0.0028  AUPR 0.1011/0.0264  AUROC 0.9331/0.8327  LR 1.00e-06  Best: ep 25
+  Epoch  28/50  loss 0.0024/0.0028  AUPR 0.1020/0.0266  AUROC 0.9335/0.8326  LR 1.00e-06  Best: ep 25
+  Epoch  29/50  loss 0.0024/0.0027  AUPR 0.1017/0.0263  AUROC 0.9338/0.8309  LR 1.00e-06  Best: ep 25
+  Epoch  30/50  loss 0.0024/0.0028  AUPR 0.1019/0.0270  AUROC 0.9338/0.8314  LR 1.00e-06  Best: ep 25
+  Epoch  31/50  loss 0.0024/0.0028  AUPR 0.1021/0.0266  AUROC 0.9339/0.8331  LR 1.00e-06  Best: ep 30
+  Epoch  32/50  loss 0.0024/0.0028  AUPR 0.1024/0.0266  AUROC 0.9337/0.8295  LR 1.00e-07  Best: ep 30
+  Epoch  33/50  loss 0.0024/0.0028  AUPR 0.1025/0.0263  AUROC 0.9336/0.8329  LR 1.00e-07  Best: ep 30
+  Epoch  34/50  loss 0.0024/0.0028  AUPR 0.1025/0.0264  AUROC 0.9335/0.8335  LR 1.00e-07  Best: ep 30
+  Epoch  35/50  loss 0.0024/0.0028  AUPR 0.1020/0.0263  AUROC 0.9334/0.8329  LR 1.00e-07  Best: ep 30
+  Epoch  36/50  loss 0.0024/0.0028  AUPR 0.1018/0.0260  AUROC 0.9337/0.8339  LR 1.00e-07  Best: ep 30
+  Epoch  37/50  loss 0.0024/0.0028  AUPR 0.1026/0.0262  AUROC 0.9335/0.8332  LR 1.00e-07  Best: ep 30
+  Epoch  38/50  loss 0.0024/0.0028  AUPR 0.1020/0.0268  AUROC 0.9339/0.8328  LR 1.00e-08  Best: ep 30
+  Epoch  39/50  loss 0.0024/0.0028  AUPR 0.1023/0.0266  AUROC 0.9337/0.8323  LR 1.00e-08  Best: ep 30
+  Epoch  40/50  loss 0.0024/0.0028  AUPR 0.1018/0.0265  AUROC 0.9337/0.8337  LR 1.00e-08  Best: ep 30
+[2026-04-11 08:59:25] Early stopping at epoch 40 (best val AUPR 0.0270 at ep 30)
+[2026-04-11 08:59:25] Training finished in 7642.5s
+[I 2026-04-11 08:59:30,431] Trial 16 finished with value: 0.026952732550327065 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 64, 'focal_alpha': 0.75, 'focal_gamma': 1.5}. Best is trial 12 with value: 0.02724718563770166.
+[2026-04-11 08:59:46] Training started
+  Epoch   1/50  loss 0.0042/0.0037  AUPR 0.0307/0.0075  AUROC 0.8620/0.8057  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0387/0.0146  AUROC 0.8763/0.8224  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0037  AUPR 0.0412/0.0134  AUROC 0.8863/0.8195  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0493/0.0181  AUROC 0.8948/0.8274  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0536/0.0166  AUROC 0.8993/0.8223  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0035  AUPR 0.0576/0.0162  AUROC 0.9036/0.8311  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0035/0.0036  AUPR 0.0573/0.0201  AUROC 0.9046/0.8218  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0035/0.0036  AUPR 0.0639/0.0188  AUROC 0.9093/0.8220  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0687/0.0205  AUROC 0.9120/0.8363  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0034/0.0035  AUPR 0.0668/0.0213  AUROC 0.9165/0.8348  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0034/0.0037  AUPR 0.0727/0.0217  AUROC 0.9153/0.8194  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0036  AUPR 0.0741/0.0205  AUROC 0.9204/0.8296  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0034/0.0035  AUPR 0.0774/0.0246  AUROC 0.9202/0.8387  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0037  AUPR 0.0701/0.0213  AUROC 0.9217/0.8149  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0033/0.0038  AUPR 0.0879/0.0290  AUROC 0.9232/0.8254  LR 1.00e-04  Best: ep 13
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0928/0.0198  AUROC 0.9255/0.8182  LR 1.00e-04  Best: ep 15
+  Epoch  17/50  loss 0.0033/0.0037  AUPR 0.0872/0.0227  AUROC 0.9261/0.8139  LR 1.00e-04  Best: ep 15
+  Epoch  18/50  loss 0.0032/0.0040  AUPR 0.0926/0.0220  AUROC 0.9302/0.8099  LR 1.00e-04  Best: ep 15
+  Epoch  19/50  loss 0.0032/0.0037  AUPR 0.0978/0.0259  AUROC 0.9306/0.8279  LR 1.00e-05  Best: ep 15
+  Epoch  20/50  loss 0.0031/0.0036  AUPR 0.1091/0.0279  AUROC 0.9362/0.8267  LR 1.00e-05  Best: ep 15
+  Epoch  21/50  loss 0.0031/0.0037  AUPR 0.1119/0.0296  AUROC 0.9375/0.8275  LR 1.00e-05  Best: ep 15
+  Epoch  22/50  loss 0.0031/0.0036  AUPR 0.1175/0.0280  AUROC 0.9387/0.8283  LR 1.00e-05  Best: ep 21
+  Epoch  23/50  loss 0.0031/0.0037  AUPR 0.1175/0.0280  AUROC 0.9395/0.8264  LR 1.00e-05  Best: ep 21
+  Epoch  24/50  loss 0.0031/0.0036  AUPR 0.1199/0.0266  AUROC 0.9400/0.8270  LR 1.00e-05  Best: ep 21
+  Epoch  25/50  loss 0.0031/0.0037  AUPR 0.1229/0.0279  AUROC 0.9410/0.8238  LR 1.00e-06  Best: ep 21
+  Epoch  26/50  loss 0.0030/0.0037  AUPR 0.1230/0.0279  AUROC 0.9411/0.8246  LR 1.00e-06  Best: ep 21
+  Epoch  27/50  loss 0.0030/0.0037  AUPR 0.1231/0.0278  AUROC 0.9410/0.8250  LR 1.00e-06  Best: ep 21
+  Epoch  28/50  loss 0.0030/0.0037  AUPR 0.1225/0.0281  AUROC 0.9409/0.8271  LR 1.00e-06  Best: ep 21
+  Epoch  29/50  loss 0.0030/0.0037  AUPR 0.1230/0.0276  AUROC 0.9410/0.8257  LR 1.00e-06  Best: ep 21
+  Epoch  30/50  loss 0.0030/0.0037  AUPR 0.1242/0.0271  AUROC 0.9414/0.8236  LR 1.00e-06  Best: ep 21
+  Epoch  31/50  loss 0.0030/0.0037  AUPR 0.1239/0.0276  AUROC 0.9413/0.8248  LR 1.00e-07  Best: ep 21
+[2026-04-11 09:39:05] Early stopping at epoch 31 (best val AUPR 0.0296 at ep 21)
+[2026-04-11 09:39:05] Training finished in 2359.2s
+[I 2026-04-11 09:39:08,092] Trial 17 finished with value: 0.02962366227635792 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 17 with value: 0.02962366227635792.
+[2026-04-11 09:39:24] Training started
+  Epoch   1/50  loss 0.0040/0.0036  AUPR 0.0251/0.0101  AUROC 0.8639/0.8224  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0037/0.0036  AUPR 0.0302/0.0165  AUROC 0.8705/0.8320  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0036/0.0037  AUPR 0.0400/0.0164  AUROC 0.8700/0.8303  LR 1.00e-03  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0037  AUPR 0.0450/0.0162  AUROC 0.8879/0.8340  LR 1.00e-03  Best: ep 2
+  Epoch   5/50  loss 0.0035/0.0036  AUPR 0.0470/0.0156  AUROC 0.8903/0.8086  LR 1.00e-03  Best: ep 2
+  Epoch   6/50  loss 0.0035/0.0036  AUPR 0.0494/0.0140  AUROC 0.8920/0.8189  LR 1.00e-03  Best: ep 2
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0527/0.0159  AUROC 0.9000/0.8366  LR 1.00e-03  Best: ep 2
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0537/0.0174  AUROC 0.9008/0.8284  LR 1.00e-03  Best: ep 2
+  Epoch   9/50  loss 0.0034/0.0037  AUPR 0.0562/0.0168  AUROC 0.9050/0.8208  LR 1.00e-03  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0038  AUPR 0.0570/0.0193  AUROC 0.9066/0.8278  LR 1.00e-03  Best: ep 8
+  Epoch  11/50  loss 0.0034/0.0036  AUPR 0.0582/0.0188  AUROC 0.9110/0.8268  LR 1.00e-03  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0612/0.0173  AUROC 0.9085/0.8390  LR 1.00e-03  Best: ep 10
+  Epoch  13/50  loss 0.0033/0.0039  AUPR 0.0640/0.0205  AUROC 0.9092/0.8325  LR 1.00e-03  Best: ep 10
+  Epoch  14/50  loss 0.0033/0.0036  AUPR 0.0696/0.0174  AUROC 0.9149/0.8309  LR 1.00e-03  Best: ep 13
+  Epoch  15/50  loss 0.0033/0.0040  AUPR 0.0673/0.0177  AUROC 0.9157/0.8285  LR 1.00e-03  Best: ep 13
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0714/0.0122  AUROC 0.9155/0.8380  LR 1.00e-03  Best: ep 13
+  Epoch  17/50  loss 0.0033/0.0035  AUPR 0.0722/0.0136  AUROC 0.9176/0.8361  LR 1.00e-03  Best: ep 13
+  Epoch  18/50  loss 0.0033/0.0038  AUPR 0.0754/0.0149  AUROC 0.9185/0.8310  LR 1.00e-04  Best: ep 13
+  Epoch  19/50  loss 0.0032/0.0039  AUPR 0.0863/0.0188  AUROC 0.9251/0.8316  LR 1.00e-04  Best: ep 13
+  Epoch  20/50  loss 0.0031/0.0038  AUPR 0.0914/0.0197  AUROC 0.9280/0.8318  LR 1.00e-04  Best: ep 13
+  Epoch  21/50  loss 0.0031/0.0037  AUPR 0.0924/0.0199  AUROC 0.9283/0.8354  LR 1.00e-04  Best: ep 13
+  Epoch  22/50  loss 0.0031/0.0037  AUPR 0.0950/0.0207  AUROC 0.9291/0.8385  LR 1.00e-04  Best: ep 13
+  Epoch  23/50  loss 0.0031/0.0037  AUPR 0.0961/0.0192  AUROC 0.9300/0.8338  LR 1.00e-04  Best: ep 22
+  Epoch  24/50  loss 0.0031/0.0037  AUPR 0.0979/0.0186  AUROC 0.9301/0.8348  LR 1.00e-05  Best: ep 22
+  Epoch  25/50  loss 0.0031/0.0037  AUPR 0.0979/0.0186  AUROC 0.9307/0.8345  LR 1.00e-05  Best: ep 22
+  Epoch  26/50  loss 0.0031/0.0037  AUPR 0.0984/0.0185  AUROC 0.9307/0.8339  LR 1.00e-05  Best: ep 22                                                                                              Best trial: 17. Best value: 0.0296237:  36%|███▌      | 18/50 [17:53:56<35:30:20, 3994.39s/it]Best trial: 17. Best value: 0.0296237:  36%|███▌      | 18/50 [17:53:56<35:30:20, 3994.39s/it]Best trial: 17. Best value: 0.0296237:  38%|███▊      | 19/50 [17:53:56<30:27:14, 3536.59s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                              Best trial: 17. Best value: 0.0296237:  38%|███▊      | 19/50 [18:23:20<30:27:14, 3536.59s/it]Best trial: 17. Best value: 0.0296237:  38%|███▊      | 19/50 [18:23:20<30:27:14, 3536.59s/it]Best trial: 17. Best value: 0.0296237:  40%|████      | 20/50 [18:23:20<25:02:13, 3004.46s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                              Best trial: 17. Best value: 0.0296237:  40%|████      | 20/50 [18:53:52<25:02:13, 3004.46s/it]Best trial: 17. Best value: 0.0296237:  40%|████      | 20/50 [18:53:52<25:02:13, 3004.46s/it]Best trial: 17. Best value: 0.0296237:  42%|████▏     | 21/50 [18:53:52<21:22:00, 2652.43s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  27/50  loss 0.0031/0.0037  AUPR 0.0991/0.0193  AUROC 0.9307/0.8343  LR 1.00e-05  Best: ep 22
+  Epoch  28/50  loss 0.0031/0.0037  AUPR 0.0990/0.0196  AUROC 0.9309/0.8356  LR 1.00e-05  Best: ep 22
+  Epoch  29/50  loss 0.0031/0.0037  AUPR 0.0993/0.0196  AUROC 0.9311/0.8356  LR 1.00e-05  Best: ep 22
+  Epoch  30/50  loss 0.0031/0.0037  AUPR 0.1001/0.0194  AUROC 0.9312/0.8344  LR 1.00e-06  Best: ep 22
+  Epoch  31/50  loss 0.0031/0.0036  AUPR 0.0996/0.0196  AUROC 0.9312/0.8352  LR 1.00e-06  Best: ep 22
+  Epoch  32/50  loss 0.0031/0.0037  AUPR 0.0998/0.0196  AUROC 0.9311/0.8355  LR 1.00e-06  Best: ep 22
+[2026-04-11 10:20:15] Early stopping at epoch 32 (best val AUPR 0.0207 at ep 22)
+[2026-04-11 10:20:15] Training finished in 2451.5s
+[I 2026-04-11 10:20:18,229] Trial 18 finished with value: 0.020713910259685473 and parameters: {'arch': '128-128-128', 'dropout': 0.2, 'lr': 0.001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 17 with value: 0.02962366227635792.
+[2026-04-11 10:20:33] Training started
+  Epoch   1/50  loss 0.0040/0.0036  AUPR 0.0276/0.0109  AUROC 0.8624/0.8196  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0333/0.0144  AUROC 0.8723/0.8238  LR 1.00e-02  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0035  AUPR 0.0368/0.0192  AUROC 0.8789/0.8366  LR 1.00e-02  Best: ep 2
+  Epoch   4/50  loss 0.0037/0.0036  AUPR 0.0425/0.0165  AUROC 0.8834/0.8313  LR 1.00e-02  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0037  AUPR 0.0494/0.0151  AUROC 0.8871/0.8335  LR 1.00e-02  Best: ep 3
+  Epoch   6/50  loss 0.0036/0.0035  AUPR 0.0512/0.0219  AUROC 0.8902/0.8258  LR 1.00e-02  Best: ep 3
+  Epoch   7/50  loss 0.0036/0.0036  AUPR 0.0513/0.0132  AUROC 0.8942/0.8189  LR 1.00e-02  Best: ep 6
+  Epoch   8/50  loss 0.0036/0.0036  AUPR 0.0573/0.0168  AUROC 0.8953/0.8357  LR 1.00e-02  Best: ep 6
+  Epoch   9/50  loss 0.0035/0.0037  AUPR 0.0578/0.0213  AUROC 0.8980/0.8205  LR 1.00e-03  Best: ep 6
+  Epoch  10/50  loss 0.0034/0.0037  AUPR 0.0658/0.0209  AUROC 0.9043/0.8285  LR 1.00e-03  Best: ep 6
+  Epoch  11/50  loss 0.0034/0.0037  AUPR 0.0684/0.0213  AUROC 0.9064/0.8319  LR 1.00e-03  Best: ep 6
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0711/0.0203  AUROC 0.9079/0.8331  LR 1.00e-03  Best: ep 6
+  Epoch  13/50  loss 0.0033/0.0038  AUPR 0.0731/0.0220  AUROC 0.9092/0.8286  LR 1.00e-03  Best: ep 6
+  Epoch  14/50  loss 0.0033/0.0036  AUPR 0.0748/0.0196  AUROC 0.9101/0.8299  LR 1.00e-03  Best: ep 13
+  Epoch  15/50  loss 0.0033/0.0037  AUPR 0.0762/0.0192  AUROC 0.9109/0.8325  LR 1.00e-04  Best: ep 13
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0765/0.0197  AUROC 0.9112/0.8315  LR 1.00e-04  Best: ep 13
+  Epoch  17/50  loss 0.0033/0.0037  AUPR 0.0769/0.0202  AUROC 0.9114/0.8314  LR 1.00e-04  Best: ep 13
+  Epoch  18/50  loss 0.0033/0.0037  AUPR 0.0770/0.0198  AUROC 0.9115/0.8306  LR 1.00e-04  Best: ep 13
+  Epoch  19/50  loss 0.0033/0.0037  AUPR 0.0771/0.0198  AUROC 0.9117/0.8292  LR 1.00e-04  Best: ep 13
+  Epoch  20/50  loss 0.0033/0.0036  AUPR 0.0774/0.0202  AUROC 0.9116/0.8294  LR 1.00e-04  Best: ep 13
+  Epoch  21/50  loss 0.0033/0.0037  AUPR 0.0774/0.0202  AUROC 0.9118/0.8290  LR 1.00e-05  Best: ep 13
+  Epoch  22/50  loss 0.0033/0.0037  AUPR 0.0776/0.0197  AUROC 0.9119/0.8285  LR 1.00e-05  Best: ep 13
+  Epoch  23/50  loss 0.0033/0.0037  AUPR 0.0776/0.0198  AUROC 0.9119/0.8288  LR 1.00e-05  Best: ep 13
+[2026-04-11 10:49:39] Early stopping at epoch 23 (best val AUPR 0.0220 at ep 13)
+[2026-04-11 10:49:39] Training finished in 1746.0s
+[I 2026-04-11 10:49:42,468] Trial 19 finished with value: 0.021958261357309238 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.01, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 17 with value: 0.02962366227635792.
+[2026-04-11 10:49:58] Training started
+  Epoch   1/50  loss 0.0043/0.0037  AUPR 0.0302/0.0112  AUROC 0.8681/0.8104  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0373/0.0138  AUROC 0.8769/0.8294  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0035  AUPR 0.0439/0.0179  AUROC 0.8883/0.8281  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0478/0.0182  AUROC 0.8932/0.8256  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0035  AUPR 0.0544/0.0154  AUROC 0.9004/0.8338  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0036  AUPR 0.0594/0.0145  AUROC 0.9008/0.8226  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0035/0.0034  AUPR 0.0628/0.0201  AUROC 0.9048/0.8404  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0035/0.0036  AUPR 0.0612/0.0149  AUROC 0.9077/0.8235  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0036  AUPR 0.0656/0.0155  AUROC 0.9081/0.8273  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0034/0.0035  AUPR 0.0723/0.0185  AUROC 0.9146/0.8296  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0034/0.0039  AUPR 0.0691/0.0232  AUROC 0.9145/0.8244  LR 1.00e-04  Best: ep 7
+  Epoch  12/50  loss 0.0034/0.0036  AUPR 0.0769/0.0209  AUROC 0.9176/0.8373  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0034/0.0039  AUPR 0.0778/0.0214  AUROC 0.9198/0.8204  LR 1.00e-05  Best: ep 11
+  Epoch  14/50  loss 0.0032/0.0037  AUPR 0.0898/0.0235  AUROC 0.9249/0.8275  LR 1.00e-05  Best: ep 11
+  Epoch  15/50  loss 0.0032/0.0037  AUPR 0.0927/0.0229  AUROC 0.9269/0.8270  LR 1.00e-05  Best: ep 14
+  Epoch  16/50  loss 0.0032/0.0038  AUPR 0.0943/0.0225  AUROC 0.9274/0.8245  LR 1.00e-05  Best: ep 14
+  Epoch  17/50  loss 0.0032/0.0037  AUPR 0.0967/0.0225  AUROC 0.9288/0.8249  LR 1.00e-05  Best: ep 14
+  Epoch  18/50  loss 0.0032/0.0038  AUPR 0.0979/0.0231  AUROC 0.9299/0.8241  LR 1.00e-05  Best: ep 14
+  Epoch  19/50  loss 0.0032/0.0037  AUPR 0.0997/0.0228  AUROC 0.9301/0.8289  LR 1.00e-06  Best: ep 14
+  Epoch  20/50  loss 0.0032/0.0037  AUPR 0.1002/0.0230  AUROC 0.9306/0.8262  LR 1.00e-06  Best: ep 14
+  Epoch  21/50  loss 0.0032/0.0037  AUPR 0.1002/0.0229  AUROC 0.9306/0.8264  LR 1.00e-06  Best: ep 14
+  Epoch  22/50  loss 0.0031/0.0037  AUPR 0.1006/0.0223  AUROC 0.9309/0.8236  LR 1.00e-06  Best: ep 14
+  Epoch  23/50  loss 0.0032/0.0037  AUPR 0.1002/0.0232  AUROC 0.9307/0.8247  LR 1.00e-06  Best: ep 14
+  Epoch  24/50  loss 0.0031/0.0037  AUPR 0.1006/0.0228  AUROC 0.9309/0.8243  LR 1.00e-06  Best: ep 14
+[2026-04-11 11:20:11] Early stopping at epoch 24 (best val AUPR 0.0235 at ep 14)
+[2026-04-11 11:20:11] Training finished in 1813.4s
+[I 2026-04-11 11:20:14,139] Trial 20 finished with value: 0.02348923922142442 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 17 with value: 0.02962366227635792.
+[2026-04-11 11:20:29] Training started
+  Epoch   1/50  loss 0.0043/0.0036  AUPR 0.0252/0.0111  AUROC 0.8681/0.8146  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0037  AUPR 0.0411/0.0160  AUROC 0.8826/0.8208  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0444/0.0152  AUROC 0.8847/0.8220  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0467/0.0205  AUROC 0.8942/0.8329  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0523/0.0224  AUROC 0.8984/0.8297  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0037  AUPR 0.0530/0.0187  AUROC 0.9018/0.8084  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0036  AUPR 0.0619/0.0196  AUROC 0.9064/0.8229  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0670/0.0217  AUROC 0.9105/0.8292  LR 1.00e-04  Best: ep 5
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0674/0.0255  AUROC 0.9107/0.8425  LR 1.00e-04  Best: ep 5
+  Epoch  10/50  loss 0.0034/0.0037  AUPR 0.0660/0.0233  AUROC 0.9134/0.8290  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0034/0.0036  AUPR 0.0737/0.0177  AUROC 0.9186/0.8279  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0034/0.0036  AUPR 0.0765/0.0235  AUROC 0.9197/0.8368  LR 1.00e-04  Best: ep 9
+  Epoch  13/50  loss 0.0033/0.0037  AUPR 0.0759/0.0251  AUROC 0.9205/0.8276  LR 1.00e-04  Best: ep 9
+  Epoch  14/50  loss 0.0033/0.0037  AUPR 0.0805/0.0216  AUROC 0.9225/0.8281  LR 1.00e-04  Best: ep 9
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0817/0.0244  AUROC 0.9241/0.8291  LR 1.00e-05  Best: ep 9
+  Epoch  16/50  loss 0.0032/0.0036  AUPR 0.0957/0.0257  AUROC 0.9305/0.8359  LR 1.00e-05  Best: ep 9                                                                                              Best trial: 17. Best value: 0.0296237:  42%|████▏     | 21/50 [19:30:29<21:22:00, 2652.43s/it]Best trial: 17. Best value: 0.0296237:  42%|████▏     | 21/50 [19:30:29<21:22:00, 2652.43s/it]Best trial: 17. Best value: 0.0296237:  44%|████▍     | 22/50 [19:30:29<19:33:59, 2515.70s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                              Best trial: 17. Best value: 0.0296237:  44%|████▍     | 22/50 [20:09:54<19:33:59, 2515.70s/it]Best trial: 22. Best value: 0.029919:  44%|████▍     | 22/50 [20:09:54<19:33:59, 2515.70s/it] Best trial: 22. Best value: 0.029919:  46%|████▌     | 23/50 [20:09:54<18:31:43, 2470.51s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0984/0.0257  AUROC 0.9320/0.8335  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0032/0.0036  AUPR 0.1015/0.0260  AUROC 0.9330/0.8347  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0031/0.0035  AUPR 0.1033/0.0276  AUROC 0.9340/0.8347  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0031/0.0036  AUPR 0.1043/0.0260  AUROC 0.9345/0.8310  LR 1.00e-05  Best: ep 19
+  Epoch  21/50  loss 0.0031/0.0036  AUPR 0.1063/0.0257  AUROC 0.9349/0.8347  LR 1.00e-06  Best: ep 19
+  Epoch  22/50  loss 0.0031/0.0036  AUPR 0.1071/0.0258  AUROC 0.9350/0.8342  LR 1.00e-06  Best: ep 19
+  Epoch  23/50  loss 0.0031/0.0036  AUPR 0.1072/0.0258  AUROC 0.9355/0.8353  LR 1.00e-06  Best: ep 19
+  Epoch  24/50  loss 0.0031/0.0036  AUPR 0.1076/0.0258  AUROC 0.9353/0.8337  LR 1.00e-06  Best: ep 19
+  Epoch  25/50  loss 0.0031/0.0036  AUPR 0.1080/0.0258  AUROC 0.9355/0.8328  LR 1.00e-06  Best: ep 19
+  Epoch  26/50  loss 0.0031/0.0036  AUPR 0.1078/0.0258  AUROC 0.9354/0.8350  LR 1.00e-06  Best: ep 19
+  Epoch  27/50  loss 0.0031/0.0036  AUPR 0.1072/0.0260  AUROC 0.9355/0.8348  LR 1.00e-07  Best: ep 19
+  Epoch  28/50  loss 0.0031/0.0036  AUPR 0.1079/0.0268  AUROC 0.9355/0.8344  LR 1.00e-07  Best: ep 19
+  Epoch  29/50  loss 0.0031/0.0036  AUPR 0.1079/0.0258  AUROC 0.9356/0.8348  LR 1.00e-07  Best: ep 19
+[2026-04-11 11:56:48] Early stopping at epoch 29 (best val AUPR 0.0276 at ep 19)
+[2026-04-11 11:56:48] Training finished in 2178.8s
+[I 2026-04-11 11:56:51,001] Trial 21 finished with value: 0.02756085953909183 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 17 with value: 0.02962366227635792.
+[2026-04-11 11:57:06] Training started
+  Epoch   1/50  loss 0.0044/0.0036  AUPR 0.0318/0.0115  AUROC 0.8673/0.8201  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0035  AUPR 0.0376/0.0160  AUROC 0.8774/0.8330  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0403/0.0183  AUROC 0.8863/0.8272  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0035  AUPR 0.0523/0.0148  AUROC 0.8946/0.8298  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0035  AUPR 0.0506/0.0186  AUROC 0.8970/0.8275  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0035/0.0037  AUPR 0.0537/0.0194  AUROC 0.8999/0.8321  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0036  AUPR 0.0573/0.0152  AUROC 0.9051/0.8168  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0606/0.0197  AUROC 0.9066/0.8381  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0653/0.0217  AUROC 0.9104/0.8386  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0036  AUPR 0.0677/0.0195  AUROC 0.9151/0.8267  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0034/0.0038  AUPR 0.0723/0.0190  AUROC 0.9163/0.8188  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0034/0.0040  AUPR 0.0738/0.0268  AUROC 0.9174/0.8191  LR 1.00e-04  Best: ep 9
+  Epoch  13/50  loss 0.0033/0.0035  AUPR 0.0829/0.0246  AUROC 0.9200/0.8330  LR 1.00e-04  Best: ep 12
+  Epoch  14/50  loss 0.0033/0.0039  AUPR 0.0862/0.0258  AUROC 0.9236/0.8205  LR 1.00e-04  Best: ep 12
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0789/0.0244  AUROC 0.9204/0.8281  LR 1.00e-05  Best: ep 12
+  Epoch  16/50  loss 0.0032/0.0038  AUPR 0.0951/0.0253  AUROC 0.9295/0.8245  LR 1.00e-05  Best: ep 12
+  Epoch  17/50  loss 0.0032/0.0037  AUPR 0.0992/0.0260  AUROC 0.9316/0.8246  LR 1.00e-05  Best: ep 12
+  Epoch  18/50  loss 0.0032/0.0037  AUPR 0.1022/0.0262  AUROC 0.9325/0.8241  LR 1.00e-05  Best: ep 12
+  Epoch  19/50  loss 0.0031/0.0037  AUPR 0.1046/0.0268  AUROC 0.9333/0.8292  LR 1.00e-05  Best: ep 12
+  Epoch  20/50  loss 0.0031/0.0037  AUPR 0.1057/0.0276  AUROC 0.9339/0.8278  LR 1.00e-05  Best: ep 19
+  Epoch  21/50  loss 0.0031/0.0037  AUPR 0.1071/0.0299  AUROC 0.9346/0.8289  LR 1.00e-06  Best: ep 20
+  Epoch  22/50  loss 0.0031/0.0037  AUPR 0.1070/0.0291  AUROC 0.9344/0.8296  LR 1.00e-06  Best: ep 21
+  Epoch  23/50  loss 0.0031/0.0037  AUPR 0.1077/0.0294  AUROC 0.9349/0.8274  LR 1.00e-06  Best: ep 21
+  Epoch  24/50  loss 0.0031/0.0037  AUPR 0.1082/0.0290  AUROC 0.9350/0.8282  LR 1.00e-06  Best: ep 21
+  Epoch  25/50  loss 0.0031/0.0037  AUPR 0.1079/0.0288  AUROC 0.9351/0.8284  LR 1.00e-06  Best: ep 21
+  Epoch  26/50  loss 0.0031/0.0037  AUPR 0.1084/0.0292  AUROC 0.9351/0.8282  LR 1.00e-06  Best: ep 21
+  Epoch  27/50  loss 0.0031/0.0037  AUPR 0.1083/0.0284  AUROC 0.9353/0.8271  LR 1.00e-07  Best: ep 21
+  Epoch  28/50  loss 0.0031/0.0037  AUPR 0.1086/0.0289  AUROC 0.9349/0.8280  LR 1.00e-07  Best: ep 21
+  Epoch  29/50  loss 0.0031/0.0038  AUPR 0.1085/0.0288  AUROC 0.9351/0.8275  LR 1.00e-07  Best: ep 21
+  Epoch  30/50  loss 0.0031/0.0037  AUPR 0.1090/0.0286  AUROC 0.9353/0.8283  LR 1.00e-07  Best: ep 21
+  Epoch  31/50  loss 0.0031/0.0037  AUPR 0.1089/0.0286  AUROC 0.9355/0.8266  LR 1.00e-07  Best: ep 21
+[2026-04-11 12:36:13] Early stopping at epoch 31 (best val AUPR 0.0299 at ep 21)
+[2026-04-11 12:36:13] Training finished in 2346.9s
+[I 2026-04-11 12:36:16,106] Trial 22 finished with value: 0.029919009819421354 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 12:36:32] Training started
+  Epoch   1/50  loss 0.0045/0.0036  AUPR 0.0290/0.0130  AUROC 0.8663/0.8304  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0039/0.0036  AUPR 0.0350/0.0124  AUROC 0.8755/0.8193  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0038/0.0037  AUPR 0.0365/0.0121  AUROC 0.8787/0.8080  LR 1.00e-04  Best: ep 1
+  Epoch   4/50  loss 0.0037/0.0036  AUPR 0.0433/0.0189  AUROC 0.8838/0.8259  LR 1.00e-04  Best: ep 1
+  Epoch   5/50  loss 0.0037/0.0036  AUPR 0.0453/0.0136  AUROC 0.8916/0.8281  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0036/0.0035  AUPR 0.0512/0.0166  AUROC 0.8976/0.8325  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0036/0.0036  AUPR 0.0505/0.0192  AUROC 0.8996/0.8204  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0036/0.0036  AUPR 0.0564/0.0232  AUROC 0.9018/0.8267  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0036/0.0037  AUPR 0.0550/0.0205  AUROC 0.9011/0.8276  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0035/0.0037  AUPR 0.0526/0.0242  AUROC 0.9052/0.8257  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0035/0.0036  AUPR 0.0643/0.0221  AUROC 0.9095/0.8286  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0035/0.0035  AUPR 0.0628/0.0227  AUROC 0.9106/0.8374  LR 1.00e-04  Best: ep 10
+  Epoch  13/50  loss 0.0034/0.0037  AUPR 0.0679/0.0240  AUROC 0.9116/0.8273  LR 1.00e-04  Best: ep 10
+  Epoch  14/50  loss 0.0034/0.0036  AUPR 0.0702/0.0244  AUROC 0.9135/0.8438  LR 1.00e-04  Best: ep 10
+  Epoch  15/50  loss 0.0034/0.0037  AUPR 0.0692/0.0245  AUROC 0.9140/0.8274  LR 1.00e-04  Best: ep 14
+  Epoch  16/50  loss 0.0034/0.0036  AUPR 0.0749/0.0199  AUROC 0.9159/0.8318  LR 1.00e-04  Best: ep 15
+  Epoch  17/50  loss 0.0034/0.0036  AUPR 0.0797/0.0249  AUROC 0.9191/0.8307  LR 1.00e-04  Best: ep 15
+  Epoch  18/50  loss 0.0034/0.0036  AUPR 0.0789/0.0276  AUROC 0.9193/0.8316  LR 1.00e-05  Best: ep 17
+  Epoch  19/50  loss 0.0033/0.0036  AUPR 0.0867/0.0284  AUROC 0.9239/0.8374  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0033/0.0036  AUPR 0.0890/0.0290  AUROC 0.9254/0.8366  LR 1.00e-05  Best: ep 19
+  Epoch  21/50  loss 0.0032/0.0036  AUPR 0.0904/0.0281  AUROC 0.9262/0.8377  LR 1.00e-05  Best: ep 20
+  Epoch  22/50  loss 0.0032/0.0036  AUPR 0.0920/0.0292  AUROC 0.9268/0.8376  LR 1.00e-05  Best: ep 20
+  Epoch  23/50  loss 0.0032/0.0036  AUPR 0.0926/0.0291  AUROC 0.9275/0.8361  LR 1.00e-05  Best: ep 22
+  Epoch  24/50  loss 0.0032/0.0036  AUPR 0.0943/0.0286  AUROC 0.9280/0.8359  LR 1.00e-06  Best: ep 22
+  Epoch  25/50  loss 0.0032/0.0036  AUPR 0.0945/0.0287  AUROC 0.9282/0.8356  LR 1.00e-06  Best: ep 22
+  Epoch  26/50  loss 0.0032/0.0036  AUPR 0.0948/0.0289  AUROC 0.9282/0.8365  LR 1.00e-06  Best: ep 22
+  Epoch  27/50  loss 0.0032/0.0036  AUPR 0.0945/0.0290  AUROC 0.9283/0.8366  LR 1.00e-06  Best: ep 22
+  Epoch  28/50  loss 0.0032/0.0036  AUPR 0.0948/0.0288  AUROC 0.9283/0.8356  LR 1.00e-06  Best: ep 22
+  Epoch  29/50  loss 0.0032/0.0036  AUPR 0.0952/0.0287  AUROC 0.9284/0.8351  LR 1.00e-06  Best: ep 22                                                                                             Best trial: 22. Best value: 0.029919:  46%|████▌     | 23/50 [20:50:19<18:31:43, 2470.51s/it]Best trial: 22. Best value: 0.029919:  46%|████▌     | 23/50 [20:50:19<18:31:43, 2470.51s/it]Best trial: 22. Best value: 0.029919:  48%|████▊     | 24/50 [20:50:19<17:44:40, 2456.94s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                             Best trial: 22. Best value: 0.029919:  48%|████▊     | 24/50 [21:11:10<17:44:40, 2456.94s/it]Best trial: 22. Best value: 0.029919:  48%|████▊     | 24/50 [21:11:10<17:44:40, 2456.94s/it]Best trial: 22. Best value: 0.029919:  50%|█████     | 25/50 [21:11:10<14:32:58, 2095.15s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                             Best trial: 22. Best value: 0.029919:  50%|█████     | 25/50 [21:46:54<14:32:58, 2095.15s/it]Best trial: 22. Best value: 0.029919:  50%|█████     | 25/50 [21:46:54<14:32:58, 2095.15s/it]Best trial: 22. Best value: 0.029919:  52%|█████▏    | 26/50 [21:46:54<14:03:51, 2109.63s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  30/50  loss 0.0032/0.0037  AUPR 0.0949/0.0290  AUROC 0.9287/0.8351  LR 1.00e-07  Best: ep 22
+  Epoch  31/50  loss 0.0032/0.0036  AUPR 0.0948/0.0289  AUROC 0.9284/0.8356  LR 1.00e-07  Best: ep 22
+  Epoch  32/50  loss 0.0032/0.0036  AUPR 0.0952/0.0292  AUROC 0.9286/0.8359  LR 1.00e-07  Best: ep 22
+[2026-04-11 13:16:38] Early stopping at epoch 32 (best val AUPR 0.0292 at ep 22)
+[2026-04-11 13:16:38] Training finished in 2406.7s
+[I 2026-04-11 13:16:41,387] Trial 23 finished with value: 0.029247856456160435 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 13:16:57] Training started
+  Epoch   1/50  loss 0.0045/0.0037  AUPR 0.0283/0.0094  AUROC 0.8649/0.8157  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0039/0.0036  AUPR 0.0348/0.0098  AUROC 0.8727/0.8261  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0038/0.0036  AUPR 0.0375/0.0148  AUROC 0.8811/0.8260  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0038/0.0037  AUPR 0.0429/0.0166  AUROC 0.8851/0.8254  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0037/0.0037  AUPR 0.0473/0.0164  AUROC 0.8925/0.8186  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0036/0.0035  AUPR 0.0474/0.0226  AUROC 0.8943/0.8337  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0036/0.0036  AUPR 0.0515/0.0203  AUROC 0.8990/0.8325  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0036/0.0035  AUPR 0.0563/0.0211  AUROC 0.9023/0.8380  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0035/0.0036  AUPR 0.0568/0.0206  AUROC 0.9035/0.8290  LR 1.00e-04  Best: ep 6
+  Epoch  10/50  loss 0.0035/0.0036  AUPR 0.0597/0.0178  AUROC 0.9058/0.8328  LR 1.00e-04  Best: ep 6
+  Epoch  11/50  loss 0.0035/0.0035  AUPR 0.0616/0.0174  AUROC 0.9082/0.8313  LR 1.00e-04  Best: ep 6
+  Epoch  12/50  loss 0.0035/0.0037  AUPR 0.0647/0.0200  AUROC 0.9086/0.8227  LR 1.00e-04  Best: ep 6
+  Epoch  13/50  loss 0.0035/0.0035  AUPR 0.0639/0.0210  AUROC 0.9127/0.8336  LR 1.00e-04  Best: ep 6
+  Epoch  14/50  loss 0.0034/0.0035  AUPR 0.0694/0.0202  AUROC 0.9129/0.8290  LR 1.00e-04  Best: ep 6
+  Epoch  15/50  loss 0.0034/0.0037  AUPR 0.0732/0.0211  AUROC 0.9137/0.8176  LR 1.00e-04  Best: ep 6
+  Epoch  16/50  loss 0.0034/0.0035  AUPR 0.0744/0.0214  AUROC 0.9153/0.8351  LR 1.00e-04  Best: ep 6
+[2026-04-11 13:37:29] Early stopping at epoch 16 (best val AUPR 0.0226 at ep 6)
+[2026-04-11 13:37:29] Training finished in 1232.9s
+[I 2026-04-11 13:37:32,505] Trial 24 finished with value: 0.022593843502869245 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 13:37:48] Training started
+  Epoch   1/50  loss 0.0040/0.0036  AUPR 0.0287/0.0134  AUROC 0.8619/0.8181  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0037/0.0036  AUPR 0.0347/0.0140  AUROC 0.8754/0.8220  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0396/0.0133  AUROC 0.8796/0.8242  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0435/0.0151  AUROC 0.8840/0.8253  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0447/0.0152  AUROC 0.8893/0.8132  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0036  AUPR 0.0480/0.0145  AUROC 0.8904/0.8250  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0036  AUPR 0.0492/0.0179  AUROC 0.8955/0.8266  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0520/0.0171  AUROC 0.8953/0.8325  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0035/0.0036  AUPR 0.0527/0.0145  AUROC 0.8974/0.8300  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0035/0.0036  AUPR 0.0531/0.0138  AUROC 0.9004/0.8286  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0034/0.0036  AUPR 0.0575/0.0188  AUROC 0.9033/0.8332  LR 1.00e-04  Best: ep 7
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0578/0.0196  AUROC 0.9029/0.8386  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0034/0.0035  AUPR 0.0619/0.0204  AUROC 0.9042/0.8409  LR 1.00e-04  Best: ep 12
+  Epoch  14/50  loss 0.0034/0.0036  AUPR 0.0621/0.0195  AUROC 0.9082/0.8317  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0034/0.0036  AUPR 0.0629/0.0190  AUROC 0.9068/0.8270  LR 1.00e-04  Best: ep 13
+  Epoch  16/50  loss 0.0034/0.0035  AUPR 0.0664/0.0200  AUROC 0.9080/0.8374  LR 1.00e-04  Best: ep 13
+  Epoch  17/50  loss 0.0034/0.0036  AUPR 0.0697/0.0169  AUROC 0.9120/0.8328  LR 1.00e-04  Best: ep 13
+  Epoch  18/50  loss 0.0033/0.0036  AUPR 0.0693/0.0263  AUROC 0.9117/0.8355  LR 1.00e-04  Best: ep 13
+  Epoch  19/50  loss 0.0033/0.0035  AUPR 0.0711/0.0221  AUROC 0.9157/0.8392  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0033/0.0036  AUPR 0.0774/0.0227  AUROC 0.9183/0.8358  LR 1.00e-05  Best: ep 18
+  Epoch  21/50  loss 0.0032/0.0036  AUPR 0.0803/0.0222  AUROC 0.9197/0.8350  LR 1.00e-05  Best: ep 18
+  Epoch  22/50  loss 0.0032/0.0036  AUPR 0.0818/0.0232  AUROC 0.9203/0.8341  LR 1.00e-05  Best: ep 18
+  Epoch  23/50  loss 0.0032/0.0036  AUPR 0.0833/0.0229  AUROC 0.9206/0.8345  LR 1.00e-05  Best: ep 18
+  Epoch  24/50  loss 0.0032/0.0036  AUPR 0.0828/0.0233  AUROC 0.9211/0.8376  LR 1.00e-05  Best: ep 18
+  Epoch  25/50  loss 0.0032/0.0036  AUPR 0.0835/0.0226  AUROC 0.9217/0.8358  LR 1.00e-06  Best: ep 18
+  Epoch  26/50  loss 0.0032/0.0036  AUPR 0.0841/0.0225  AUROC 0.9221/0.8361  LR 1.00e-06  Best: ep 18
+  Epoch  27/50  loss 0.0032/0.0036  AUPR 0.0844/0.0229  AUROC 0.9219/0.8354  LR 1.00e-06  Best: ep 18
+  Epoch  28/50  loss 0.0032/0.0036  AUPR 0.0845/0.0226  AUROC 0.9218/0.8357  LR 1.00e-06  Best: ep 18
+[2026-04-11 14:13:13] Early stopping at epoch 28 (best val AUPR 0.0263 at ep 18)
+[2026-04-11 14:13:13] Training finished in 2125.1s
+[I 2026-04-11 14:13:15,914] Trial 25 finished with value: 0.02627896860759033 and parameters: {'arch': '128-128-128', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 14:13:31] Training started
+  Epoch   1/50  loss 0.0043/0.0032  AUPR 0.0281/0.0166  AUROC 0.8664/0.8184  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0034/0.0031  AUPR 0.0330/0.0123  AUROC 0.8716/0.8176  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0032/0.0031  AUPR 0.0392/0.0120  AUROC 0.8823/0.8201  LR 1.00e-04  Best: ep 1
+  Epoch   4/50  loss 0.0032/0.0031  AUPR 0.0407/0.0115  AUROC 0.8907/0.8134  LR 1.00e-04  Best: ep 1
+  Epoch   5/50  loss 0.0031/0.0031  AUPR 0.0453/0.0136  AUROC 0.8929/0.8231  LR 1.00e-04  Best: ep 1
+  Epoch   6/50  loss 0.0031/0.0032  AUPR 0.0447/0.0117  AUROC 0.8977/0.8090  LR 1.00e-04  Best: ep 1
+  Epoch   7/50  loss 0.0030/0.0031  AUPR 0.0467/0.0166  AUROC 0.9011/0.8255  LR 1.00e-04  Best: ep 1
+  Epoch   8/50  loss 0.0030/0.0031  AUPR 0.0503/0.0133  AUROC 0.9018/0.8162  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0029/0.0030  AUPR 0.0542/0.0152  AUROC 0.9054/0.8327  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0029/0.0033  AUPR 0.0529/0.0150  AUROC 0.9091/0.8080  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0029/0.0031  AUPR 0.0552/0.0175  AUROC 0.9107/0.8262  LR 1.00e-04  Best: ep 7
+  Epoch  12/50  loss 0.0029/0.0032  AUPR 0.0566/0.0173  AUROC 0.9107/0.8158  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0028/0.0031  AUPR 0.0586/0.0175  AUROC 0.9103/0.8309  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0028/0.0030  AUPR 0.0613/0.0188  AUROC 0.9146/0.8342  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0028/0.0031  AUPR 0.0650/0.0212  AUROC 0.9158/0.8312  LR 1.00e-05  Best: ep 14
+  Epoch  16/50  loss 0.0027/0.0032  AUPR 0.0690/0.0211  AUROC 0.9216/0.8263  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0027/0.0032  AUPR 0.0704/0.0208  AUROC 0.9231/0.8235  LR 1.00e-05  Best: ep 15
+  Epoch  18/50  loss 0.0027/0.0032  AUPR 0.0719/0.0212  AUROC 0.9243/0.8188  LR 1.00e-05  Best: ep 15
+  Epoch  19/50  loss 0.0026/0.0032  AUPR 0.0728/0.0211  AUROC 0.9251/0.8211  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0026/0.0032  AUPR 0.0743/0.0211  AUROC 0.9259/0.8181  LR 1.00e-05  Best: ep 18
+  Epoch  21/50  loss 0.0027/0.0032  AUPR 0.0746/0.0199  AUROC 0.9261/0.8191  LR 1.00e-06  Best: ep 18                                                                                             Best trial: 22. Best value: 0.029919:  52%|█████▏    | 26/50 [22:22:32<14:03:51, 2109.63s/it]Best trial: 22. Best value: 0.029919:  52%|█████▏    | 26/50 [22:22:32<14:03:51, 2109.63s/it]Best trial: 22. Best value: 0.029919:  54%|█████▍    | 27/50 [22:22:32<13:31:58, 2118.21s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                             Best trial: 22. Best value: 0.029919:  54%|█████▍    | 27/50 [22:37:54<13:31:58, 2118.21s/it]Best trial: 22. Best value: 0.029919:  54%|█████▍    | 27/50 [22:37:54<13:31:58, 2118.21s/it]Best trial: 22. Best value: 0.029919:  56%|█████▌    | 28/50 [22:37:54<10:45:06, 1759.37s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                             Best trial: 22. Best value: 0.029919:  56%|█████▌    | 28/50 [23:02:14<10:45:06, 1759.37s/it]Best trial: 22. Best value: 0.029919:  56%|█████▌    | 28/50 [23:02:14<10:45:06, 1759.37s/it]Best trial: 22. Best value: 0.029919:  58%|█████▊    | 29/50 [23:02:14<9:44:18, 1669.46s/it] /home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 22. Best value: 0.029919:  58%|█████▊    | 29/50 [23:33:03<9:44:18, 1669.46s/it]Best trial: 22. Best value: 0.029919:  58%|█████▊    | 29/50 [23:33:03<9:44:18, 1669.46s/it]Best trial: 22. Best value: 0.029919:  60%|██████    | 30/50 [23:33:03<9:34:29, 1723.46s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  22/50  loss 0.0026/0.0032  AUPR 0.0751/0.0203  AUROC 0.9266/0.8206  LR 1.00e-06  Best: ep 18
+  Epoch  23/50  loss 0.0026/0.0032  AUPR 0.0748/0.0207  AUROC 0.9265/0.8224  LR 1.00e-06  Best: ep 18
+  Epoch  24/50  loss 0.0026/0.0032  AUPR 0.0750/0.0209  AUROC 0.9269/0.8212  LR 1.00e-06  Best: ep 18
+  Epoch  25/50  loss 0.0026/0.0032  AUPR 0.0753/0.0208  AUROC 0.9271/0.8200  LR 1.00e-06  Best: ep 18
+  Epoch  26/50  loss 0.0026/0.0032  AUPR 0.0755/0.0210  AUROC 0.9272/0.8207  LR 1.00e-06  Best: ep 18
+  Epoch  27/50  loss 0.0026/0.0032  AUPR 0.0754/0.0205  AUROC 0.9273/0.8204  LR 1.00e-07  Best: ep 18
+  Epoch  28/50  loss 0.0026/0.0032  AUPR 0.0757/0.0206  AUROC 0.9273/0.8200  LR 1.00e-07  Best: ep 18
+[2026-04-11 14:48:51] Early stopping at epoch 28 (best val AUPR 0.0212 at ep 18)
+[2026-04-11 14:48:51] Training finished in 2120.1s
+[I 2026-04-11 14:48:54,137] Trial 26 finished with value: 0.02119211909095952 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.95, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 14:49:09] Training started
+  Epoch   1/50  loss 0.0044/0.0037  AUPR 0.0287/0.0079  AUROC 0.8616/0.8094  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0039/0.0035  AUPR 0.0362/0.0223  AUROC 0.8738/0.8319  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0038/0.0036  AUPR 0.0353/0.0140  AUROC 0.8830/0.8264  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0037/0.0036  AUPR 0.0449/0.0149  AUROC 0.8882/0.8298  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0037/0.0037  AUPR 0.0460/0.0132  AUROC 0.8884/0.8231  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0037/0.0036  AUPR 0.0521/0.0183  AUROC 0.8951/0.8305  LR 1.00e-04  Best: ep 2
+  Epoch   7/50  loss 0.0036/0.0036  AUPR 0.0545/0.0159  AUROC 0.8960/0.8321  LR 1.00e-04  Best: ep 2
+  Epoch   8/50  loss 0.0036/0.0041  AUPR 0.0544/0.0192  AUROC 0.9008/0.8244  LR 1.00e-05  Best: ep 2
+  Epoch   9/50  loss 0.0035/0.0036  AUPR 0.0634/0.0192  AUROC 0.9057/0.8350  LR 1.00e-05  Best: ep 2
+  Epoch  10/50  loss 0.0035/0.0036  AUPR 0.0662/0.0193  AUROC 0.9078/0.8347  LR 1.00e-05  Best: ep 2
+  Epoch  11/50  loss 0.0035/0.0035  AUPR 0.0677/0.0199  AUROC 0.9089/0.8387  LR 1.00e-05  Best: ep 2
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0679/0.0199  AUROC 0.9095/0.8385  LR 1.00e-05  Best: ep 2
+[2026-04-11 15:04:13] Early stopping at epoch 12 (best val AUPR 0.0223 at ep 2)
+[2026-04-11 15:04:13] Training finished in 904.1s
+[I 2026-04-11 15:04:16,288] Trial 27 finished with value: 0.02230775469079296 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 15:04:31] Training started
+  Epoch   1/50  loss 0.0040/0.0040  AUPR 0.0237/0.0161  AUROC 0.8578/0.8247  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0035  AUPR 0.0322/0.0180  AUROC 0.8658/0.8408  LR 1.00e-02  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0381/0.0189  AUROC 0.8796/0.8412  LR 1.00e-02  Best: ep 2
+  Epoch   4/50  loss 0.0037/0.0035  AUPR 0.0425/0.0173  AUROC 0.8829/0.8445  LR 1.00e-02  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0035  AUPR 0.0492/0.0182  AUROC 0.8876/0.8383  LR 1.00e-02  Best: ep 3
+  Epoch   6/50  loss 0.0036/0.0039  AUPR 0.0484/0.0162  AUROC 0.8894/0.8306  LR 1.00e-02  Best: ep 3
+  Epoch   7/50  loss 0.0036/0.0035  AUPR 0.0523/0.0181  AUROC 0.8904/0.8399  LR 1.00e-02  Best: ep 3
+  Epoch   8/50  loss 0.0036/0.0035  AUPR 0.0524/0.0174  AUROC 0.8937/0.8429  LR 1.00e-02  Best: ep 3
+  Epoch   9/50  loss 0.0035/0.0035  AUPR 0.0571/0.0212  AUROC 0.8954/0.8329  LR 1.00e-02  Best: ep 3
+  Epoch  10/50  loss 0.0035/0.0034  AUPR 0.0616/0.0194  AUROC 0.9009/0.8451  LR 1.00e-02  Best: ep 9
+  Epoch  11/50  loss 0.0035/0.0036  AUPR 0.0632/0.0182  AUROC 0.9000/0.8288  LR 1.00e-02  Best: ep 9
+  Epoch  12/50  loss 0.0035/0.0036  AUPR 0.0583/0.0145  AUROC 0.8990/0.8148  LR 1.00e-02  Best: ep 9
+  Epoch  13/50  loss 0.0035/0.0035  AUPR 0.0663/0.0178  AUROC 0.9065/0.8292  LR 1.00e-02  Best: ep 9
+  Epoch  14/50  loss 0.0035/0.0037  AUPR 0.0645/0.0177  AUROC 0.9080/0.8357  LR 1.00e-02  Best: ep 9
+  Epoch  15/50  loss 0.0034/0.0036  AUPR 0.0679/0.0176  AUROC 0.9080/0.8283  LR 1.00e-02  Best: ep 9
+  Epoch  16/50  loss 0.0034/0.0035  AUPR 0.0686/0.0200  AUROC 0.9071/0.8325  LR 1.00e-03  Best: ep 9
+  Epoch  17/50  loss 0.0033/0.0037  AUPR 0.0792/0.0199  AUROC 0.9162/0.8295  LR 1.00e-03  Best: ep 9
+  Epoch  18/50  loss 0.0033/0.0036  AUPR 0.0835/0.0205  AUROC 0.9182/0.8348  LR 1.00e-03  Best: ep 9
+  Epoch  19/50  loss 0.0032/0.0035  AUPR 0.0860/0.0205  AUROC 0.9197/0.8381  LR 1.00e-03  Best: ep 9
+[2026-04-11 15:28:33] Early stopping at epoch 19 (best val AUPR 0.0212 at ep 9)
+[2026-04-11 15:28:33] Training finished in 1441.6s
+[I 2026-04-11 15:28:35,954] Trial 28 finished with value: 0.021220234670157285 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.01, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 15:28:51] Training started
+  Epoch   1/50  loss 0.0040/0.0037  AUPR 0.0272/0.0079  AUROC 0.8605/0.8062  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0329/0.0156  AUROC 0.8679/0.8172  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0341/0.0144  AUROC 0.8777/0.8186  LR 1.00e-03  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0396/0.0126  AUROC 0.8690/0.8197  LR 1.00e-03  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0438/0.0122  AUROC 0.8827/0.8239  LR 1.00e-03  Best: ep 2
+  Epoch   6/50  loss 0.0036/0.0035  AUPR 0.0451/0.0153  AUROC 0.8906/0.8313  LR 1.00e-03  Best: ep 2
+  Epoch   7/50  loss 0.0035/0.0037  AUPR 0.0463/0.0156  AUROC 0.8921/0.8112  LR 1.00e-03  Best: ep 2
+  Epoch   8/50  loss 0.0035/0.0038  AUPR 0.0449/0.0153  AUROC 0.8936/0.8111  LR 1.00e-03  Best: ep 7
+  Epoch   9/50  loss 0.0035/0.0036  AUPR 0.0458/0.0139  AUROC 0.8962/0.8353  LR 1.00e-03  Best: ep 7
+  Epoch  10/50  loss 0.0035/0.0035  AUPR 0.0522/0.0148  AUROC 0.9011/0.8247  LR 1.00e-03  Best: ep 7
+  Epoch  11/50  loss 0.0034/0.0035  AUPR 0.0522/0.0147  AUROC 0.8981/0.8336  LR 1.00e-03  Best: ep 7
+  Epoch  12/50  loss 0.0034/0.0036  AUPR 0.0572/0.0127  AUROC 0.9010/0.8263  LR 1.00e-04  Best: ep 7
+  Epoch  13/50  loss 0.0033/0.0037  AUPR 0.0659/0.0178  AUROC 0.9088/0.8253  LR 1.00e-04  Best: ep 7
+  Epoch  14/50  loss 0.0033/0.0036  AUPR 0.0682/0.0187  AUROC 0.9107/0.8231  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0693/0.0169  AUROC 0.9120/0.8267  LR 1.00e-04  Best: ep 14
+  Epoch  16/50  loss 0.0033/0.0037  AUPR 0.0703/0.0173  AUROC 0.9124/0.8245  LR 1.00e-04  Best: ep 14
+  Epoch  17/50  loss 0.0033/0.0037  AUPR 0.0714/0.0182  AUROC 0.9131/0.8231  LR 1.00e-04  Best: ep 14
+  Epoch  18/50  loss 0.0033/0.0037  AUPR 0.0714/0.0162  AUROC 0.9140/0.8259  LR 1.00e-05  Best: ep 14
+  Epoch  19/50  loss 0.0033/0.0037  AUPR 0.0718/0.0161  AUROC 0.9143/0.8253  LR 1.00e-05  Best: ep 14
+  Epoch  20/50  loss 0.0032/0.0037  AUPR 0.0723/0.0171  AUROC 0.9145/0.8247  LR 1.00e-05  Best: ep 14
+  Epoch  21/50  loss 0.0033/0.0037  AUPR 0.0725/0.0167  AUROC 0.9145/0.8241  LR 1.00e-05  Best: ep 14
+  Epoch  22/50  loss 0.0032/0.0037  AUPR 0.0723/0.0162  AUROC 0.9145/0.8248  LR 1.00e-05  Best: ep 14
+  Epoch  23/50  loss 0.0032/0.0037  AUPR 0.0727/0.0169  AUROC 0.9146/0.8256  LR 1.00e-05  Best: ep 14
+  Epoch  24/50  loss 0.0032/0.0037  AUPR 0.0726/0.0166  AUROC 0.9147/0.8249  LR 1.00e-06  Best: ep 14
+[2026-04-11 15:59:22] Early stopping at epoch 24 (best val AUPR 0.0187 at ep 14)
+[2026-04-11 15:59:22] Training finished in 1831.2s
+[I 2026-04-11 15:59:25,399] Trial 29 finished with value: 0.01870185484035823 and parameters: {'arch': '128-128-128', 'dropout': 0.30000000000000004, 'lr': 0.001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 15:59:40] Training started
+  Epoch   1/50  loss 0.0041/0.0036  AUPR 0.0277/0.0121  AUROC 0.8560/0.8207  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0037  AUPR 0.0327/0.0135  AUROC 0.8714/0.8318  LR 1.00e-02  Best: ep 1                                                                                            Best trial: 22. Best value: 0.029919:  60%|██████    | 30/50 [23:59:43<9:34:29, 1723.46s/it]Best trial: 22. Best value: 0.029919:  60%|██████    | 30/50 [23:59:43<9:34:29, 1723.46s/it]Best trial: 22. Best value: 0.029919:  62%|██████▏   | 31/50 [23:59:43<8:54:02, 1686.43s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 22. Best value: 0.029919:  62%|██████▏   | 31/50 [24:33:52<8:54:02, 1686.43s/it]Best trial: 22. Best value: 0.029919:  62%|██████▏   | 31/50 [24:33:52<8:54:02, 1686.43s/it]Best trial: 22. Best value: 0.029919:  64%|██████▍   | 32/50 [24:33:52<8:58:30, 1795.04s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            
+  Epoch   3/50  loss 0.0037/0.0035  AUPR 0.0357/0.0186  AUROC 0.8779/0.8314  LR 1.00e-02  Best: ep 2
+  Epoch   4/50  loss 0.0037/0.0035  AUPR 0.0364/0.0170  AUROC 0.8814/0.8394  LR 1.00e-02  Best: ep 3
+  Epoch   5/50  loss 0.0037/0.0035  AUPR 0.0450/0.0177  AUROC 0.8856/0.8334  LR 1.00e-02  Best: ep 3
+  Epoch   6/50  loss 0.0037/0.0035  AUPR 0.0454/0.0160  AUROC 0.8870/0.8249  LR 1.00e-02  Best: ep 3
+  Epoch   7/50  loss 0.0036/0.0035  AUPR 0.0481/0.0156  AUROC 0.8883/0.8254  LR 1.00e-02  Best: ep 3
+  Epoch   8/50  loss 0.0036/0.0036  AUPR 0.0484/0.0140  AUROC 0.8932/0.8342  LR 1.00e-02  Best: ep 3
+  Epoch   9/50  loss 0.0036/0.0037  AUPR 0.0493/0.0163  AUROC 0.8949/0.8225  LR 1.00e-02  Best: ep 3
+  Epoch  10/50  loss 0.0036/0.0036  AUPR 0.0557/0.0170  AUROC 0.8985/0.8325  LR 1.00e-02  Best: ep 3
+  Epoch  11/50  loss 0.0036/0.0037  AUPR 0.0542/0.0208  AUROC 0.8978/0.8356  LR 1.00e-03  Best: ep 3
+  Epoch  12/50  loss 0.0035/0.0036  AUPR 0.0621/0.0193  AUROC 0.9043/0.8339  LR 1.00e-03  Best: ep 11
+  Epoch  13/50  loss 0.0034/0.0037  AUPR 0.0631/0.0192  AUROC 0.9061/0.8360  LR 1.00e-03  Best: ep 11
+  Epoch  14/50  loss 0.0034/0.0037  AUPR 0.0652/0.0193  AUROC 0.9073/0.8348  LR 1.00e-03  Best: ep 11
+  Epoch  15/50  loss 0.0034/0.0036  AUPR 0.0661/0.0187  AUROC 0.9080/0.8357  LR 1.00e-03  Best: ep 11
+  Epoch  16/50  loss 0.0034/0.0037  AUPR 0.0670/0.0183  AUROC 0.9087/0.8337  LR 1.00e-03  Best: ep 11
+  Epoch  17/50  loss 0.0034/0.0036  AUPR 0.0690/0.0182  AUROC 0.9094/0.8378  LR 1.00e-04  Best: ep 11
+  Epoch  18/50  loss 0.0034/0.0036  AUPR 0.0695/0.0182  AUROC 0.9099/0.8369  LR 1.00e-04  Best: ep 11
+  Epoch  19/50  loss 0.0034/0.0036  AUPR 0.0692/0.0182  AUROC 0.9099/0.8373  LR 1.00e-04  Best: ep 11
+  Epoch  20/50  loss 0.0034/0.0036  AUPR 0.0698/0.0179  AUROC 0.9101/0.8370  LR 1.00e-04  Best: ep 11
+  Epoch  21/50  loss 0.0034/0.0036  AUPR 0.0700/0.0180  AUROC 0.9101/0.8373  LR 1.00e-04  Best: ep 11
+[2026-04-11 16:26:02] Early stopping at epoch 21 (best val AUPR 0.0208 at ep 11)
+[2026-04-11 16:26:02] Training finished in 1581.9s
+[I 2026-04-11 16:26:05,443] Trial 30 finished with value: 0.020823925793361626 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.01, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 16:26:21] Training started
+  Epoch   1/50  loss 0.0043/0.0036  AUPR 0.0306/0.0158  AUROC 0.8653/0.8277  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0385/0.0118  AUROC 0.8759/0.8254  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0397/0.0121  AUROC 0.8868/0.8296  LR 1.00e-04  Best: ep 1
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0509/0.0166  AUROC 0.8955/0.8292  LR 1.00e-04  Best: ep 1
+  Epoch   5/50  loss 0.0036/0.0040  AUPR 0.0505/0.0170  AUROC 0.8966/0.8155  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0035  AUPR 0.0574/0.0166  AUROC 0.9015/0.8379  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0038  AUPR 0.0568/0.0189  AUROC 0.9048/0.8307  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0632/0.0140  AUROC 0.9076/0.8369  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0657/0.0178  AUROC 0.9111/0.8415  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0034/0.0036  AUPR 0.0696/0.0218  AUROC 0.9160/0.8345  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0034/0.0035  AUPR 0.0691/0.0171  AUROC 0.9162/0.8345  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0036  AUPR 0.0749/0.0245  AUROC 0.9170/0.8396  LR 1.00e-04  Best: ep 10
+  Epoch  13/50  loss 0.0033/0.0036  AUPR 0.0772/0.0195  AUROC 0.9197/0.8289  LR 1.00e-04  Best: ep 12
+  Epoch  14/50  loss 0.0033/0.0038  AUPR 0.0830/0.0221  AUROC 0.9216/0.8299  LR 1.00e-04  Best: ep 12
+  Epoch  15/50  loss 0.0033/0.0035  AUPR 0.0884/0.0248  AUROC 0.9254/0.8363  LR 1.00e-05  Best: ep 12
+  Epoch  16/50  loss 0.0032/0.0035  AUPR 0.0977/0.0263  AUROC 0.9303/0.8398  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0996/0.0273  AUROC 0.9320/0.8361  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0031/0.0036  AUPR 0.1031/0.0258  AUROC 0.9330/0.8362  LR 1.00e-05  Best: ep 17
+  Epoch  19/50  loss 0.0031/0.0036  AUPR 0.1042/0.0259  AUROC 0.9335/0.8351  LR 1.00e-05  Best: ep 17
+  Epoch  20/50  loss 0.0031/0.0036  AUPR 0.1066/0.0263  AUROC 0.9346/0.8356  LR 1.00e-05  Best: ep 17
+  Epoch  21/50  loss 0.0031/0.0036  AUPR 0.1081/0.0261  AUROC 0.9352/0.8367  LR 1.00e-06  Best: ep 17
+  Epoch  22/50  loss 0.0031/0.0036  AUPR 0.1086/0.0262  AUROC 0.9357/0.8341  LR 1.00e-06  Best: ep 17
+  Epoch  23/50  loss 0.0031/0.0036  AUPR 0.1084/0.0255  AUROC 0.9356/0.8350  LR 1.00e-06  Best: ep 17
+  Epoch  24/50  loss 0.0031/0.0036  AUPR 0.1084/0.0268  AUROC 0.9353/0.8361  LR 1.00e-06  Best: ep 17
+  Epoch  25/50  loss 0.0031/0.0036  AUPR 0.1086/0.0262  AUROC 0.9357/0.8355  LR 1.00e-06  Best: ep 17
+  Epoch  26/50  loss 0.0031/0.0036  AUPR 0.1086/0.0269  AUROC 0.9354/0.8361  LR 1.00e-06  Best: ep 17
+  Epoch  27/50  loss 0.0031/0.0036  AUPR 0.1088/0.0259  AUROC 0.9360/0.8346  LR 1.00e-07  Best: ep 17
+[2026-04-11 17:00:11] Early stopping at epoch 27 (best val AUPR 0.0273 at ep 17)
+[2026-04-11 17:00:11] Training finished in 2030.2s
+[I 2026-04-11 17:00:13,899] Trial 31 finished with value: 0.027327236907527707 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.
+[2026-04-11 17:00:29] Training started
+  Epoch   1/50  loss 0.0043/0.0037  AUPR 0.0343/0.0145  AUROC 0.8736/0.8032  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0400/0.0176  AUROC 0.8824/0.8150  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0451/0.0145  AUROC 0.8901/0.8215  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0035  AUPR 0.0481/0.0148  AUROC 0.8946/0.8330  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0498/0.0159  AUROC 0.8958/0.8119  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0035/0.0035  AUPR 0.0521/0.0122  AUROC 0.8992/0.8318  LR 1.00e-04  Best: ep 2
+  Epoch   7/50  loss 0.0035/0.0036  AUPR 0.0561/0.0148  AUROC 0.9055/0.8233  LR 1.00e-04  Best: ep 2
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0601/0.0187  AUROC 0.9104/0.8331  LR 1.00e-04  Best: ep 2
+  Epoch   9/50  loss 0.0035/0.0039  AUPR 0.0629/0.0178  AUROC 0.9091/0.8148  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0035  AUPR 0.0634/0.0197  AUROC 0.9147/0.8359  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0034/0.0035  AUPR 0.0675/0.0226  AUROC 0.9173/0.8275  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0765/0.0197  AUROC 0.9197/0.8302  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0033/0.0035  AUPR 0.0772/0.0250  AUROC 0.9211/0.8314  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0035  AUPR 0.0844/0.0231  AUROC 0.9236/0.8278  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0033/0.0037  AUPR 0.0809/0.0220  AUROC 0.9238/0.8267  LR 1.00e-04  Best: ep 13
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0903/0.0227  AUROC 0.9267/0.8249  LR 1.00e-05  Best: ep 13
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0969/0.0215  AUROC 0.9324/0.8228  LR 1.00e-05  Best: ep 13
+  Epoch  18/50  loss 0.0032/0.0036  AUPR 0.0995/0.0223  AUROC 0.9344/0.8266  LR 1.00e-05  Best: ep 13
+  Epoch  19/50  loss 0.0032/0.0037  AUPR 0.1006/0.0232  AUROC 0.9353/0.8245  LR 1.00e-05  Best: ep 13
+  Epoch  20/50  loss 0.0031/0.0036  AUPR 0.1041/0.0231  AUROC 0.9363/0.8227  LR 1.00e-05  Best: ep 13
+  Epoch  21/50  loss 0.0031/0.0036  AUPR 0.1058/0.0224  AUROC 0.9372/0.8255  LR 1.00e-05  Best: ep 13
+  Epoch  22/50  loss 0.0031/0.0037  AUPR 0.1060/0.0228  AUROC 0.9377/0.8207  LR 1.00e-06  Best: ep 13
+  Epoch  23/50  loss 0.0031/0.0036  AUPR 0.1068/0.0229  AUROC 0.9380/0.8215  LR 1.00e-06  Best: ep 13
+[2026-04-11 17:29:21] Early stopping at epoch 23 (best val AUPR 0.0250 at ep 13)
+[2026-04-11 17:29:21] Training finished in 1732.6s
+[I 2026-04-11 17:29:24,591] Trial 32 finished with value: 0.025041719005112192 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 22 with value: 0.029919009819421354.Best trial: 22. Best value: 0.029919:  64%|██████▍   | 32/50 [25:03:02<8:58:30, 1795.04s/it]Best trial: 22. Best value: 0.029919:  64%|██████▍   | 32/50 [25:03:02<8:58:30, 1795.04s/it]Best trial: 22. Best value: 0.029919:  66%|██████▌   | 33/50 [25:03:02<8:24:49, 1781.74s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 22. Best value: 0.029919:  66%|██████▌   | 33/50 [25:39:37<8:24:49, 1781.74s/it]Best trial: 33. Best value: 0.031032:  66%|██████▌   | 33/50 [25:39:37<8:24:49, 1781.74s/it]Best trial: 33. Best value: 0.031032:  68%|██████▊   | 34/50 [25:39:37<8:28:07, 1905.49s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            
+[2026-04-11 17:29:40] Training started
+  Epoch   1/50  loss 0.0043/0.0037  AUPR 0.0271/0.0067  AUROC 0.8702/0.8096  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0399/0.0093  AUROC 0.8828/0.8186  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0467/0.0187  AUROC 0.8887/0.8232  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0035  AUPR 0.0503/0.0215  AUROC 0.8927/0.8419  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0035/0.0038  AUPR 0.0553/0.0174  AUROC 0.9015/0.8263  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0036  AUPR 0.0529/0.0247  AUROC 0.8972/0.8433  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0577/0.0159  AUROC 0.9051/0.8392  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0035/0.0034  AUPR 0.0620/0.0210  AUROC 0.9096/0.8413  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0034/0.0036  AUPR 0.0678/0.0218  AUROC 0.9122/0.8393  LR 1.00e-04  Best: ep 6
+  Epoch  10/50  loss 0.0034/0.0037  AUPR 0.0687/0.0269  AUROC 0.9166/0.8334  LR 1.00e-04  Best: ep 6
+  Epoch  11/50  loss 0.0034/0.0035  AUPR 0.0728/0.0229  AUROC 0.9155/0.8296  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0037  AUPR 0.0793/0.0224  AUROC 0.9197/0.8269  LR 1.00e-04  Best: ep 10
+  Epoch  13/50  loss 0.0033/0.0035  AUPR 0.0793/0.0231  AUROC 0.9223/0.8386  LR 1.00e-04  Best: ep 10
+  Epoch  14/50  loss 0.0033/0.0037  AUPR 0.0845/0.0251  AUROC 0.9241/0.8315  LR 1.00e-05  Best: ep 10
+  Epoch  15/50  loss 0.0032/0.0036  AUPR 0.0935/0.0262  AUROC 0.9288/0.8346  LR 1.00e-05  Best: ep 10
+  Epoch  16/50  loss 0.0032/0.0036  AUPR 0.0975/0.0280  AUROC 0.9316/0.8310  LR 1.00e-05  Best: ep 10
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0995/0.0275  AUROC 0.9324/0.8306  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0031/0.0036  AUPR 0.1002/0.0292  AUROC 0.9327/0.8316  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0031/0.0036  AUPR 0.1031/0.0310  AUROC 0.9333/0.8353  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0031/0.0037  AUPR 0.1034/0.0305  AUROC 0.9344/0.8291  LR 1.00e-06  Best: ep 19
+  Epoch  21/50  loss 0.0031/0.0037  AUPR 0.1042/0.0301  AUROC 0.9344/0.8324  LR 1.00e-06  Best: ep 19
+  Epoch  22/50  loss 0.0031/0.0037  AUPR 0.1048/0.0299  AUROC 0.9348/0.8311  LR 1.00e-06  Best: ep 19
+  Epoch  23/50  loss 0.0031/0.0037  AUPR 0.1048/0.0301  AUROC 0.9347/0.8312  LR 1.00e-06  Best: ep 19
+  Epoch  24/50  loss 0.0031/0.0037  AUPR 0.1053/0.0300  AUROC 0.9346/0.8317  LR 1.00e-06  Best: ep 19
+  Epoch  25/50  loss 0.0031/0.0037  AUPR 0.1050/0.0304  AUROC 0.9347/0.8319  LR 1.00e-06  Best: ep 19
+  Epoch  26/50  loss 0.0031/0.0037  AUPR 0.1049/0.0298  AUROC 0.9347/0.8312  LR 1.00e-07  Best: ep 19
+  Epoch  27/50  loss 0.0031/0.0036  AUPR 0.1058/0.0301  AUROC 0.9350/0.8307  LR 1.00e-07  Best: ep 19
+  Epoch  28/50  loss 0.0031/0.0037  AUPR 0.1053/0.0301  AUROC 0.9352/0.8293  LR 1.00e-07  Best: ep 19
+  Epoch  29/50  loss 0.0031/0.0037  AUPR 0.1051/0.0304  AUROC 0.9349/0.8313  LR 1.00e-07  Best: ep 19
+[2026-04-11 18:05:56] Early stopping at epoch 29 (best val AUPR 0.0310 at ep 19)
+[2026-04-11 18:05:56] Training finished in 2176.1s
+[I 2026-04-11 18:05:58,831] Trial 33 finished with value: 0.031031972334710587 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 18:06:14] Training started
+  Epoch   1/50  loss 0.0044/0.0037  AUPR 0.0324/0.0108  AUROC 0.8671/0.8056  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0037  AUPR 0.0382/0.0180  AUROC 0.8813/0.8245  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0035  AUPR 0.0440/0.0111  AUROC 0.8872/0.8279  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0035  AUPR 0.0455/0.0136  AUROC 0.8981/0.8274  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0035  AUPR 0.0523/0.0171  AUROC 0.9002/0.8265  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0035/0.0035  AUPR 0.0576/0.0192  AUROC 0.9027/0.8298  LR 1.00e-04  Best: ep 2
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0651/0.0195  AUROC 0.9070/0.8312  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0662/0.0172  AUROC 0.9099/0.8311  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0667/0.0181  AUROC 0.9100/0.8350  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0034/0.0036  AUPR 0.0695/0.0206  AUROC 0.9120/0.8197  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0034/0.0042  AUPR 0.0699/0.0218  AUROC 0.9148/0.8243  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0766/0.0207  AUROC 0.9199/0.8353  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0033/0.0036  AUPR 0.0761/0.0201  AUROC 0.9177/0.8313  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0035  AUPR 0.0828/0.0197  AUROC 0.9215/0.8315  LR 1.00e-04  Best: ep 11
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0909/0.0203  AUROC 0.9268/0.8331  LR 1.00e-04  Best: ep 11
+  Epoch  16/50  loss 0.0032/0.0036  AUPR 0.0867/0.0232  AUROC 0.9255/0.8309  LR 1.00e-04  Best: ep 11
+  Epoch  17/50  loss 0.0033/0.0034  AUPR 0.0941/0.0242  AUROC 0.9269/0.8455  LR 1.00e-04  Best: ep 16
+  Epoch  18/50  loss 0.0033/0.0035  AUPR 0.0946/0.0190  AUROC 0.9267/0.8418  LR 1.00e-04  Best: ep 17
+  Epoch  19/50  loss 0.0032/0.0036  AUPR 0.1017/0.0249  AUROC 0.9315/0.8282  LR 1.00e-04  Best: ep 17
+  Epoch  20/50  loss 0.0032/0.0036  AUPR 0.1040/0.0247  AUROC 0.9328/0.8332  LR 1.00e-04  Best: ep 19
+  Epoch  21/50  loss 0.0032/0.0036  AUPR 0.1056/0.0255  AUROC 0.9322/0.8292  LR 1.00e-04  Best: ep 19
+  Epoch  22/50  loss 0.0032/0.0036  AUPR 0.1108/0.0245  AUROC 0.9344/0.8202  LR 1.00e-04  Best: ep 21
+  Epoch  23/50  loss 0.0032/0.0038  AUPR 0.1122/0.0275  AUROC 0.9361/0.8324  LR 1.00e-05  Best: ep 21
+  Epoch  24/50  loss 0.0031/0.0036  AUPR 0.1271/0.0278  AUROC 0.9413/0.8338  LR 1.00e-05  Best: ep 23
+  Epoch  25/50  loss 0.0030/0.0036  AUPR 0.1307/0.0274  AUROC 0.9432/0.8277  LR 1.00e-05  Best: ep 24
+  Epoch  26/50  loss 0.0030/0.0036  AUPR 0.1330/0.0269  AUROC 0.9437/0.8289  LR 1.00e-05  Best: ep 24
+  Epoch  27/50  loss 0.0030/0.0036  AUPR 0.1360/0.0277  AUROC 0.9445/0.8291  LR 1.00e-05  Best: ep 24
+  Epoch  28/50  loss 0.0030/0.0036  AUPR 0.1368/0.0279  AUROC 0.9451/0.8284  LR 1.00e-05  Best: ep 24
+  Epoch  29/50  loss 0.0030/0.0036  AUPR 0.1383/0.0276  AUROC 0.9453/0.8299  LR 1.00e-06  Best: ep 28
+  Epoch  30/50  loss 0.0030/0.0036  AUPR 0.1400/0.0264  AUROC 0.9459/0.8293  LR 1.00e-06  Best: ep 28
+  Epoch  31/50  loss 0.0030/0.0036  AUPR 0.1403/0.0264  AUROC 0.9457/0.8287  LR 1.00e-06  Best: ep 28
+  Epoch  32/50  loss 0.0030/0.0036  AUPR 0.1405/0.0282  AUROC 0.9457/0.8310  LR 1.00e-06  Best: ep 28
+  Epoch  33/50  loss 0.0030/0.0036  AUPR 0.1407/0.0275  AUROC 0.9460/0.8292  LR 1.00e-06  Best: ep 32
+  Epoch  34/50  loss 0.0030/0.0036  AUPR 0.1415/0.0277  AUROC 0.9461/0.8291  LR 1.00e-06  Best: ep 32
+  Epoch  35/50  loss 0.0030/0.0036  AUPR 0.1408/0.0284  AUROC 0.9460/0.8309  LR 1.00e-07  Best: ep 32
+  Epoch  36/50  loss 0.0030/0.0036  AUPR 0.1414/0.0278  AUROC 0.9459/0.8307  LR 1.00e-07  Best: ep 35
+  Epoch  37/50  loss 0.0030/0.0036  AUPR 0.1414/0.0282  AUROC 0.9461/0.8304  LR 1.00e-07  Best: ep 35
+  Epoch  38/50  loss 0.0030/0.0036  AUPR 0.1410/0.0274  AUROC 0.9463/0.8286  LR 1.00e-07  Best: ep 35
+  Epoch  39/50  loss 0.0030/0.0036  AUPR 0.1415/0.0279  AUROC 0.9461/0.8285  LR 1.00e-07  Best: ep 35
+  Epoch  40/50  loss 0.0030/0.0036  AUPR 0.1413/0.0272  AUROC 0.9459/0.8290  LR 1.00e-07  Best: ep 35
+  Epoch  41/50  loss 0.0030/0.0036  AUPR 0.1414/0.0278  AUROC 0.9461/0.8303  LR 1.00e-08  Best: ep 35
+  Epoch  42/50  loss 0.0029/0.0036  AUPR 0.1407/0.0275  AUROC 0.9460/0.8298  LR 1.00e-08  Best: ep 35
+  Epoch  43/50  loss 0.0030/0.0036  AUPR 0.1417/0.0275  AUROC 0.9458/0.8291  LR 1.00e-08  Best: ep 35
+  Epoch  44/50  loss 0.0030/0.0036  AUPR 0.1413/0.0274  AUROC 0.9460/0.8288  LR 1.00e-08  Best: ep 35
+  Epoch  45/50  loss 0.0030/0.0036  AUPR 0.1419/0.0273  AUROC 0.9460/0.8293  LR 1.00e-08  Best: ep 35
+[2026-04-11 19:03:12] Early stopping at epoch 45 (best val AUPR 0.0284 at ep 35)
+[2026-04-11 19:03:12] Training finished in 3417.9s
+[I 2026-04-11 19:03:15,412] Trial 34 finished with value: 0.02838441698690431 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.Best trial: 33. Best value: 0.031032:  68%|██████▊   | 34/50 [26:36:53<8:28:07, 1905.49s/it]Best trial: 33. Best value: 0.031032:  68%|██████▊   | 34/50 [26:36:53<8:28:07, 1905.49s/it]Best trial: 33. Best value: 0.031032:  70%|███████   | 35/50 [26:36:53<9:51:12, 2364.82s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  70%|███████   | 35/50 [26:56:07<9:51:12, 2364.82s/it]Best trial: 33. Best value: 0.031032:  70%|███████   | 35/50 [26:56:07<9:51:12, 2364.82s/it]Best trial: 33. Best value: 0.031032:  72%|███████▏  | 36/50 [26:56:07<7:47:00, 2001.45s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  72%|███████▏  | 36/50 [27:29:30<7:47:00, 2001.45s/it]Best trial: 33. Best value: 0.031032:  72%|███████▏  | 36/50 [27:29:30<7:47:00, 2001.45s/it]Best trial: 33. Best value: 0.031032:  74%|███████▍  | 37/50 [27:29:30<7:13:47, 2002.08s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  74%|███████▍  | 37/50 [28:02:22<7:13:47, 2002.08s/it]Best trial: 33. Best value: 0.031032:  74%|███████▍  | 37/50 [28:02:22<7:13:47, 2002.08s/it]Best trial: 33. Best value: 0.031032:  76%|███████▌  | 38/50 [28:02:22<6:38:34, 1992.91s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+[2026-04-11 19:03:31] Training started
+  Epoch   1/50  loss 0.0043/0.0031  AUPR 0.0256/0.0109  AUROC 0.8630/0.8257  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0033/0.0033  AUPR 0.0362/0.0161  AUROC 0.8816/0.8067  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0031/0.0031  AUPR 0.0386/0.0149  AUROC 0.8842/0.8170  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0030/0.0032  AUPR 0.0452/0.0130  AUROC 0.8956/0.8136  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0030/0.0032  AUPR 0.0474/0.0194  AUROC 0.8989/0.8264  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0029/0.0030  AUPR 0.0515/0.0161  AUROC 0.9044/0.8257  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0029/0.0032  AUPR 0.0543/0.0167  AUROC 0.9090/0.8210  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0028/0.0030  AUPR 0.0549/0.0177  AUROC 0.9090/0.8362  LR 1.00e-04  Best: ep 5
+  Epoch   9/50  loss 0.0028/0.0031  AUPR 0.0582/0.0146  AUROC 0.9141/0.8232  LR 1.00e-04  Best: ep 5
+  Epoch  10/50  loss 0.0028/0.0031  AUPR 0.0634/0.0162  AUROC 0.9180/0.8286  LR 1.00e-04  Best: ep 5
+  Epoch  11/50  loss 0.0028/0.0030  AUPR 0.0631/0.0178  AUROC 0.9195/0.8354  LR 1.00e-04  Best: ep 5
+  Epoch  12/50  loss 0.0027/0.0033  AUPR 0.0644/0.0192  AUROC 0.9218/0.8278  LR 1.00e-04  Best: ep 5
+  Epoch  13/50  loss 0.0027/0.0031  AUPR 0.0671/0.0185  AUROC 0.9252/0.8288  LR 1.00e-04  Best: ep 5
+  Epoch  14/50  loss 0.0027/0.0032  AUPR 0.0719/0.0188  AUROC 0.9276/0.8231  LR 1.00e-05  Best: ep 5
+  Epoch  15/50  loss 0.0026/0.0032  AUPR 0.0785/0.0179  AUROC 0.9326/0.8251  LR 1.00e-05  Best: ep 5
+[2026-04-11 19:22:26] Early stopping at epoch 15 (best val AUPR 0.0194 at ep 5)
+[2026-04-11 19:22:26] Training finished in 1135.0s
+[I 2026-04-11 19:22:29,011] Trial 35 finished with value: 0.019357468186205415 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.95, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 19:22:44] Training started
+  Epoch   1/50  loss 0.0040/0.0036  AUPR 0.0291/0.0100  AUROC 0.8615/0.8247  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0037/0.0037  AUPR 0.0358/0.0178  AUROC 0.8757/0.8211  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0036/0.0036  AUPR 0.0431/0.0161  AUROC 0.8853/0.8250  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0035/0.0035  AUPR 0.0420/0.0183  AUROC 0.8899/0.8408  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0035/0.0035  AUPR 0.0444/0.0145  AUROC 0.8963/0.8298  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0036  AUPR 0.0516/0.0172  AUROC 0.8989/0.8242  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0550/0.0191  AUROC 0.9017/0.8349  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0034/0.0035  AUPR 0.0562/0.0192  AUROC 0.9025/0.8356  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0608/0.0194  AUROC 0.9065/0.8259  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0037  AUPR 0.0623/0.0147  AUROC 0.9041/0.8257  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0034/0.0037  AUPR 0.0579/0.0217  AUROC 0.9093/0.8277  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0033/0.0035  AUPR 0.0652/0.0166  AUROC 0.9101/0.8328  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0033/0.0038  AUPR 0.0648/0.0207  AUROC 0.9106/0.8246  LR 1.00e-05  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0036  AUPR 0.0778/0.0212  AUROC 0.9185/0.8324  LR 1.00e-05  Best: ep 11
+  Epoch  15/50  loss 0.0032/0.0036  AUPR 0.0793/0.0217  AUROC 0.9199/0.8315  LR 1.00e-05  Best: ep 11
+  Epoch  16/50  loss 0.0032/0.0036  AUPR 0.0808/0.0225  AUROC 0.9203/0.8356  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0032/0.0037  AUPR 0.0822/0.0212  AUROC 0.9213/0.8270  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0032/0.0036  AUPR 0.0839/0.0210  AUROC 0.9227/0.8315  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0032/0.0036  AUPR 0.0819/0.0189  AUROC 0.9230/0.8325  LR 1.00e-06  Best: ep 16
+  Epoch  20/50  loss 0.0032/0.0036  AUPR 0.0843/0.0200  AUROC 0.9236/0.8331  LR 1.00e-06  Best: ep 16
+  Epoch  21/50  loss 0.0032/0.0036  AUPR 0.0850/0.0206  AUROC 0.9237/0.8337  LR 1.00e-06  Best: ep 16
+  Epoch  22/50  loss 0.0032/0.0036  AUPR 0.0851/0.0214  AUROC 0.9236/0.8338  LR 1.00e-06  Best: ep 16
+  Epoch  23/50  loss 0.0032/0.0036  AUPR 0.0851/0.0207  AUROC 0.9238/0.8332  LR 1.00e-06  Best: ep 16
+  Epoch  24/50  loss 0.0032/0.0036  AUPR 0.0853/0.0211  AUROC 0.9237/0.8340  LR 1.00e-06  Best: ep 16
+  Epoch  25/50  loss 0.0032/0.0036  AUPR 0.0856/0.0208  AUROC 0.9240/0.8321  LR 1.00e-07  Best: ep 16
+  Epoch  26/50  loss 0.0032/0.0036  AUPR 0.0855/0.0213  AUROC 0.9239/0.8322  LR 1.00e-07  Best: ep 16
+[2026-04-11 19:55:49] Early stopping at epoch 26 (best val AUPR 0.0225 at ep 16)
+[2026-04-11 19:55:49] Training finished in 1985.4s
+[I 2026-04-11 19:55:52,554] Trial 36 finished with value: 0.02253489947177525 and parameters: {'arch': '128-128-128', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 19:56:07] Training started
+  Epoch   1/50  loss 0.0042/0.0037  AUPR 0.0285/0.0118  AUROC 0.8650/0.8135  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0039/0.0036  AUPR 0.0306/0.0107  AUROC 0.8752/0.8241  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0373/0.0168  AUROC 0.8804/0.8230  LR 1.00e-03  Best: ep 1
+  Epoch   4/50  loss 0.0037/0.0036  AUPR 0.0352/0.0150  AUROC 0.8829/0.8183  LR 1.00e-03  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0037  AUPR 0.0451/0.0195  AUROC 0.8872/0.8346  LR 1.00e-03  Best: ep 3
+  Epoch   6/50  loss 0.0036/0.0036  AUPR 0.0464/0.0164  AUROC 0.8891/0.8204  LR 1.00e-03  Best: ep 5
+  Epoch   7/50  loss 0.0036/0.0036  AUPR 0.0484/0.0190  AUROC 0.8934/0.8278  LR 1.00e-03  Best: ep 5
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0503/0.0173  AUROC 0.8937/0.8304  LR 1.00e-03  Best: ep 5
+  Epoch   9/50  loss 0.0035/0.0035  AUPR 0.0547/0.0193  AUROC 0.8935/0.8395  LR 1.00e-03  Best: ep 5
+  Epoch  10/50  loss 0.0035/0.0035  AUPR 0.0576/0.0181  AUROC 0.8984/0.8370  LR 1.00e-03  Best: ep 5
+  Epoch  11/50  loss 0.0035/0.0036  AUPR 0.0559/0.0192  AUROC 0.9009/0.8331  LR 1.00e-03  Best: ep 5
+  Epoch  12/50  loss 0.0035/0.0037  AUPR 0.0627/0.0161  AUROC 0.9021/0.8304  LR 1.00e-03  Best: ep 5
+  Epoch  13/50  loss 0.0034/0.0037  AUPR 0.0663/0.0193  AUROC 0.9051/0.8267  LR 1.00e-03  Best: ep 5
+  Epoch  14/50  loss 0.0034/0.0036  AUPR 0.0671/0.0185  AUROC 0.9052/0.8239  LR 1.00e-03  Best: ep 5
+  Epoch  15/50  loss 0.0034/0.0037  AUPR 0.0686/0.0221  AUROC 0.9073/0.8326  LR 1.00e-04  Best: ep 5
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0741/0.0222  AUROC 0.9110/0.8323  LR 1.00e-04  Best: ep 15
+  Epoch  17/50  loss 0.0033/0.0037  AUPR 0.0773/0.0193  AUROC 0.9123/0.8306  LR 1.00e-04  Best: ep 16
+  Epoch  18/50  loss 0.0033/0.0036  AUPR 0.0784/0.0192  AUROC 0.9133/0.8358  LR 1.00e-04  Best: ep 16
+  Epoch  19/50  loss 0.0033/0.0036  AUPR 0.0792/0.0202  AUROC 0.9139/0.8322  LR 1.00e-04  Best: ep 16
+  Epoch  20/50  loss 0.0033/0.0036  AUPR 0.0813/0.0209  AUROC 0.9146/0.8349  LR 1.00e-04  Best: ep 16
+  Epoch  21/50  loss 0.0033/0.0036  AUPR 0.0818/0.0201  AUROC 0.9152/0.8355  LR 1.00e-05  Best: ep 16
+  Epoch  22/50  loss 0.0033/0.0037  AUPR 0.0819/0.0195  AUROC 0.9153/0.8334  LR 1.00e-05  Best: ep 16
+  Epoch  23/50  loss 0.0033/0.0036  AUPR 0.0828/0.0204  AUROC 0.9155/0.8337  LR 1.00e-05  Best: ep 16
+  Epoch  24/50  loss 0.0033/0.0037  AUPR 0.0825/0.0198  AUROC 0.9156/0.8333  LR 1.00e-05  Best: ep 16
+  Epoch  25/50  loss 0.0033/0.0036  AUPR 0.0832/0.0204  AUROC 0.9156/0.8343  LR 1.00e-05  Best: ep 16
+  Epoch  26/50  loss 0.0032/0.0037  AUPR 0.0830/0.0202  AUROC 0.9157/0.8342  LR 1.00e-05  Best: ep 16
+[2026-04-11 20:28:41] Early stopping at epoch 26 (best val AUPR 0.0222 at ep 16)
+[2026-04-11 20:28:41] Training finished in 1953.6s
+[I 2026-04-11 20:28:44,056] Trial 37 finished with value: 0.022169925974399343 and parameters: {'arch': '256-128-64', 'dropout': 0.4, 'lr': 0.001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 20:28:59] Training started
+  Epoch   1/50  loss 0.0038/0.0021  AUPR 0.0249/0.0100  AUROC 0.8610/0.7980  LR 1.00e-04  Best: ep 0                                                                                            Best trial: 33. Best value: 0.031032:  76%|███████▌  | 38/50 [28:49:24<6:38:34, 1992.91s/it]Best trial: 33. Best value: 0.031032:  76%|███████▌  | 38/50 [28:49:24<6:38:34, 1992.91s/it]Best trial: 33. Best value: 0.031032:  78%|███████▊  | 39/50 [28:49:24<6:50:57, 2241.57s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  78%|███████▊  | 39/50 [29:29:09<6:50:57, 2241.57s/it]Best trial: 33. Best value: 0.031032:  78%|███████▊  | 39/50 [29:29:09<6:50:57, 2241.57s/it]Best trial: 33. Best value: 0.031032:  80%|████████  | 40/50 [29:29:09<6:20:46, 2284.64s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch   2/50  loss 0.0023/0.0018  AUPR 0.0312/0.0096  AUROC 0.8710/0.8112  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0021/0.0017  AUPR 0.0297/0.0116  AUROC 0.8782/0.8206  LR 1.00e-04  Best: ep 1
+  Epoch   4/50  loss 0.0020/0.0017  AUPR 0.0387/0.0130  AUROC 0.8843/0.8308  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0019/0.0018  AUPR 0.0372/0.0141  AUROC 0.8851/0.8125  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0019/0.0017  AUPR 0.0404/0.0131  AUROC 0.8903/0.8188  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0019/0.0017  AUPR 0.0425/0.0144  AUROC 0.8965/0.8166  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0018/0.0017  AUPR 0.0463/0.0147  AUROC 0.8979/0.8314  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0018/0.0017  AUPR 0.0458/0.0138  AUROC 0.9006/0.8355  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0017/0.0017  AUPR 0.0504/0.0147  AUROC 0.9008/0.8280  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0017/0.0017  AUPR 0.0524/0.0154  AUROC 0.9041/0.8245  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0017/0.0017  AUPR 0.0507/0.0173  AUROC 0.9043/0.8231  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0017/0.0017  AUPR 0.0514/0.0181  AUROC 0.9061/0.8278  LR 1.00e-04  Best: ep 12
+  Epoch  14/50  loss 0.0017/0.0018  AUPR 0.0556/0.0175  AUROC 0.9117/0.8195  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0017/0.0017  AUPR 0.0559/0.0173  AUROC 0.9112/0.8336  LR 1.00e-05  Best: ep 13
+  Epoch  16/50  loss 0.0016/0.0017  AUPR 0.0608/0.0184  AUROC 0.9166/0.8301  LR 1.00e-05  Best: ep 13
+  Epoch  17/50  loss 0.0016/0.0017  AUPR 0.0624/0.0189  AUROC 0.9184/0.8317  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0016/0.0017  AUPR 0.0626/0.0195  AUROC 0.9187/0.8327  LR 1.00e-05  Best: ep 17
+  Epoch  19/50  loss 0.0016/0.0017  AUPR 0.0639/0.0196  AUROC 0.9198/0.8311  LR 1.00e-05  Best: ep 18
+  Epoch  20/50  loss 0.0016/0.0017  AUPR 0.0642/0.0188  AUROC 0.9205/0.8326  LR 1.00e-05  Best: ep 19
+  Epoch  21/50  loss 0.0016/0.0017  AUPR 0.0651/0.0196  AUROC 0.9211/0.8308  LR 1.00e-06  Best: ep 19
+  Epoch  22/50  loss 0.0015/0.0017  AUPR 0.0652/0.0193  AUROC 0.9214/0.8306  LR 1.00e-06  Best: ep 19
+  Epoch  23/50  loss 0.0016/0.0017  AUPR 0.0659/0.0196  AUROC 0.9215/0.8315  LR 1.00e-06  Best: ep 19
+  Epoch  24/50  loss 0.0015/0.0017  AUPR 0.0658/0.0195  AUROC 0.9215/0.8325  LR 1.00e-06  Best: ep 19
+  Epoch  25/50  loss 0.0016/0.0017  AUPR 0.0657/0.0192  AUROC 0.9218/0.8316  LR 1.00e-06  Best: ep 19
+  Epoch  26/50  loss 0.0016/0.0017  AUPR 0.0660/0.0192  AUROC 0.9219/0.8322  LR 1.00e-06  Best: ep 19
+  Epoch  27/50  loss 0.0015/0.0017  AUPR 0.0658/0.0197  AUROC 0.9217/0.8312  LR 1.00e-07  Best: ep 19
+  Epoch  28/50  loss 0.0016/0.0017  AUPR 0.0658/0.0193  AUROC 0.9217/0.8313  LR 1.00e-07  Best: ep 27
+  Epoch  29/50  loss 0.0015/0.0017  AUPR 0.0659/0.0196  AUROC 0.9217/0.8320  LR 1.00e-07  Best: ep 27
+  Epoch  30/50  loss 0.0015/0.0017  AUPR 0.0660/0.0194  AUROC 0.9217/0.8319  LR 1.00e-07  Best: ep 27
+  Epoch  31/50  loss 0.0015/0.0017  AUPR 0.0659/0.0195  AUROC 0.9218/0.8320  LR 1.00e-07  Best: ep 27
+  Epoch  32/50  loss 0.0016/0.0017  AUPR 0.0661/0.0196  AUROC 0.9216/0.8319  LR 1.00e-07  Best: ep 27
+  Epoch  33/50  loss 0.0016/0.0017  AUPR 0.0660/0.0196  AUROC 0.9217/0.8321  LR 1.00e-08  Best: ep 27
+  Epoch  34/50  loss 0.0015/0.0017  AUPR 0.0661/0.0195  AUROC 0.9219/0.8317  LR 1.00e-08  Best: ep 27
+  Epoch  35/50  loss 0.0015/0.0017  AUPR 0.0660/0.0194  AUROC 0.9217/0.8320  LR 1.00e-08  Best: ep 27
+  Epoch  36/50  loss 0.0015/0.0017  AUPR 0.0660/0.0194  AUROC 0.9219/0.8310  LR 1.00e-08  Best: ep 27
+  Epoch  37/50  loss 0.0016/0.0017  AUPR 0.0660/0.0193  AUROC 0.9217/0.8311  LR 1.00e-08  Best: ep 27
+[2026-04-11 21:15:43] Early stopping at epoch 37 (best val AUPR 0.0197 at ep 27)
+[2026-04-11 21:15:43] Training finished in 2803.4s
+[I 2026-04-11 21:15:45,858] Trial 38 finished with value: 0.019688290733366098 and parameters: {'arch': '128-64-32', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.95, 'focal_gamma': 2.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 21:16:01] Training started
+  Epoch   1/50  loss 0.0043/0.0036  AUPR 0.0307/0.0155  AUROC 0.8717/0.8210  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0324/0.0186  AUROC 0.8822/0.8105  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0449/0.0177  AUROC 0.8892/0.8188  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0035  AUPR 0.0485/0.0173  AUROC 0.8872/0.8312  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0535/0.0192  AUROC 0.8968/0.8262  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0035/0.0035  AUPR 0.0509/0.0216  AUROC 0.8999/0.8418  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0572/0.0184  AUROC 0.9067/0.8244  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0035/0.0035  AUPR 0.0647/0.0194  AUROC 0.9089/0.8306  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0034/0.0035  AUPR 0.0673/0.0195  AUROC 0.9122/0.8327  LR 1.00e-04  Best: ep 6
+  Epoch  10/50  loss 0.0034/0.0034  AUPR 0.0692/0.0188  AUROC 0.9147/0.8372  LR 1.00e-04  Best: ep 6
+  Epoch  11/50  loss 0.0034/0.0035  AUPR 0.0736/0.0234  AUROC 0.9171/0.8349  LR 1.00e-04  Best: ep 6
+  Epoch  12/50  loss 0.0034/0.0035  AUPR 0.0790/0.0200  AUROC 0.9189/0.8373  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0033/0.0035  AUPR 0.0807/0.0193  AUROC 0.9215/0.8391  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0035  AUPR 0.0785/0.0206  AUROC 0.9229/0.8351  LR 1.00e-04  Best: ep 11
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0850/0.0246  AUROC 0.9242/0.8359  LR 1.00e-04  Best: ep 11
+  Epoch  16/50  loss 0.0033/0.0042  AUPR 0.0838/0.0232  AUROC 0.9244/0.8211  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0992/0.0209  AUROC 0.9323/0.8307  LR 1.00e-05  Best: ep 15
+  Epoch  18/50  loss 0.0032/0.0036  AUPR 0.1014/0.0215  AUROC 0.9339/0.8320  LR 1.00e-05  Best: ep 15
+  Epoch  19/50  loss 0.0031/0.0036  AUPR 0.1039/0.0237  AUROC 0.9352/0.8321  LR 1.00e-05  Best: ep 15
+  Epoch  20/50  loss 0.0031/0.0036  AUPR 0.1062/0.0244  AUROC 0.9356/0.8337  LR 1.00e-05  Best: ep 15
+  Epoch  21/50  loss 0.0031/0.0036  AUPR 0.1074/0.0248  AUROC 0.9364/0.8332  LR 1.00e-05  Best: ep 15
+  Epoch  22/50  loss 0.0031/0.0036  AUPR 0.1087/0.0246  AUROC 0.9370/0.8301  LR 1.00e-06  Best: ep 21
+  Epoch  23/50  loss 0.0031/0.0036  AUPR 0.1101/0.0243  AUROC 0.9375/0.8304  LR 1.00e-06  Best: ep 21
+  Epoch  24/50  loss 0.0031/0.0036  AUPR 0.1110/0.0244  AUROC 0.9375/0.8311  LR 1.00e-06  Best: ep 21
+  Epoch  25/50  loss 0.0031/0.0036  AUPR 0.1111/0.0241  AUROC 0.9376/0.8313  LR 1.00e-06  Best: ep 21
+  Epoch  26/50  loss 0.0031/0.0036  AUPR 0.1102/0.0245  AUROC 0.9378/0.8310  LR 1.00e-06  Best: ep 21
+  Epoch  27/50  loss 0.0031/0.0036  AUPR 0.1112/0.0241  AUROC 0.9378/0.8305  LR 1.00e-06  Best: ep 21
+  Epoch  28/50  loss 0.0031/0.0036  AUPR 0.1111/0.0246  AUROC 0.9376/0.8313  LR 1.00e-07  Best: ep 21
+  Epoch  29/50  loss 0.0031/0.0036  AUPR 0.1108/0.0247  AUROC 0.9378/0.8318  LR 1.00e-07  Best: ep 21
+  Epoch  30/50  loss 0.0031/0.0036  AUPR 0.1113/0.0246  AUROC 0.9379/0.8317  LR 1.00e-07  Best: ep 21
+  Epoch  31/50  loss 0.0031/0.0036  AUPR 0.1115/0.0247  AUROC 0.9378/0.8308  LR 1.00e-07  Best: ep 21
+[2026-04-11 21:55:28] Early stopping at epoch 31 (best val AUPR 0.0248 at ep 21)
+[2026-04-11 21:55:28] Training finished in 2366.7s
+[I 2026-04-11 21:55:30,998] Trial 39 finished with value: 0.024836349123564055 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 21:55:46] Training started
+  Epoch   1/50  loss 0.0025/0.0021  AUPR 0.0218/0.0135  AUROC 0.8566/0.8161  LR 1.00e-02  Best: ep 0
+  Epoch   2/50  loss 0.0023/0.0021  AUPR 0.0299/0.0150  AUROC 0.8725/0.8183  LR 1.00e-02  Best: ep 1
+  Epoch   3/50  loss 0.0022/0.0022  AUPR 0.0337/0.0099  AUROC 0.8766/0.8261  LR 1.00e-02  Best: ep 2
+  Epoch   4/50  loss 0.0022/0.0021  AUPR 0.0313/0.0109  AUROC 0.8793/0.8165  LR 1.00e-02  Best: ep 2
+  Epoch   5/50  loss 0.0022/0.0021  AUPR 0.0366/0.0127  AUROC 0.8826/0.8256  LR 1.00e-02  Best: ep 2
+  Epoch   6/50  loss 0.0022/0.0021  AUPR 0.0396/0.0136  AUROC 0.8848/0.8296  LR 1.00e-02  Best: ep 2                                                                                            Best trial: 33. Best value: 0.031032:  80%|████████  | 40/50 [29:53:25<6:20:46, 2284.64s/it]Best trial: 33. Best value: 0.031032:  80%|████████  | 40/50 [29:53:25<6:20:46, 2284.64s/it]Best trial: 33. Best value: 0.031032:  82%|████████▏ | 41/50 [29:53:25<5:05:25, 2036.15s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  82%|████████▏ | 41/50 [30:41:53<5:05:25, 2036.15s/it]Best trial: 33. Best value: 0.031032:  82%|████████▏ | 41/50 [30:41:53<5:05:25, 2036.15s/it]Best trial: 33. Best value: 0.031032:  84%|████████▍ | 42/50 [30:41:53<5:06:21, 2297.74s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch   7/50  loss 0.0021/0.0021  AUPR 0.0402/0.0124  AUROC 0.8867/0.8182  LR 1.00e-02  Best: ep 2
+  Epoch   8/50  loss 0.0021/0.0023  AUPR 0.0445/0.0171  AUROC 0.8875/0.8148  LR 1.00e-02  Best: ep 2
+  Epoch   9/50  loss 0.0021/0.0021  AUPR 0.0435/0.0172  AUROC 0.8887/0.8251  LR 1.00e-02  Best: ep 8
+  Epoch  10/50  loss 0.0021/0.0023  AUPR 0.0416/0.0163  AUROC 0.8906/0.8213  LR 1.00e-02  Best: ep 9
+  Epoch  11/50  loss 0.0021/0.0021  AUPR 0.0458/0.0164  AUROC 0.8950/0.8331  LR 1.00e-03  Best: ep 9
+  Epoch  12/50  loss 0.0020/0.0021  AUPR 0.0500/0.0154  AUROC 0.8991/0.8313  LR 1.00e-03  Best: ep 9
+  Epoch  13/50  loss 0.0020/0.0021  AUPR 0.0516/0.0151  AUROC 0.9008/0.8278  LR 1.00e-03  Best: ep 9
+  Epoch  14/50  loss 0.0020/0.0022  AUPR 0.0532/0.0147  AUROC 0.9020/0.8271  LR 1.00e-03  Best: ep 9
+  Epoch  15/50  loss 0.0020/0.0021  AUPR 0.0538/0.0140  AUROC 0.9025/0.8302  LR 1.00e-03  Best: ep 9
+  Epoch  16/50  loss 0.0020/0.0021  AUPR 0.0542/0.0118  AUROC 0.9035/0.8255  LR 1.00e-03  Best: ep 9
+  Epoch  17/50  loss 0.0020/0.0021  AUPR 0.0540/0.0124  AUROC 0.9042/0.8303  LR 1.00e-04  Best: ep 9
+  Epoch  18/50  loss 0.0020/0.0021  AUPR 0.0547/0.0127  AUROC 0.9046/0.8293  LR 1.00e-04  Best: ep 9
+  Epoch  19/50  loss 0.0020/0.0021  AUPR 0.0547/0.0124  AUROC 0.9048/0.8298  LR 1.00e-04  Best: ep 9
+[2026-04-11 22:19:44] Early stopping at epoch 19 (best val AUPR 0.0172 at ep 9)
+[2026-04-11 22:19:44] Training finished in 1438.2s
+[I 2026-04-11 22:19:47,318] Trial 40 finished with value: 0.017159275212000686 and parameters: {'arch': '128-64-32', 'dropout': 0.30000000000000004, 'lr': 0.01, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 2.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 22:20:02] Training started
+  Epoch   1/50  loss 0.0043/0.0037  AUPR 0.0333/0.0096  AUROC 0.8729/0.8134  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0323/0.0130  AUROC 0.8808/0.8210  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0483/0.0142  AUROC 0.8899/0.8153  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0469/0.0159  AUROC 0.8927/0.8334  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0544/0.0159  AUROC 0.8988/0.8234  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0035/0.0035  AUPR 0.0566/0.0158  AUROC 0.9036/0.8280  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0035/0.0036  AUPR 0.0537/0.0147  AUROC 0.9031/0.8111  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0035/0.0037  AUPR 0.0648/0.0189  AUROC 0.9104/0.8298  LR 1.00e-04  Best: ep 4
+  Epoch   9/50  loss 0.0034/0.0036  AUPR 0.0682/0.0188  AUROC 0.9127/0.8278  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0035  AUPR 0.0728/0.0199  AUROC 0.9149/0.8368  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0034/0.0036  AUPR 0.0732/0.0184  AUROC 0.9170/0.8279  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0034/0.0042  AUPR 0.0759/0.0235  AUROC 0.9200/0.8191  LR 1.00e-05  Best: ep 10
+  Epoch  13/50  loss 0.0033/0.0038  AUPR 0.0869/0.0234  AUROC 0.9255/0.8306  LR 1.00e-05  Best: ep 12
+  Epoch  14/50  loss 0.0032/0.0037  AUPR 0.0903/0.0252  AUROC 0.9272/0.8295  LR 1.00e-05  Best: ep 12
+  Epoch  15/50  loss 0.0032/0.0036  AUPR 0.0934/0.0252  AUROC 0.9280/0.8321  LR 1.00e-05  Best: ep 14
+  Epoch  16/50  loss 0.0032/0.0036  AUPR 0.0943/0.0254  AUROC 0.9291/0.8311  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0959/0.0248  AUROC 0.9300/0.8299  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0032/0.0036  AUPR 0.0961/0.0242  AUROC 0.9300/0.8356  LR 1.00e-06  Best: ep 16
+  Epoch  19/50  loss 0.0032/0.0036  AUPR 0.0977/0.0248  AUROC 0.9310/0.8330  LR 1.00e-06  Best: ep 16
+  Epoch  20/50  loss 0.0032/0.0036  AUPR 0.0981/0.0240  AUROC 0.9310/0.8316  LR 1.00e-06  Best: ep 16
+  Epoch  21/50  loss 0.0032/0.0036  AUPR 0.0982/0.0245  AUROC 0.9312/0.8322  LR 1.00e-06  Best: ep 16
+  Epoch  22/50  loss 0.0032/0.0036  AUPR 0.0979/0.0245  AUROC 0.9309/0.8317  LR 1.00e-06  Best: ep 16
+  Epoch  23/50  loss 0.0032/0.0036  AUPR 0.0987/0.0252  AUROC 0.9313/0.8304  LR 1.00e-06  Best: ep 16
+  Epoch  24/50  loss 0.0032/0.0036  AUPR 0.0984/0.0254  AUROC 0.9313/0.8306  LR 1.00e-07  Best: ep 16
+  Epoch  25/50  loss 0.0032/0.0036  AUPR 0.0980/0.0248  AUROC 0.9310/0.8315  LR 1.00e-07  Best: ep 24
+  Epoch  26/50  loss 0.0032/0.0036  AUPR 0.0983/0.0256  AUROC 0.9312/0.8317  LR 1.00e-07  Best: ep 24
+  Epoch  27/50  loss 0.0032/0.0036  AUPR 0.0982/0.0245  AUROC 0.9312/0.8316  LR 1.00e-07  Best: ep 26
+  Epoch  28/50  loss 0.0032/0.0036  AUPR 0.0988/0.0257  AUROC 0.9312/0.8312  LR 1.00e-07  Best: ep 26
+  Epoch  29/50  loss 0.0032/0.0036  AUPR 0.0985/0.0254  AUROC 0.9313/0.8314  LR 1.00e-07  Best: ep 28
+  Epoch  30/50  loss 0.0031/0.0036  AUPR 0.0986/0.0253  AUROC 0.9313/0.8313  LR 1.00e-08  Best: ep 28
+  Epoch  31/50  loss 0.0032/0.0036  AUPR 0.0986/0.0248  AUROC 0.9313/0.8318  LR 1.00e-08  Best: ep 28
+  Epoch  32/50  loss 0.0032/0.0036  AUPR 0.0990/0.0241  AUROC 0.9315/0.8309  LR 1.00e-08  Best: ep 28
+  Epoch  33/50  loss 0.0032/0.0036  AUPR 0.0988/0.0253  AUROC 0.9313/0.8319  LR 1.00e-08  Best: ep 28
+  Epoch  34/50  loss 0.0031/0.0036  AUPR 0.0990/0.0253  AUROC 0.9314/0.8307  LR 1.00e-08  Best: ep 28
+  Epoch  35/50  loss 0.0032/0.0036  AUPR 0.0987/0.0245  AUROC 0.9313/0.8313  LR 1.00e-08  Best: ep 28
+  Epoch  36/50  loss 0.0031/0.0036  AUPR 0.0986/0.0245  AUROC 0.9312/0.8318  LR 1.00e-08  Best: ep 28
+  Epoch  37/50  loss 0.0031/0.0037  AUPR 0.0982/0.0249  AUROC 0.9310/0.8311  LR 1.00e-08  Best: ep 28
+  Epoch  38/50  loss 0.0032/0.0036  AUPR 0.0986/0.0255  AUROC 0.9312/0.8312  LR 1.00e-08  Best: ep 28
+[2026-04-11 23:08:12] Early stopping at epoch 38 (best val AUPR 0.0257 at ep 28)
+[2026-04-11 23:08:12] Training finished in 2889.9s
+[I 2026-04-11 23:08:15,446] Trial 41 finished with value: 0.025697533384050418 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 23:08:30] Training started
+  Epoch   1/50  loss 0.0042/0.0037  AUPR 0.0344/0.0105  AUROC 0.8671/0.8090  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0322/0.0121  AUROC 0.8787/0.8239  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0352/0.0142  AUROC 0.8826/0.8222  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0494/0.0184  AUROC 0.8935/0.8274  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0035  AUPR 0.0554/0.0164  AUROC 0.8997/0.8255  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0036/0.0035  AUPR 0.0521/0.0154  AUROC 0.9026/0.8232  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0596/0.0216  AUROC 0.9057/0.8314  LR 1.00e-04  Best: ep 4
+  Epoch   8/50  loss 0.0035/0.0037  AUPR 0.0644/0.0241  AUROC 0.9093/0.8208  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0037  AUPR 0.0655/0.0220  AUROC 0.9113/0.8314  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0036  AUPR 0.0676/0.0215  AUROC 0.9128/0.8347  LR 1.00e-04  Best: ep 8
+  Epoch  11/50  loss 0.0034/0.0036  AUPR 0.0697/0.0234  AUROC 0.9160/0.8313  LR 1.00e-04  Best: ep 8
+  Epoch  12/50  loss 0.0034/0.0040  AUPR 0.0752/0.0249  AUROC 0.9186/0.8132  LR 1.00e-04  Best: ep 8
+  Epoch  13/50  loss 0.0033/0.0036  AUPR 0.0776/0.0223  AUROC 0.9212/0.8192  LR 1.00e-05  Best: ep 12
+  Epoch  14/50  loss 0.0032/0.0037  AUPR 0.0873/0.0216  AUROC 0.9265/0.8232  LR 1.00e-05  Best: ep 12
+  Epoch  15/50  loss 0.0032/0.0036  AUPR 0.0899/0.0216  AUROC 0.9282/0.8239  LR 1.00e-05  Best: ep 12
+  Epoch  16/50  loss 0.0032/0.0036  AUPR 0.0917/0.0232  AUROC 0.9297/0.8245  LR 1.00e-05  Best: ep 12
+  Epoch  17/50  loss 0.0032/0.0036  AUPR 0.0933/0.0228  AUROC 0.9303/0.8262  LR 1.00e-05  Best: ep 12
+  Epoch  18/50  loss 0.0032/0.0037  AUPR 0.0938/0.0218  AUROC 0.9311/0.8253  LR 1.00e-05  Best: ep 12
+  Epoch  19/50  loss 0.0032/0.0036  AUPR 0.0947/0.0244  AUROC 0.9315/0.8268  LR 1.00e-06  Best: ep 12
+  Epoch  20/50  loss 0.0032/0.0036  AUPR 0.0958/0.0240  AUROC 0.9316/0.8277  LR 1.00e-06  Best: ep 12
+  Epoch  21/50  loss 0.0032/0.0036  AUPR 0.0967/0.0239  AUROC 0.9321/0.8277  LR 1.00e-06  Best: ep 12
+  Epoch  22/50  loss 0.0032/0.0036  AUPR 0.0966/0.0242  AUROC 0.9322/0.8284  LR 1.00e-06  Best: ep 12                                                                                            Best trial: 33. Best value: 0.031032:  84%|████████▍ | 42/50 [31:09:53<5:06:21, 2297.74s/it]Best trial: 33. Best value: 0.031032:  84%|████████▍ | 42/50 [31:09:53<5:06:21, 2297.74s/it]Best trial: 33. Best value: 0.031032:  86%|████████▌ | 43/50 [31:09:53<4:06:25, 2112.25s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  86%|████████▌ | 43/50 [31:39:03<4:06:25, 2112.25s/it]Best trial: 33. Best value: 0.031032:  86%|████████▌ | 43/50 [31:39:03<4:06:25, 2112.25s/it]Best trial: 33. Best value: 0.031032:  88%|████████▊ | 44/50 [31:39:03<3:20:22, 2003.81s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  88%|████████▊ | 44/50 [32:05:41<3:20:22, 2003.81s/it]Best trial: 33. Best value: 0.031032:  88%|████████▊ | 44/50 [32:05:41<3:20:22, 2003.81s/it]Best trial: 33. Best value: 0.031032:  90%|█████████ | 45/50 [32:05:41<2:36:50, 1882.00s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+[2026-04-11 23:36:12] Early stopping at epoch 22 (best val AUPR 0.0249 at ep 12)
+[2026-04-11 23:36:12] Training finished in 1661.2s
+[I 2026-04-11 23:36:14,891] Trial 42 finished with value: 0.024875096059392265 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-11 23:36:30] Training started
+  Epoch   1/50  loss 0.0043/0.0036  AUPR 0.0346/0.0125  AUROC 0.8721/0.8228  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0035  AUPR 0.0392/0.0182  AUROC 0.8801/0.8312  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0036  AUPR 0.0460/0.0130  AUROC 0.8885/0.8237  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0476/0.0179  AUROC 0.8942/0.8199  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0036/0.0036  AUPR 0.0550/0.0209  AUROC 0.8977/0.8163  LR 1.00e-04  Best: ep 2
+  Epoch   6/50  loss 0.0036/0.0036  AUPR 0.0585/0.0183  AUROC 0.9032/0.8172  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0037  AUPR 0.0592/0.0219  AUROC 0.9057/0.8148  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0035/0.0036  AUPR 0.0628/0.0226  AUROC 0.9093/0.8232  LR 1.00e-05  Best: ep 7
+  Epoch   9/50  loss 0.0034/0.0036  AUPR 0.0702/0.0223  AUROC 0.9140/0.8221  LR 1.00e-05  Best: ep 8
+  Epoch  10/50  loss 0.0034/0.0036  AUPR 0.0741/0.0220  AUROC 0.9162/0.8205  LR 1.00e-05  Best: ep 8
+  Epoch  11/50  loss 0.0033/0.0036  AUPR 0.0754/0.0227  AUROC 0.9178/0.8220  LR 1.00e-05  Best: ep 8
+  Epoch  12/50  loss 0.0033/0.0036  AUPR 0.0766/0.0223  AUROC 0.9186/0.8217  LR 1.00e-05  Best: ep 11
+  Epoch  13/50  loss 0.0033/0.0036  AUPR 0.0770/0.0236  AUROC 0.9199/0.8200  LR 1.00e-05  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0036  AUPR 0.0785/0.0232  AUROC 0.9208/0.8219  LR 1.00e-06  Best: ep 13
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0792/0.0232  AUROC 0.9210/0.8211  LR 1.00e-06  Best: ep 13
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0795/0.0234  AUROC 0.9210/0.8209  LR 1.00e-06  Best: ep 13
+  Epoch  17/50  loss 0.0033/0.0036  AUPR 0.0795/0.0235  AUROC 0.9211/0.8206  LR 1.00e-06  Best: ep 13
+  Epoch  18/50  loss 0.0033/0.0036  AUPR 0.0798/0.0233  AUROC 0.9213/0.8210  LR 1.00e-06  Best: ep 13
+  Epoch  19/50  loss 0.0033/0.0037  AUPR 0.0803/0.0232  AUROC 0.9214/0.8199  LR 1.00e-06  Best: ep 13
+  Epoch  20/50  loss 0.0033/0.0036  AUPR 0.0804/0.0232  AUROC 0.9216/0.8192  LR 1.00e-07  Best: ep 13
+  Epoch  21/50  loss 0.0033/0.0037  AUPR 0.0805/0.0230  AUROC 0.9215/0.8192  LR 1.00e-07  Best: ep 13
+  Epoch  22/50  loss 0.0033/0.0037  AUPR 0.0804/0.0231  AUROC 0.9216/0.8199  LR 1.00e-07  Best: ep 13
+  Epoch  23/50  loss 0.0033/0.0036  AUPR 0.0802/0.0235  AUROC 0.9214/0.8204  LR 1.00e-07  Best: ep 13
+[2026-04-12 00:05:22] Early stopping at epoch 23 (best val AUPR 0.0236 at ep 13)
+[2026-04-12 00:05:22] Training finished in 1731.9s
+[I 2026-04-12 00:05:25,653] Trial 43 finished with value: 0.023622405699217374 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-12 00:05:41] Training started
+  Epoch   1/50  loss 0.0043/0.0036  AUPR 0.0336/0.0120  AUROC 0.8697/0.8163  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0038/0.0036  AUPR 0.0362/0.0153  AUROC 0.8788/0.8224  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0037/0.0037  AUPR 0.0430/0.0184  AUROC 0.8876/0.8121  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0036/0.0036  AUPR 0.0493/0.0161  AUROC 0.8903/0.8243  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0036/0.0035  AUPR 0.0499/0.0199  AUROC 0.8946/0.8344  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0035/0.0037  AUPR 0.0584/0.0204  AUROC 0.8995/0.8130  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0035/0.0035  AUPR 0.0630/0.0199  AUROC 0.9068/0.8356  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0035/0.0040  AUPR 0.0612/0.0185  AUROC 0.9091/0.8247  LR 1.00e-04  Best: ep 6
+  Epoch   9/50  loss 0.0034/0.0038  AUPR 0.0681/0.0214  AUROC 0.9109/0.8159  LR 1.00e-04  Best: ep 6
+  Epoch  10/50  loss 0.0034/0.0035  AUPR 0.0687/0.0191  AUROC 0.9139/0.8344  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0034/0.0036  AUPR 0.0720/0.0251  AUROC 0.9165/0.8291  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0034/0.0037  AUPR 0.0730/0.0194  AUROC 0.9181/0.8146  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0034/0.0037  AUPR 0.0705/0.0250  AUROC 0.9209/0.8246  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0033/0.0035  AUPR 0.0795/0.0209  AUROC 0.9211/0.8330  LR 1.00e-04  Best: ep 11
+  Epoch  15/50  loss 0.0033/0.0036  AUPR 0.0812/0.0240  AUROC 0.9225/0.8261  LR 1.00e-04  Best: ep 11
+  Epoch  16/50  loss 0.0033/0.0036  AUPR 0.0899/0.0186  AUROC 0.9259/0.8305  LR 1.00e-04  Best: ep 11
+  Epoch  17/50  loss 0.0033/0.0037  AUPR 0.0874/0.0239  AUROC 0.9266/0.8354  LR 1.00e-04  Best: ep 11
+  Epoch  18/50  loss 0.0033/0.0037  AUPR 0.0947/0.0188  AUROC 0.9280/0.8188  LR 1.00e-04  Best: ep 11
+  Epoch  19/50  loss 0.0032/0.0035  AUPR 0.0974/0.0214  AUROC 0.9297/0.8347  LR 1.00e-04  Best: ep 11
+  Epoch  20/50  loss 0.0032/0.0037  AUPR 0.0993/0.0249  AUROC 0.9325/0.8324  LR 1.00e-05  Best: ep 11
+  Epoch  21/50  loss 0.0031/0.0036  AUPR 0.1116/0.0250  AUROC 0.9382/0.8297  LR 1.00e-05  Best: ep 11
+[2026-04-12 00:32:00] Early stopping at epoch 21 (best val AUPR 0.0251 at ep 11)
+[2026-04-12 00:32:00] Training finished in 1579.5s
+[I 2026-04-12 00:32:03,449] Trial 44 finished with value: 0.025058840911622006 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-12 00:32:19] Training started
+  Epoch   1/50  loss 0.0041/0.0030  AUPR 0.0349/0.0129  AUROC 0.8746/0.8251  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0032/0.0031  AUPR 0.0395/0.0140  AUROC 0.8859/0.8173  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0031/0.0031  AUPR 0.0379/0.0127  AUROC 0.8899/0.8174  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0030/0.0032  AUPR 0.0392/0.0149  AUROC 0.8912/0.8180  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0030/0.0031  AUPR 0.0487/0.0113  AUROC 0.9003/0.8170  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0029/0.0030  AUPR 0.0522/0.0173  AUROC 0.9018/0.8267  LR 1.00e-04  Best: ep 4
+  Epoch   7/50  loss 0.0029/0.0030  AUPR 0.0501/0.0184  AUROC 0.9055/0.8304  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0028/0.0030  AUPR 0.0546/0.0155  AUROC 0.9113/0.8197  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0028/0.0033  AUPR 0.0568/0.0205  AUROC 0.9127/0.8093  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0028/0.0032  AUPR 0.0621/0.0188  AUROC 0.9146/0.8353  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0027/0.0030  AUPR 0.0589/0.0174  AUROC 0.9182/0.8219  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0027/0.0031  AUPR 0.0670/0.0209  AUROC 0.9193/0.8300  LR 1.00e-04  Best: ep 9
+  Epoch  13/50  loss 0.0027/0.0031  AUPR 0.0674/0.0208  AUROC 0.9210/0.8304  LR 1.00e-05  Best: ep 12
+  Epoch  14/50  loss 0.0026/0.0031  AUPR 0.0740/0.0205  AUROC 0.9269/0.8277  LR 1.00e-05  Best: ep 12
+  Epoch  15/50  loss 0.0026/0.0031  AUPR 0.0760/0.0224  AUROC 0.9285/0.8255  LR 1.00e-05  Best: ep 12
+  Epoch  16/50  loss 0.0026/0.0031  AUPR 0.0777/0.0224  AUROC 0.9296/0.8273  LR 1.00e-05  Best: ep 15
+  Epoch  17/50  loss 0.0025/0.0031  AUPR 0.0790/0.0222  AUROC 0.9302/0.8282  LR 1.00e-05  Best: ep 16
+  Epoch  18/50  loss 0.0025/0.0031  AUPR 0.0801/0.0230  AUROC 0.9313/0.8275  LR 1.00e-05  Best: ep 16
+  Epoch  19/50  loss 0.0026/0.0032  AUPR 0.0804/0.0232  AUROC 0.9318/0.8247  LR 1.00e-06  Best: ep 18
+  Epoch  20/50  loss 0.0025/0.0031  AUPR 0.0809/0.0228  AUROC 0.9321/0.8256  LR 1.00e-06  Best: ep 19
+  Epoch  21/50  loss 0.0025/0.0031  AUPR 0.0815/0.0226  AUROC 0.9324/0.8262  LR 1.00e-06  Best: ep 19
+  Epoch  22/50  loss 0.0025/0.0031  AUPR 0.0815/0.0227  AUROC 0.9325/0.8258  LR 1.00e-06  Best: ep 19
+  Epoch  23/50  loss 0.0025/0.0031  AUPR 0.0817/0.0230  AUROC 0.9322/0.8261  LR 1.00e-06  Best: ep 19
+  Epoch  24/50  loss 0.0025/0.0031  AUPR 0.0818/0.0233  AUROC 0.9324/0.8271  LR 1.00e-06  Best: ep 19                                                                                            Best trial: 33. Best value: 0.031032:  90%|█████████ | 45/50 [33:25:49<2:36:50, 1882.00s/it]Best trial: 33. Best value: 0.031032:  90%|█████████ | 45/50 [33:25:49<2:36:50, 1882.00s/it]Best trial: 33. Best value: 0.031032:  92%|█████████▏| 46/50 [33:25:49<3:03:58, 2759.70s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  92%|█████████▏| 46/50 [34:18:48<3:03:58, 2759.70s/it]Best trial: 33. Best value: 0.031032:  92%|█████████▏| 46/50 [34:18:48<3:03:58, 2759.70s/it]Best trial: 33. Best value: 0.031032:  94%|█████████▍| 47/50 [34:18:48<2:24:17, 2885.69s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+  Epoch  25/50  loss 0.0025/0.0031  AUPR 0.0820/0.0227  AUROC 0.9326/0.8261  LR 1.00e-07  Best: ep 24
+  Epoch  26/50  loss 0.0025/0.0031  AUPR 0.0819/0.0230  AUROC 0.9328/0.8252  LR 1.00e-07  Best: ep 24
+  Epoch  27/50  loss 0.0025/0.0031  AUPR 0.0820/0.0234  AUROC 0.9328/0.8255  LR 1.00e-07  Best: ep 24
+  Epoch  28/50  loss 0.0025/0.0031  AUPR 0.0820/0.0229  AUROC 0.9330/0.8258  LR 1.00e-07  Best: ep 27
+  Epoch  29/50  loss 0.0025/0.0031  AUPR 0.0820/0.0229  AUROC 0.9328/0.8253  LR 1.00e-07  Best: ep 27
+  Epoch  30/50  loss 0.0025/0.0031  AUPR 0.0823/0.0232  AUROC 0.9330/0.8249  LR 1.00e-07  Best: ep 27
+  Epoch  31/50  loss 0.0025/0.0031  AUPR 0.0819/0.0238  AUROC 0.9326/0.8278  LR 1.00e-08  Best: ep 27
+  Epoch  32/50  loss 0.0025/0.0031  AUPR 0.0819/0.0245  AUROC 0.9327/0.8276  LR 1.00e-08  Best: ep 31
+  Epoch  33/50  loss 0.0025/0.0031  AUPR 0.0820/0.0232  AUROC 0.9328/0.8258  LR 1.00e-08  Best: ep 32
+  Epoch  34/50  loss 0.0025/0.0031  AUPR 0.0817/0.0240  AUROC 0.9328/0.8261  LR 1.00e-08  Best: ep 32
+  Epoch  35/50  loss 0.0025/0.0031  AUPR 0.0822/0.0234  AUROC 0.9331/0.8251  LR 1.00e-08  Best: ep 32
+  Epoch  36/50  loss 0.0025/0.0031  AUPR 0.0818/0.0233  AUROC 0.9324/0.8259  LR 1.00e-08  Best: ep 32
+  Epoch  37/50  loss 0.0025/0.0031  AUPR 0.0821/0.0228  AUROC 0.9328/0.8253  LR 1.00e-08  Best: ep 32
+  Epoch  38/50  loss 0.0025/0.0032  AUPR 0.0822/0.0224  AUROC 0.9327/0.8240  LR 1.00e-08  Best: ep 32
+  Epoch  39/50  loss 0.0025/0.0032  AUPR 0.0818/0.0231  AUROC 0.9327/0.8259  LR 1.00e-08  Best: ep 32
+  Epoch  40/50  loss 0.0025/0.0031  AUPR 0.0823/0.0233  AUROC 0.9328/0.8275  LR 1.00e-08  Best: ep 32
+  Epoch  41/50  loss 0.0025/0.0031  AUPR 0.0818/0.0237  AUROC 0.9325/0.8270  LR 1.00e-08  Best: ep 32
+  Epoch  42/50  loss 0.0025/0.0031  AUPR 0.0815/0.0241  AUROC 0.9327/0.8266  LR 1.00e-08  Best: ep 32
+[2026-04-12 01:52:07] Early stopping at epoch 42 (best val AUPR 0.0245 at ep 32)
+[2026-04-12 01:52:07] Training finished in 4788.2s
+[I 2026-04-12 01:52:11,118] Trial 45 finished with value: 0.02449397176752184 and parameters: {'arch': '256-128-64', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 128, 'focal_alpha': 0.95, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-12 01:52:26] Training started
+  Epoch   1/50  loss 0.0047/0.0037  AUPR 0.0262/0.0081  AUROC 0.8611/0.8107  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0041/0.0036  AUPR 0.0324/0.0101  AUROC 0.8671/0.8224  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0039/0.0036  AUPR 0.0368/0.0162  AUROC 0.8738/0.8215  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0039/0.0036  AUPR 0.0424/0.0145  AUROC 0.8829/0.8287  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0038/0.0035  AUPR 0.0421/0.0168  AUROC 0.8855/0.8329  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0038/0.0035  AUPR 0.0430/0.0136  AUROC 0.8882/0.8312  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0037/0.0036  AUPR 0.0503/0.0156  AUROC 0.8946/0.8223  LR 1.00e-04  Best: ep 5
+  Epoch   8/50  loss 0.0037/0.0035  AUPR 0.0500/0.0174  AUROC 0.8928/0.8360  LR 1.00e-04  Best: ep 5
+  Epoch   9/50  loss 0.0037/0.0036  AUPR 0.0518/0.0216  AUROC 0.8979/0.8281  LR 1.00e-04  Best: ep 8
+  Epoch  10/50  loss 0.0036/0.0036  AUPR 0.0549/0.0206  AUROC 0.8991/0.8326  LR 1.00e-04  Best: ep 9
+  Epoch  11/50  loss 0.0036/0.0035  AUPR 0.0576/0.0195  AUROC 0.9017/0.8344  LR 1.00e-04  Best: ep 9
+  Epoch  12/50  loss 0.0036/0.0035  AUPR 0.0587/0.0205  AUROC 0.9033/0.8330  LR 1.00e-04  Best: ep 9
+  Epoch  13/50  loss 0.0036/0.0035  AUPR 0.0601/0.0218  AUROC 0.9039/0.8389  LR 1.00e-04  Best: ep 9
+  Epoch  14/50  loss 0.0035/0.0035  AUPR 0.0613/0.0198  AUROC 0.9051/0.8375  LR 1.00e-04  Best: ep 13
+  Epoch  15/50  loss 0.0035/0.0036  AUPR 0.0638/0.0222  AUROC 0.9075/0.8361  LR 1.00e-04  Best: ep 13
+  Epoch  16/50  loss 0.0035/0.0036  AUPR 0.0629/0.0242  AUROC 0.9083/0.8341  LR 1.00e-04  Best: ep 15
+  Epoch  17/50  loss 0.0035/0.0037  AUPR 0.0670/0.0232  AUROC 0.9096/0.8244  LR 1.00e-04  Best: ep 16
+  Epoch  18/50  loss 0.0035/0.0035  AUPR 0.0669/0.0222  AUROC 0.9113/0.8329  LR 1.00e-04  Best: ep 16
+  Epoch  19/50  loss 0.0035/0.0035  AUPR 0.0695/0.0228  AUROC 0.9134/0.8368  LR 1.00e-04  Best: ep 16
+  Epoch  20/50  loss 0.0035/0.0036  AUPR 0.0709/0.0262  AUROC 0.9125/0.8413  LR 1.00e-05  Best: ep 16
+  Epoch  21/50  loss 0.0034/0.0037  AUPR 0.0764/0.0272  AUROC 0.9168/0.8359  LR 1.00e-05  Best: ep 20
+  Epoch  22/50  loss 0.0034/0.0036  AUPR 0.0786/0.0270  AUROC 0.9181/0.8362  LR 1.00e-05  Best: ep 21
+  Epoch  23/50  loss 0.0034/0.0036  AUPR 0.0801/0.0264  AUROC 0.9189/0.8357  LR 1.00e-05  Best: ep 21
+  Epoch  24/50  loss 0.0034/0.0036  AUPR 0.0806/0.0264  AUROC 0.9195/0.8337  LR 1.00e-05  Best: ep 21
+  Epoch  25/50  loss 0.0033/0.0036  AUPR 0.0815/0.0264  AUROC 0.9199/0.8323  LR 1.00e-05  Best: ep 21
+  Epoch  26/50  loss 0.0034/0.0036  AUPR 0.0829/0.0266  AUROC 0.9204/0.8355  LR 1.00e-06  Best: ep 21
+  Epoch  27/50  loss 0.0033/0.0035  AUPR 0.0833/0.0265  AUROC 0.9206/0.8353  LR 1.00e-06  Best: ep 21
+  Epoch  28/50  loss 0.0033/0.0036  AUPR 0.0828/0.0269  AUROC 0.9205/0.8355  LR 1.00e-06  Best: ep 21
+  Epoch  29/50  loss 0.0033/0.0036  AUPR 0.0831/0.0270  AUROC 0.9205/0.8372  LR 1.00e-06  Best: ep 21
+  Epoch  30/50  loss 0.0033/0.0036  AUPR 0.0829/0.0277  AUROC 0.9207/0.8360  LR 1.00e-06  Best: ep 21
+  Epoch  31/50  loss 0.0033/0.0036  AUPR 0.0831/0.0272  AUROC 0.9209/0.8353  LR 1.00e-06  Best: ep 30
+  Epoch  32/50  loss 0.0033/0.0036  AUPR 0.0831/0.0277  AUROC 0.9210/0.8363  LR 1.00e-07  Best: ep 30
+  Epoch  33/50  loss 0.0033/0.0036  AUPR 0.0833/0.0276  AUROC 0.9209/0.8359  LR 1.00e-07  Best: ep 32
+  Epoch  34/50  loss 0.0033/0.0036  AUPR 0.0832/0.0277  AUROC 0.9211/0.8353  LR 1.00e-07  Best: ep 32
+  Epoch  35/50  loss 0.0033/0.0036  AUPR 0.0834/0.0273  AUROC 0.9208/0.8361  LR 1.00e-07  Best: ep 32
+  Epoch  36/50  loss 0.0033/0.0036  AUPR 0.0834/0.0273  AUROC 0.9210/0.8356  LR 1.00e-07  Best: ep 32
+  Epoch  37/50  loss 0.0033/0.0036  AUPR 0.0835/0.0276  AUROC 0.9210/0.8349  LR 1.00e-07  Best: ep 32
+  Epoch  38/50  loss 0.0033/0.0036  AUPR 0.0828/0.0265  AUROC 0.9209/0.8343  LR 1.00e-08  Best: ep 32
+  Epoch  39/50  loss 0.0033/0.0036  AUPR 0.0834/0.0276  AUROC 0.9210/0.8355  LR 1.00e-08  Best: ep 32
+  Epoch  40/50  loss 0.0033/0.0036  AUPR 0.0834/0.0275  AUROC 0.9211/0.8350  LR 1.00e-08  Best: ep 32
+  Epoch  41/50  loss 0.0033/0.0036  AUPR 0.0829/0.0266  AUROC 0.9207/0.8351  LR 1.00e-08  Best: ep 32
+  Epoch  42/50  loss 0.0033/0.0036  AUPR 0.0833/0.0264  AUROC 0.9210/0.8351  LR 1.00e-08  Best: ep 32
+[2026-04-12 02:45:08] Early stopping at epoch 42 (best val AUPR 0.0277 at ep 32)
+[2026-04-12 02:45:08] Training finished in 3161.8s
+[I 2026-04-12 02:45:10,769] Trial 46 finished with value: 0.027663169606250402 and parameters: {'arch': '256-128-64', 'dropout': 0.4, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-12 02:45:26] Training started
+  Epoch   1/50  loss 0.0027/0.0022  AUPR 0.0269/0.0132  AUROC 0.8598/0.8179  LR 1.00e-03  Best: ep 0
+  Epoch   2/50  loss 0.0023/0.0021  AUPR 0.0279/0.0129  AUROC 0.8709/0.8217  LR 1.00e-03  Best: ep 1
+  Epoch   3/50  loss 0.0022/0.0021  AUPR 0.0383/0.0170  AUROC 0.8802/0.8185  LR 1.00e-03  Best: ep 1
+  Epoch   4/50  loss 0.0021/0.0022  AUPR 0.0406/0.0152  AUROC 0.8852/0.8200  LR 1.00e-03  Best: ep 3
+  Epoch   5/50  loss 0.0021/0.0021  AUPR 0.0414/0.0117  AUROC 0.8882/0.8193  LR 1.00e-03  Best: ep 3
+  Epoch   6/50  loss 0.0021/0.0021  AUPR 0.0452/0.0164  AUROC 0.8892/0.8293  LR 1.00e-03  Best: ep 3
+  Epoch   7/50  loss 0.0020/0.0021  AUPR 0.0484/0.0146  AUROC 0.8936/0.8290  LR 1.00e-03  Best: ep 3
+  Epoch   8/50  loss 0.0020/0.0021  AUPR 0.0513/0.0156  AUROC 0.8942/0.8339  LR 1.00e-03  Best: ep 3
+  Epoch   9/50  loss 0.0020/0.0020  AUPR 0.0520/0.0147  AUROC 0.8988/0.8348  LR 1.00e-03  Best: ep 3
+  Epoch  10/50  loss 0.0020/0.0021  AUPR 0.0480/0.0148  AUROC 0.8977/0.8274  LR 1.00e-03  Best: ep 3
+  Epoch  11/50  loss 0.0020/0.0021  AUPR 0.0559/0.0152  AUROC 0.9032/0.8282  LR 1.00e-03  Best: ep 3
+  Epoch  12/50  loss 0.0020/0.0021  AUPR 0.0540/0.0135  AUROC 0.9008/0.8139  LR 1.00e-03  Best: ep 3
+  Epoch  13/50  loss 0.0020/0.0022  AUPR 0.0540/0.0152  AUROC 0.9012/0.8239  LR 1.00e-03  Best: ep 3                                                                                            Best trial: 33. Best value: 0.031032:  94%|█████████▍| 47/50 [34:43:25<2:24:17, 2885.69s/it]Best trial: 33. Best value: 0.031032:  94%|█████████▍| 47/50 [34:43:25<2:24:17, 2885.69s/it]Best trial: 33. Best value: 0.031032:  96%|█████████▌| 48/50 [34:43:25<1:22:06, 2463.07s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+                                                                                            Best trial: 33. Best value: 0.031032:  96%|█████████▌| 48/50 [36:28:00<1:22:06, 2463.07s/it]Best trial: 33. Best value: 0.031032:  96%|█████████▌| 48/50 [36:28:00<1:22:06, 2463.07s/it]Best trial: 33. Best value: 0.031032:  98%|█████████▊| 49/50 [36:28:00<1:00:06, 3606.63s/it]/home/b-xiangzhang/DeepSLP/src/data.py:111: UserWarning: you are shuffling a 'StringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  rng.shuffle(queries)
+
+[2026-04-12 03:09:44] Early stopping at epoch 13 (best val AUPR 0.0170 at ep 3)
+[2026-04-12 03:09:44] Training finished in 1458.3s
+[I 2026-04-12 03:09:47,745] Trial 47 finished with value: 0.016988600351003566 and parameters: {'arch': '128-64-32', 'dropout': 0.2, 'lr': 0.001, 'batch_size': 128, 'focal_alpha': 0.75, 'focal_gamma': 2.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-12 03:10:03] Training started
+  Epoch   1/50  loss 0.0043/0.0037  AUPR 0.0285/0.0125  AUROC 0.8630/0.8012  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0039/0.0036  AUPR 0.0323/0.0132  AUROC 0.8699/0.8199  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0038/0.0036  AUPR 0.0396/0.0114  AUROC 0.8776/0.8135  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0038/0.0035  AUPR 0.0421/0.0180  AUROC 0.8813/0.8276  LR 1.00e-04  Best: ep 2
+  Epoch   5/50  loss 0.0037/0.0037  AUPR 0.0415/0.0183  AUROC 0.8884/0.8250  LR 1.00e-04  Best: ep 4
+  Epoch   6/50  loss 0.0037/0.0035  AUPR 0.0442/0.0192  AUROC 0.8914/0.8338  LR 1.00e-04  Best: ep 5
+  Epoch   7/50  loss 0.0036/0.0037  AUPR 0.0487/0.0202  AUROC 0.8887/0.8096  LR 1.00e-04  Best: ep 6
+  Epoch   8/50  loss 0.0036/0.0035  AUPR 0.0515/0.0176  AUROC 0.8955/0.8368  LR 1.00e-04  Best: ep 7
+  Epoch   9/50  loss 0.0036/0.0037  AUPR 0.0516/0.0197  AUROC 0.8977/0.8252  LR 1.00e-04  Best: ep 7
+  Epoch  10/50  loss 0.0036/0.0038  AUPR 0.0553/0.0214  AUROC 0.9012/0.8313  LR 1.00e-04  Best: ep 7
+  Epoch  11/50  loss 0.0035/0.0036  AUPR 0.0582/0.0228  AUROC 0.9027/0.8276  LR 1.00e-04  Best: ep 10
+  Epoch  12/50  loss 0.0035/0.0037  AUPR 0.0567/0.0171  AUROC 0.9046/0.8262  LR 1.00e-04  Best: ep 11
+  Epoch  13/50  loss 0.0035/0.0036  AUPR 0.0637/0.0164  AUROC 0.9049/0.8221  LR 1.00e-04  Best: ep 11
+  Epoch  14/50  loss 0.0035/0.0037  AUPR 0.0631/0.0214  AUROC 0.9074/0.8294  LR 1.00e-05  Best: ep 11
+  Epoch  15/50  loss 0.0034/0.0035  AUPR 0.0697/0.0217  AUROC 0.9120/0.8355  LR 1.00e-05  Best: ep 11
+  Epoch  16/50  loss 0.0034/0.0036  AUPR 0.0703/0.0211  AUROC 0.9131/0.8343  LR 1.00e-05  Best: ep 11
+  Epoch  17/50  loss 0.0034/0.0037  AUPR 0.0718/0.0225  AUROC 0.9138/0.8372  LR 1.00e-05  Best: ep 11
+  Epoch  18/50  loss 0.0034/0.0036  AUPR 0.0724/0.0226  AUROC 0.9144/0.8376  LR 1.00e-05  Best: ep 11
+  Epoch  19/50  loss 0.0034/0.0036  AUPR 0.0732/0.0233  AUROC 0.9152/0.8355  LR 1.00e-05  Best: ep 11
+  Epoch  20/50  loss 0.0034/0.0037  AUPR 0.0746/0.0224  AUROC 0.9154/0.8332  LR 1.00e-06  Best: ep 19
+  Epoch  21/50  loss 0.0034/0.0037  AUPR 0.0750/0.0227  AUROC 0.9158/0.8348  LR 1.00e-06  Best: ep 19
+  Epoch  22/50  loss 0.0034/0.0036  AUPR 0.0748/0.0233  AUROC 0.9158/0.8345  LR 1.00e-06  Best: ep 19
+  Epoch  23/50  loss 0.0033/0.0036  AUPR 0.0751/0.0234  AUROC 0.9161/0.8345  LR 1.00e-06  Best: ep 19
+  Epoch  24/50  loss 0.0034/0.0036  AUPR 0.0751/0.0228  AUROC 0.9160/0.8340  LR 1.00e-06  Best: ep 23
+  Epoch  25/50  loss 0.0034/0.0036  AUPR 0.0753/0.0232  AUROC 0.9162/0.8339  LR 1.00e-06  Best: ep 23
+  Epoch  26/50  loss 0.0034/0.0036  AUPR 0.0751/0.0233  AUROC 0.9162/0.8323  LR 1.00e-07  Best: ep 23
+  Epoch  27/50  loss 0.0033/0.0037  AUPR 0.0747/0.0231  AUROC 0.9161/0.8343  LR 1.00e-07  Best: ep 23
+  Epoch  28/50  loss 0.0033/0.0036  AUPR 0.0749/0.0232  AUROC 0.9161/0.8350  LR 1.00e-07  Best: ep 23
+  Epoch  29/50  loss 0.0033/0.0037  AUPR 0.0749/0.0228  AUROC 0.9157/0.8354  LR 1.00e-07  Best: ep 23
+  Epoch  30/50  loss 0.0034/0.0036  AUPR 0.0752/0.0230  AUROC 0.9160/0.8348  LR 1.00e-07  Best: ep 23
+  Epoch  31/50  loss 0.0033/0.0037  AUPR 0.0755/0.0230  AUROC 0.9164/0.8356  LR 1.00e-07  Best: ep 23
+  Epoch  32/50  loss 0.0033/0.0036  AUPR 0.0753/0.0233  AUROC 0.9166/0.8338  LR 1.00e-08  Best: ep 23
+  Epoch  33/50  loss 0.0034/0.0037  AUPR 0.0753/0.0222  AUROC 0.9162/0.8335  LR 1.00e-08  Best: ep 23
+[2026-04-12 04:54:17] Early stopping at epoch 33 (best val AUPR 0.0234 at ep 23)
+[2026-04-12 04:54:17] Training finished in 6254.5s
+[I 2026-04-12 04:54:22,669] Trial 48 finished with value: 0.023448269485597823 and parameters: {'arch': '256-128-64', 'dropout': 0.30000000000000004, 'lr': 0.0001, 'batch_size': 64, 'focal_alpha': 0.75, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+[2026-04-12 04:54:38] Training started
+  Epoch   1/50  loss 0.0034/0.0029  AUPR 0.0252/0.0120  AUROC 0.8640/0.8343  LR 1.00e-04  Best: ep 0
+  Epoch   2/50  loss 0.0030/0.0030  AUPR 0.0351/0.0126  AUROC 0.8827/0.8313  LR 1.00e-04  Best: ep 1
+  Epoch   3/50  loss 0.0029/0.0031  AUPR 0.0406/0.0174  AUROC 0.8891/0.8349  LR 1.00e-04  Best: ep 2
+  Epoch   4/50  loss 0.0029/0.0030  AUPR 0.0391/0.0159  AUROC 0.8918/0.8326  LR 1.00e-04  Best: ep 3
+  Epoch   5/50  loss 0.0028/0.0030  AUPR 0.0413/0.0126  AUROC 0.8935/0.8264  LR 1.00e-04  Best: ep 3
+  Epoch   6/50  loss 0.0028/0.0030  AUPR 0.0448/0.0165  AUROC 0.8972/0.8392  LR 1.00e-04  Best: ep 3
+  Epoch   7/50  loss 0.0028/0.0031  AUPR 0.0480/0.0141  AUROC 0.9010/0.8303  LR 1.00e-05  Best: ep 3
+  Epoch   8/50  loss 0.0027/0.0030  AUPR 0.0551/0.0175  AUROC 0.9092/0.8392  LR 1.00e-05  Best: ep 3
+  Epoch   9/50  loss 0.0027/0.0030  AUPR 0.0568/0.0178  AUROC 0.9105/0.8375  LR 1.00e-05  Best: ep 8
+  Epoch  10/50  loss 0.0026/0.0030  AUPR 0.0586/0.0175  AUROC 0.9123/0.8347  LR 1.00e-05  Best: ep 9
+  Epoch  11/50  loss 0.0026/0.0030  AUPR 0.0589/0.0177  AUROC 0.9132/0.8363  LR 1.00e-05  Best: ep 9
+  Epoch  12/50  loss 0.0026/0.0030  AUPR 0.0595/0.0186  AUROC 0.9138/0.8341  LR 1.00e-05  Best: ep 9
+  Epoch  13/50  loss 0.0026/0.0030  AUPR 0.0607/0.0183  AUROC 0.9151/0.8362  LR 1.00e-06  Best: ep 12
+  Epoch  14/50  loss 0.0026/0.0030  AUPR 0.0607/0.0187  AUROC 0.9151/0.8361  LR 1.00e-06  Best: ep 12
+  Epoch  15/50  loss 0.0026/0.0030  AUPR 0.0608/0.0185  AUROC 0.9154/0.8357  LR 1.00e-06  Best: ep 14
+  Epoch  16/50  loss 0.0026/0.0030  AUPR 0.0613/0.0186  AUROC 0.9155/0.8354  LR 1.00e-06  Best: ep 14
+  Epoch  17/50  loss 0.0026/0.0030  AUPR 0.0615/0.0189  AUROC 0.9156/0.8354  LR 1.00e-06  Best: ep 14
+  Epoch  18/50  loss 0.0026/0.0030  AUPR 0.0613/0.0187  AUROC 0.9157/0.8354  LR 1.00e-06  Best: ep 17
+  Epoch  19/50  loss 0.0026/0.0030  AUPR 0.0615/0.0189  AUROC 0.9157/0.8351  LR 1.00e-07  Best: ep 17
+  Epoch  20/50  loss 0.0026/0.0030  AUPR 0.0616/0.0190  AUROC 0.9157/0.8351  LR 1.00e-07  Best: ep 19
+  Epoch  21/50  loss 0.0026/0.0030  AUPR 0.0614/0.0191  AUROC 0.9157/0.8351  LR 1.00e-07  Best: ep 20
+  Epoch  22/50  loss 0.0026/0.0030  AUPR 0.0614/0.0187  AUROC 0.9158/0.8361  LR 1.00e-07  Best: ep 21
+  Epoch  23/50  loss 0.0026/0.0030  AUPR 0.0612/0.0185  AUROC 0.9157/0.8357  LR 1.00e-07  Best: ep 21
+  Epoch  24/50  loss 0.0026/0.0030  AUPR 0.0614/0.0188  AUROC 0.9157/0.8356  LR 1.00e-07  Best: ep 21
+  Epoch  25/50  loss 0.0026/0.0030  AUPR 0.0615/0.0190  AUROC 0.9158/0.8356  LR 1.00e-08  Best: ep 21
+  Epoch  26/50  loss 0.0026/0.0030  AUPR 0.0616/0.0190  AUROC 0.9159/0.8349  LR 1.00e-08  Best: ep 21
+  Epoch  27/50  loss 0.0026/0.0030  AUPR 0.0615/0.0189  AUROC 0.9160/0.8355  LR 1.00e-08  Best: ep 21
+  Epoch  28/50  loss 0.0026/0.0030  AUPR 0.0615/0.0189  AUROC 0.9160/0.8352  LR 1.00e-08  Best: ep 21
+  Epoch  29/50  loss 0.0026/0.0030  AUPR 0.0616/0.0192  AUROC 0.9159/0.8349  LR 1.00e-08  Best: ep 21
+  Epoch  30/50  loss 0.0026/0.0030  AUPR 0.0615/0.0189  AUROC 0.9159/0.8345  LR 1.00e-08  Best: ep 29
+  Epoch  31/50  loss 0.0026/0.0030  AUPR 0.0616/0.0190  AUROC 0.9159/0.8342  LR 1.00e-08  Best: ep 29
+  Epoch  32/50  loss 0.0026/0.0030  AUPR 0.0617/0.0190  AUROC 0.9158/0.8354  LR 1.00e-08  Best: ep 29
+  Epoch  33/50  loss 0.0026/0.0030  AUPR 0.0616/0.0191  AUROC 0.9158/0.8356  LR 1.00e-08  Best: ep 29
+  Epoch  34/50  loss 0.0026/0.0030  AUPR 0.0615/0.0189  AUROC 0.9157/0.8351  LR 1.00e-08  Best: ep 29
+  Epoch  35/50  loss 0.0026/0.0030  AUPR 0.0616/0.0190  AUROC 0.9158/0.8354  LR 1.00e-08  Best: ep 29
+  Epoch  36/50  loss 0.0026/0.0030  AUPR 0.0614/0.0188  AUROC 0.9158/0.8354  LR 1.00e-08  Best: ep 29
+  Epoch  37/50  loss 0.0026/0.0030  AUPR 0.0616/0.0189  AUROC 0.9158/0.8354  LR 1.00e-08  Best: ep 29
+  Epoch  38/50  loss 0.0026/0.0030  AUPR 0.0614/0.0189  AUROC 0.9156/0.8353  LR 1.00e-08  Best: ep 29
+  Epoch  39/50  loss 0.0026/0.0030  AUPR 0.0614/0.0188  AUROC 0.9158/0.8351  LR 1.00e-08  Best: ep 29                                                                                            Best trial: 33. Best value: 0.031032:  98%|█████████▊| 49/50 [37:18:03<1:00:06, 3606.63s/it]Best trial: 33. Best value: 0.031032:  98%|█████████▊| 49/50 [37:18:03<1:00:06, 3606.63s/it]Best trial: 33. Best value: 0.031032: 100%|██████████| 50/50 [37:18:03<00:00, 3425.50s/it]  Best trial: 33. Best value: 0.031032: 100%|██████████| 50/50 [37:18:03<00:00, 2685.67s/it]
+
+[2026-04-12 05:44:22] Early stopping at epoch 39 (best val AUPR 0.0192 at ep 29)
+[2026-04-12 05:44:22] Training finished in 2984.8s
+[I 2026-04-12 05:44:25,532] Trial 49 finished with value: 0.01917293629942919 and parameters: {'arch': '128-128-128', 'dropout': 0.2, 'lr': 0.0001, 'batch_size': 256, 'focal_alpha': 0.95, 'focal_gamma': 1.0}. Best is trial 33 with value: 0.031031972334710587.
+
+=== Best Trial ===
+  Value (mean val AUPR): 0.0310
+  Params:
+    arch: 256-128-64
+    dropout: 0.2
+    lr: 0.0001
+    batch_size: 256
+    focal_alpha: 0.75
+    focal_gamma: 1.0
+
+Results saved to outputs/tuning/tuning_results.json
+Optuna visualisation HTMLs saved.
