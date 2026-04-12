@@ -135,7 +135,7 @@ def main() -> None:
             batch_size=best["batch_size"],
             balanced_sampling=best.get("balanced_sampling", False),
             lr=best["lr"],
-            weight_decay=best["weight_decay"],
+            weight_decay=best.get("weight_decay", 1e-4),
             max_grad_norm=best.get("max_grad_norm", 1.0),
             epochs=args.epochs,
             focal_alpha=best["focal_alpha"],
