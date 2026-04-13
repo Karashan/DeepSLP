@@ -205,12 +205,12 @@ def random_baseline(
     n_permutations: int = 10_000,
     seed: int = 42,
 ) -> dict[str, dict[str, np.ndarray]]:
-    """Compute random baseline with mean and confidence intervals.
+    """Compute random baseline with mean and standard deviation.
 
     Returns
     -------
     dict with keys "sl_pairs" and "gene_coverage", each containing:
-        "mean", "ci_lo", "ci_hi" – arrays of length Q+1.
+        "mean", "sd", "sd_lo", "sd_hi" – arrays of length Q+1.
     """
     rng = np.random.default_rng(seed)
     Q = len(all_queries)
@@ -223,10 +223,13 @@ def random_baseline(
         cov_matrix[p] = cumulative_gene_coverage(list(perm), sl_genes_per_query)
 
     def _summarize(mat):
+        mean = mat.mean(axis=0)
+        sd = mat.std(axis=0, ddof=1)
         return {
-            "mean": mat.mean(axis=0),
-            "ci_lo": np.percentile(mat, 2.5, axis=0),
-            "ci_hi": np.percentile(mat, 97.5, axis=0),
+            "mean": mean,
+            "sd": sd,
+            "sd_lo": mean - sd,
+            "sd_hi": mean + sd,
         }
 
     return {
@@ -274,11 +277,11 @@ def plot_prioritization_curve(
     # Random baseline
     ax.fill_between(
         ks,
-        random_stats["ci_lo"],
-        random_stats["ci_hi"],
+        random_stats["sd_lo"],
+        random_stats["sd_hi"],
         alpha=0.15,
         color="grey",
-        label="Random 95% CI",
+        label="Random ± 1 SD",
     )
     ax.plot(ks, random_stats["mean"], color="grey", ls="--", lw=1.5, label="Random")
 
@@ -450,8 +453,8 @@ def main() -> None:
     # SL discovery
     sl_df = pd.DataFrame({"k": ks})
     sl_df["random_mean"] = rand["sl_pairs"]["mean"]
-    sl_df["random_ci_lo"] = rand["sl_pairs"]["ci_lo"]
-    sl_df["random_ci_hi"] = rand["sl_pairs"]["ci_hi"]
+    sl_df["random_sd_lo"] = rand["sl_pairs"]["sd_lo"]
+    sl_df["random_sd_hi"] = rand["sl_pairs"]["sd_hi"]
     for name in rankings:
         sl_df[name] = sl_curves[name]
     sl_df.to_csv(output_dir / "sl_discovery_curves.tsv", sep="\t", index=False)
@@ -459,8 +462,8 @@ def main() -> None:
     # Library coverage
     cov_df = pd.DataFrame({"k": ks})
     cov_df["random_mean"] = rand["gene_coverage"]["mean"]
-    cov_df["random_ci_lo"] = rand["gene_coverage"]["ci_lo"]
-    cov_df["random_ci_hi"] = rand["gene_coverage"]["ci_hi"]
+    cov_df["random_sd_lo"] = rand["gene_coverage"]["sd_lo"]
+    cov_df["random_sd_hi"] = rand["gene_coverage"]["sd_hi"]
     for name in rankings:
         cov_df[name] = cov_curves[name]
     cov_df.to_csv(output_dir / "library_coverage_curves.tsv", sep="\t", index=False)

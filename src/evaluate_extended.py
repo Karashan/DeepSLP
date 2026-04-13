@@ -267,8 +267,7 @@ def test2_sl_hub_discovery(
                 rand_mat[p, i + 1] = len(covered_r)
 
         rand_mean = rand_mat.mean(axis=0)
-        rand_lo = np.percentile(rand_mat, 2.5, axis=0)
-        rand_hi = np.percentile(rand_mat, 97.5, axis=0)
+        rand_sd = rand_mat.std(axis=0, ddof=1)
 
         guided_nauc = normalized_auc(guided_cum)
         rand_nauc = normalized_auc(rand_mean)
@@ -279,8 +278,8 @@ def test2_sl_hub_discovery(
             "random_nauc": rand_nauc,
             "guided_cum": guided_cum,
             "rand_mean": rand_mean,
-            "rand_lo": rand_lo,
-            "rand_hi": rand_hi,
+            "rand_sd_lo": rand_mean - rand_sd,
+            "rand_sd_hi": rand_mean + rand_sd,
         }
         print(f"  Hub≥{t}: guided nAUC={guided_nauc:.4f}  "
               f"random nAUC={rand_nauc:.4f}  "
@@ -292,8 +291,8 @@ def test2_sl_hub_discovery(
     ks = np.arange(Q + 1)
     for idx, (t, res) in enumerate(results.items()):
         ax = axes[0, idx]
-        ax.fill_between(ks, res["rand_lo"], res["rand_hi"],
-                        alpha=0.15, color="grey")
+        ax.fill_between(ks, res["rand_sd_lo"], res["rand_sd_hi"],
+                        alpha=0.15, color="grey", label="Random ± 1 SD")
         ax.plot(ks, res["rand_mean"], "grey", ls="--", lw=1.5, label="Random")
         ax.plot(ks, res["guided_cum"], "#1f77b4", lw=2,
                 label="Guided (Σ pred_prob)")
@@ -388,8 +387,7 @@ def test3_efficiency_budget(
                             for p in range(n_perm)])
         rand_mean = float(np.mean(rand_ks))
         rand_median = float(np.median(rand_ks))
-        rand_lo = float(np.percentile(rand_ks, 2.5))
-        rand_hi = float(np.percentile(rand_ks, 97.5))
+        rand_sd = float(np.std(rand_ks, ddof=1))
         savings = rand_mean - guided_k
         savings_pct = savings / rand_mean * 100 if rand_mean > 0 else 0
 
@@ -399,13 +397,12 @@ def test3_efficiency_budget(
             "guided_queries": guided_k,
             "random_mean_queries": rand_mean,
             "random_median_queries": rand_median,
-            "random_ci_lo": rand_lo,
-            "random_ci_hi": rand_hi,
+            "random_sd": rand_sd,
             "queries_saved": savings,
             "savings_pct": savings_pct,
         })
         print(f"  {pct}% ({target} pairs):  Guided={guided_k}  "
-              f"Random={rand_mean:.1f} [{rand_lo:.0f}-{rand_hi:.0f}]  "
+              f"Random={rand_mean:.1f} ± {rand_sd:.1f}  "
               f"Savings={savings:.1f} queries ({savings_pct:.1f}%)")
 
     # --- Coverage milestones ---
@@ -419,8 +416,7 @@ def test3_efficiency_budget(
                             for p in range(n_perm)])
         rand_mean = float(np.mean(rand_ks))
         rand_median = float(np.median(rand_ks))
-        rand_lo = float(np.percentile(rand_ks, 2.5))
-        rand_hi = float(np.percentile(rand_ks, 97.5))
+        rand_sd = float(np.std(rand_ks, ddof=1))
         savings = rand_mean - guided_k
         savings_pct = savings / rand_mean * 100 if rand_mean > 0 else 0
 
@@ -430,13 +426,12 @@ def test3_efficiency_budget(
             "guided_queries": guided_k,
             "random_mean_queries": rand_mean,
             "random_median_queries": rand_median,
-            "random_ci_lo": rand_lo,
-            "random_ci_hi": rand_hi,
+            "random_sd": rand_sd,
             "queries_saved": savings,
             "savings_pct": savings_pct,
         })
         print(f"  {pct}% ({target} genes):  Guided={guided_k}  "
-              f"Random={rand_mean:.1f} [{rand_lo:.0f}-{rand_hi:.0f}]  "
+              f"Random={rand_mean:.1f} ± {rand_sd:.1f}  "
               f"Savings={savings:.1f} queries ({savings_pct:.1f}%)")
 
     pd.DataFrame(sl_rows).to_csv(output_dir / "efficiency_sl_pairs.tsv",
@@ -451,8 +446,8 @@ def test3_efficiency_budget(
     x = np.arange(len(sl_targets_pct))
     g_vals = [r["guided_queries"] for r in sl_rows]
     r_vals = [r["random_mean_queries"] for r in sl_rows]
-    r_err_lo = [r["random_mean_queries"] - r["random_ci_lo"] for r in sl_rows]
-    r_err_hi = [r["random_ci_hi"] - r["random_mean_queries"] for r in sl_rows]
+    r_err_lo = [r["random_sd"] for r in sl_rows]
+    r_err_hi = [r["random_sd"] for r in sl_rows]
     w = 0.35
     axes[0].bar(x - w / 2, g_vals, w, label="Guided", color="#1f77b4")
     axes[0].bar(x + w / 2, r_vals, w, label="Random",
@@ -470,8 +465,8 @@ def test3_efficiency_budget(
     # Coverage
     g_vals_c = [r["guided_queries"] for r in cov_rows]
     r_vals_c = [r["random_mean_queries"] for r in cov_rows]
-    r_err_lo_c = [r["random_mean_queries"] - r["random_ci_lo"] for r in cov_rows]
-    r_err_hi_c = [r["random_ci_hi"] - r["random_mean_queries"] for r in cov_rows]
+    r_err_lo_c = [r["random_sd"] for r in cov_rows]
+    r_err_hi_c = [r["random_sd"] for r in cov_rows]
     axes[1].bar(x - w / 2, g_vals_c, w, label="Guided", color="#1f77b4")
     axes[1].bar(x + w / 2, r_vals_c, w, label="Random",
                 color="grey", yerr=[r_err_lo_c, r_err_hi_c],
@@ -555,10 +550,12 @@ def test4_rare_gene_enrichment(
         rand_common_mat[p] = _gene_subset_coverage(perm, common_genes)
 
     def _stats(mat):
+        mean = mat.mean(axis=0)
+        sd = mat.std(axis=0, ddof=1)
         return {
-            "mean": mat.mean(axis=0),
-            "ci_lo": np.percentile(mat, 2.5, axis=0),
-            "ci_hi": np.percentile(mat, 97.5, axis=0),
+            "mean": mean,
+            "sd_lo": mean - sd,
+            "sd_hi": mean + sd,
         }
 
     rand_rare = _stats(rand_rare_mat)
@@ -596,8 +593,8 @@ def test4_rare_gene_enrichment(
         ("Rare SL Genes (1-2 partners)", guided_rare, rand_rare, len(rare_genes)),
         ("Common SL Genes (≥3 partners)", guided_common, rand_common, len(common_genes)),
     ]):
-        ax.fill_between(ks, rand_stats["ci_lo"], rand_stats["ci_hi"],
-                        alpha=0.15, color="grey")
+        ax.fill_between(ks, rand_stats["sd_lo"], rand_stats["sd_hi"],
+                        alpha=0.15, color="grey", label="Random ± 1 SD")
         ax.plot(ks, rand_stats["mean"], "grey", ls="--", lw=1.5, label="Random")
         ax.plot(ks, guided_cum, "#1f77b4", lw=2, label="Guided (Σ pred_prob)")
         ax.axhline(y=total, color="black", ls="-", lw=0.5, alpha=0.3)
@@ -780,10 +777,12 @@ def test5_per_model_variability(
          rand_cov_mat.mean(axis=0), ens_cov_cum),
     ]:
         # Random
+        r_mat = rand_sl_mat if "sl" in metric_key else rand_cov_mat
+        r_sd = r_mat.std(axis=0, ddof=1)
         ax.fill_between(ks,
-                        np.percentile(rand_sl_mat if "sl" in metric_key else rand_cov_mat, 2.5, axis=0),
-                        np.percentile(rand_sl_mat if "sl" in metric_key else rand_cov_mat, 97.5, axis=0),
-                        alpha=0.1, color="grey")
+                        rand_mean - r_sd,
+                        rand_mean + r_sd,
+                        alpha=0.1, color="grey", label="Random ± 1 SD")
         ax.plot(ks, rand_mean, "grey", ls="--", lw=1.5, label="Random")
 
         # Individual models
@@ -973,9 +972,9 @@ def test6_stratified_difficulty(
         ]):
             ax = axes[row_idx, col_idx]
             r_mean = r_mat.mean(axis=0)
-            r_lo = np.percentile(r_mat, 2.5, axis=0)
-            r_hi = np.percentile(r_mat, 97.5, axis=0)
-            ax.fill_between(ks_s, r_lo, r_hi, alpha=0.15, color="grey")
+            r_sd = r_mat.std(axis=0, ddof=1)
+            ax.fill_between(ks_s, r_mean - r_sd, r_mean + r_sd,
+                            alpha=0.15, color="grey", label="Random ± 1 SD")
             ax.plot(ks_s, r_mean, "grey", ls="--", lw=1.5, label="Random")
             ax.plot(ks_s, g_cum, "#1f77b4", lw=2, label="Guided")
             ax.axhline(y=total, color="black", ls="-", lw=0.5, alpha=0.3)
