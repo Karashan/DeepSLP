@@ -278,12 +278,11 @@ def plot_prioritization_curve(
 
     # Model-guided strategies
     colors = {"sum_proba": "#1f77b4", "mean_proba": "#ff7f0e",
-              "top100_sum": "#2ca02c", "hits_0.5": "#d62728",
+              "top100_sum": "#2ca02c",
               "hits_baserate": "#9467bd"}
     labels = {"sum_proba": "Guided (Σ pred_prob)",
               "mean_proba": "Guided (mean pred_prob)",
               "top100_sum": "Guided (Σ top-100 pred_prob)",
-              "hits_0.5": "Guided (# pred > 0.5)",
               "hits_baserate": "Guided (# pred > base-rate cutoff)"}
     for name, curve in curves.items():
         if name.startswith("oracle"):
@@ -387,13 +386,7 @@ def main() -> None:
                                         score_col=args.score_col)
     rankings["top100_sum"] = list(s.index)
 
-    # Strategy 4: count predicted above threshold 0.5
-    s = score_queries_by_top_hits(df, threshold=0.5,
-                                  query_col=args.query_col,
-                                  score_col=args.score_col)
-    rankings["hits_0.5"] = list(s.index)
-
-    # Strategy 5: count predicted above base-rate-calibrated threshold
+    # Strategy 4: count predicted above base-rate-calibrated threshold
     #   Choose the cutoff so that the fraction of predicted positives
     #   matches the true SL prevalence in the external validation set.
     true_pos_rate = total_sl / len(df)
