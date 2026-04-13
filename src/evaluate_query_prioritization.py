@@ -79,13 +79,19 @@ def score_queries_by_top_hits(
     query_col: str = "Query",
     score_col: str = "predict_proba",
 ) -> pd.Series:
-    """Rank queries by the number of pairs predicted above *threshold*."""
-    return (
-        df.assign(_hit=(df[score_col] >= threshold).astype(int))
-        .groupby(query_col)["_hit"]
-        .sum()
-        .sort_values(ascending=False)
-    )
+    """Rank queries by the number of pairs predicted above *threshold*.
+
+    Ties (same hit count) are broken by the sum of predicted probabilities
+    for that query, so the ordering is never arbitrary.
+    """
+    grp = df.assign(_hit=(df[score_col] >= threshold).astype(int)).groupby(query_col)
+    hits = grp["_hit"].sum()
+    # Tiebreaker: sum of predicted probabilities (continuous, no ties)
+    sum_proba = grp[score_col].sum()
+    # Combine: hit count as primary key, sum_proba as tiebreaker.
+    # Add a tiny fraction of sum_proba so sort order breaks ties correctly.
+    combined = hits.astype(float) + sum_proba / (sum_proba.max() + 1)
+    return combined.sort_values(ascending=False)
 
 
 def score_queries_by_top_percentile(
@@ -291,10 +297,16 @@ def plot_prioritization_curve(
         ax.plot(ks, curve, color=c, lw=2, label=labels.get(name, name))
 
     # Oracle
+    oracle_styles = {
+        "oracle_sl": {"color": "black", "ls": ":", "lw": 1.8,
+                      "label": "Oracle (SL count)"},
+        "oracle_cov": {"color": "#8B0000", "ls": "-.", "lw": 1.8,
+                       "label": "Oracle (greedy coverage)"},
+    }
     for name, curve in curves.items():
         if name.startswith("oracle"):
-            label = "Oracle (SL count)" if "sl" in name else "Oracle (greedy coverage)"
-            ax.plot(ks, curve, color="black", ls=":", lw=1.5, label=label)
+            style = oracle_styles.get(name, {})
+            ax.plot(ks, curve, **style)
 
     ax.set_xlabel("Number of queries screened")
     ax.set_ylabel(ylabel)
