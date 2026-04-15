@@ -52,7 +52,7 @@ def parse_args() -> argparse.Namespace:
 
     # Model architecture
     p.add_argument("--hidden-sizes", type=int, nargs="+", default=[128, 64, 32])
-    p.add_argument("--dropout", type=float, default=0.2)
+    p.add_argument("--dropout", type=float, default=0.3)
 
     # Training
     p.add_argument("--batch-size", type=int, default=64)
@@ -60,7 +60,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--weight-decay", type=float, default=1e-4)
     p.add_argument("--max-grad-norm", type=float, default=1.0)
     p.add_argument("--epochs", type=int, default=50)
-    p.add_argument("--patience", type=int, default=15)
+    p.add_argument("--patience", type=int, default=10)
     p.add_argument("--scheduler", default="plateau", choices=["plateau", "cosine"])
     p.add_argument("--focal-alpha", type=float, default=0.75)
     p.add_argument("--focal-gamma", type=float, default=1.5)

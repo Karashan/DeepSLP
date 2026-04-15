@@ -63,14 +63,14 @@ def _build_objective(
         # --- sample hyperparameters (simplified) ---
         ARCH_PRESETS = {
             "128-64-32":  [128, 64, 32],
-            "128-128-128":  [128, 128, 128],
-            "256-128-64": [256, 128, 64]
+            "128-64":     [128, 64],
+            "256-128-64-32": [256, 128, 64, 32],
         }
         arch = trial.suggest_categorical("arch", list(ARCH_PRESETS.keys()))
         hidden_sizes = ARCH_PRESETS[arch]
 
-        dropout = trial.suggest_float("dropout", 0.2, 0.4, step=0.1)
-        lr = trial.suggest_categorical("lr", [1e-2, 1e-3, 1e-4])
+        dropout = trial.suggest_float("dropout", 0.3, 0.5, step=0.1)
+        lr = trial.suggest_categorical("lr", [1e-2, 5e-3, 1e-3])
         batch_size = trial.suggest_categorical("batch_size", [64, 128, 256])
         focal_alpha = trial.suggest_categorical("focal_alpha", [0.75, 0.95])
         focal_gamma = trial.suggest_categorical("focal_gamma", [1.0, 1.5, 2.0])

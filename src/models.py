@@ -21,7 +21,7 @@ class FocalLoss(nn.Module):
     Expects raw logits (applies sigmoid internally via BCEWithLogitsLoss).
     """
 
-    def __init__(self, alpha: float = 0.75, gamma: float = 2.0, reduction: str = "mean"):
+    def __init__(self, alpha: float = 0.75, gamma: float = 1.5, reduction: str = "mean"):
         super().__init__()
         self.alpha = alpha
         self.gamma = gamma
