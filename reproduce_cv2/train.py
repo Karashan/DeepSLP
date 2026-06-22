@@ -60,7 +60,7 @@ def _eval_aupr(model, loader, device) -> float:
     labels_all, probs_all = [], []
     with torch.no_grad():
         for inputs, labels in loader:
-            logits = model(inputs.to(device)).squeeze(-1)
+            logits = model(inputs.to(device))
             probs_all.append(torch.sigmoid(logits).cpu())
             labels_all.append(labels.float().cpu())
     y = torch.cat(labels_all).numpy()
@@ -93,14 +93,15 @@ def train_one_fold(split, cfg: TrainConfig, device: str):
     X_val_s = scaler.transform(X_val)
     X_test_s = scaler.transform(X_test)
 
-    def loaders(Xs, y, shuffle):
+    def loaders(Xs, y, shuffle, drop_last=False):
         ds = TensorDataset(
             torch.tensor(Xs, dtype=torch.float32),
             torch.tensor(y.values, dtype=torch.long),
         )
-        return DataLoader(ds, batch_size=cfg.batch_size, shuffle=shuffle)
+        return DataLoader(ds, batch_size=cfg.batch_size, shuffle=shuffle, drop_last=drop_last)
 
-    train_loader = loaders(X_train_s, y_train, True)
+    # drop_last on train avoids a size-1 final batch breaking BatchNorm1d
+    train_loader = loaders(X_train_s, y_train, True, drop_last=True)
     val_loader = loaders(X_val_s, y_val, False)
     test_loader = loaders(X_test_s, y_test, False)
 
@@ -123,7 +124,7 @@ def train_one_fold(split, cfg: TrainConfig, device: str):
             inputs = inputs.to(device)
             labels = labels.to(device).float()
             optimizer.zero_grad()
-            outputs = model(inputs).squeeze(-1)
+            outputs = model(inputs)
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
@@ -136,7 +137,7 @@ def train_one_fold(split, cfg: TrainConfig, device: str):
             for inputs, labels in val_loader:
                 inputs = inputs.to(device)
                 labels = labels.to(device).float()
-                outputs = model(inputs).squeeze(-1)
+                outputs = model(inputs)
                 val_loss += criterion(outputs, labels).item() * inputs.size(0)
         val_loss /= len(val_loader.dataset)
 
@@ -167,7 +168,7 @@ def train_one_fold(split, cfg: TrainConfig, device: str):
     scores, labels_all = [], []
     with torch.no_grad():
         for inputs, labels in test_loader:
-            logits = model(inputs.to(device)).squeeze(-1)
+            logits = model(inputs.to(device))
             scores.append(torch.sigmoid(logits).cpu())
             labels_all.append(labels.float().cpu())
     test_scores = torch.cat(scores).numpy()
