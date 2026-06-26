@@ -46,7 +46,7 @@ NON_FEATURE_COLS: List[str] = [
 @dataclass
 class TrainConfig:
     # --- data ---
-    input_dir: str = field(default_factory=lambda: _repo_path("data", "input", "GIV_24Q4", "ReLU128_5L") + os.sep)
+    input_dir: str = field(default_factory=lambda: _repo_path("data", "input", "GIV_24Q4_3L") + os.sep)
     input_glob_iter: int = 20            # number of *_{i}.tsv shards to concatenate
     file_tail: str = ".tsv"
     label_col: str = "GI_stringent_Type2"

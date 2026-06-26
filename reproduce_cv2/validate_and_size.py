@@ -1,10 +1,10 @@
 """Validate GIV_24Q4 features against AE raw data + size the gene-pair universe."""
 import os, glob, numpy as np, pandas as pd
 
-AE = os.path.expanduser("~/DeepSLP/data/input/AE")
-KO = os.path.join(AE, "AE128_5L_std100_CRISPRGeneEffect_24Q4_imputed_gene_wise_mean_align_qGI2021.txt")
-EXP = os.path.join(AE, "AE128_5L_std100_Expression_BC_24Q4_align_qGI2021.txt")
-GIV_DIR = os.path.expanduser("~/DeepSLP/data/input/GIV_24Q4/ReLU128_5L")
+AE = os.path.expanduser("~/DeepSLP/data/input/AE_3L")
+KO = os.path.join(AE, "AE_std100_CRISPRGeneEffect_24Q4_imputed_gene_wise_mean_align_qGI2021.txt")
+EXP = os.path.join(AE, "AE_std100_Expression_BC_24Q4_align_qGI2021.txt")
+GIV_DIR = os.path.expanduser("~/DeepSLP/data/input/GIV_24Q4_3L")
 
 df_ko = pd.read_csv(KO, sep="\t", index_col=0)
 df_exp = pd.read_csv(EXP, sep="\t", index_col=0)

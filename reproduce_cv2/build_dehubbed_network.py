@@ -51,9 +51,9 @@ sys.modules["__main__"].NeuralNetwork = _m.NeuralNetwork
 sys.modules["__main__"].FocalLoss = _m.FocalLoss
 
 REPO = os.path.expanduser("~/DeepSLP")
-DEF_KO = os.path.join(REPO, "data/input/AE/AE128_5L_std100_CRISPRGeneEffect_24Q4_imputed_gene_wise_mean_align_qGI2021.txt")
-DEF_EXP = os.path.join(REPO, "data/input/AE/AE128_5L_std100_Expression_BC_24Q4_align_qGI2021.txt")
-DEF_SCREEN = os.path.join(REPO, "data/input/GIV_24Q4/ReLU128_5L")
+DEF_KO = os.path.join(REPO, "data/input/AE_3L/AE_std100_CRISPRGeneEffect_24Q4_imputed_gene_wise_mean_align_qGI2021.txt")
+DEF_EXP = os.path.join(REPO, "data/input/AE_3L/AE_std100_Expression_BC_24Q4_align_qGI2021.txt")
+DEF_SCREEN = os.path.join(REPO, "data/input/GIV_24Q4_3L")
 
 
 def log(msg):

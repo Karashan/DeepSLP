@@ -1,6 +1,6 @@
 """Visualize the 256-dim GIV latent feature space of the ~4M gene pairs.
 
-Reads all latent features from data/input/GIV_24Q4/ReLU128_5L/ (20 shards,
+Reads all latent features from data/input/GIV_24Q4_3L/ (20 shards,
 ~200k pairs each, 256 features = ko_0..ko_127 + exp_0..exp_127), then projects
 representative subsamples to 2-D with UMAP and t-SNE (openTSNE) to reveal global
 structure.
@@ -57,7 +57,7 @@ def log(msg: str) -> None:
 def load_all(input_dir: str):
     """Load all shards: feature matrix (float32) + metadata frame."""
     files = sorted(
-        glob.glob(os.path.join(input_dir, "qGI_24Q4_GIV_ReLU128_5L_*.tsv")),
+        glob.glob(os.path.join(input_dir, "qGI_24Q4_GIV_ReLU128_*.tsv")),
         key=lambda x: int(x.split("_")[-1].split(".")[0]),
     )
     log(f"Found {len(files)} shards")
@@ -118,7 +118,7 @@ def scatter_panels(emb, meta_s, title, out_png, topk_label="GI_stringent_Type2")
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--input-dir", default=os.path.join(REPO_ROOT, "data", "input", "GIV_24Q4", "ReLU128_5L"))
+    p.add_argument("--input-dir", default=os.path.join(REPO_ROOT, "data", "input", "GIV_24Q4_3L"))
     p.add_argument("--out-dir", default=None)
     p.add_argument("--pca", type=int, default=50, help="PCA dims before UMAP/t-SNE")
     p.add_argument("--umap-sample", type=int, default=300000)

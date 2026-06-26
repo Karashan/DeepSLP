@@ -12,9 +12,9 @@ sys.modules["__main__"].NeuralNetwork = _m.NeuralNetwork
 sys.modules["__main__"].FocalLoss = _m.FocalLoss
 import pandas as pd
 
-AE = os.path.expanduser("~/DeepSLP/data/input/AE")
-KO = os.path.join(AE, "AE128_5L_std100_CRISPRGeneEffect_24Q4_imputed_gene_wise_mean_align_qGI2021.txt")
-EXP = os.path.join(AE, "AE128_5L_std100_Expression_BC_24Q4_align_qGI2021.txt")
+AE = os.path.expanduser("~/DeepSLP/data/input/AE_3L")
+KO = os.path.join(AE, "AE_std100_CRISPRGeneEffect_24Q4_imputed_gene_wise_mean_align_qGI2021.txt")
+EXP = os.path.join(AE, "AE_std100_Expression_BC_24Q4_align_qGI2021.txt")
 ORIG = os.path.expanduser("~/DeepSLP/data/interim/ReLU128_f_a075_g15_10folds_pt10")
 DEV = "cuda" if torch.cuda.is_available() else "cpu"
 

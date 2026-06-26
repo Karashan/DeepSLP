@@ -107,7 +107,7 @@ def plot_by_dataset(emb, ds, title, out_png):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--train-dir", default=os.path.join(REPO_ROOT, "data", "input", "GIV_24Q4", "ReLU128_5L"))
+    p.add_argument("--train-dir", default=os.path.join(REPO_ROOT, "data", "input", "GIV_24Q4_3L"))
     p.add_argument("--train-iter", type=int, default=20)
     p.add_argument("--heldout-dir", default=os.path.join(REPO_ROOT, "data", "input", "GIV_24Q4_heldout"))
     p.add_argument("--heldout-iter", type=int, default=11)

@@ -29,7 +29,7 @@ from config import NON_FEATURE_COLS, TrainConfig  # noqa: E402
 ORIG = os.path.expanduser("~/DeepSLP/data/interim/ReLU128_f_a075_g15_10folds_pt10")
 REPRO = os.path.expanduser("~/DeepSLP/data/interim/repro_ensemble_10folds_20260622_022346")
 HELDOUT = os.path.expanduser("~/DeepSLP/data/input/GIV_24Q4_heldout/")
-TRAIN_DIR = os.path.expanduser("~/DeepSLP/data/input/GIV_24Q4/ReLU128_5L/")
+TRAIN_DIR = os.path.expanduser("~/DeepSLP/data/input/GIV_24Q4_3L/")
 DEV = "cuda" if torch.cuda.is_available() else "cpu"
 
 
@@ -64,7 +64,7 @@ def main():
     # Training gene sets (only need Query + Gene columns -> fast)
     train_q, train_g = set(), set()
     for i in range(20):
-        fp = os.path.join(TRAIN_DIR, f"qGI_24Q4_GIV_ReLU128_5L_{i}.tsv")
+        fp = os.path.join(TRAIN_DIR, f"qGI_24Q4_GIV_ReLU128_{i}.tsv")
         if not os.path.exists(fp):
             continue
         t = pd.read_csv(fp, sep="\t", usecols=["Query", "Gene"], low_memory=False)

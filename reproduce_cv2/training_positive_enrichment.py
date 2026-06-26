@@ -8,7 +8,7 @@ import os, glob, numpy as np, pandas as pd
 from scipy.stats import spearmanr, mannwhitneyu
 
 REPO = os.path.expanduser("~/DeepSLP")
-SHARDS = f"{REPO}/data/input/GIV_24Q4/ReLU128_5L"
+SHARDS = f"{REPO}/data/input/GIV_24Q4_3L"
 DRIVERS = f"{REPO}/data/interim/all_pairs_pred/hcls1_investigation/per_gene_drivers.tsv"
 OUT = f"{REPO}/data/interim/all_pairs_pred/hcls1_investigation"
 LABEL = "GI_stringent_Type2"

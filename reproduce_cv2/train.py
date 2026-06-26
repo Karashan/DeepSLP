@@ -16,7 +16,7 @@ For each fold i in [1, n_folds]:
 
 Example:
     python reproduce_cv2/train.py \
-        --input-dir data/input/GIV_24Q4/ReLU128_5L/ \
+        --input-dir data/input/GIV_24Q4_3L/ \
         --output-dir reproduce_cv2/output/
 
 Run ``python reproduce_cv2/train.py --help`` for all options.
